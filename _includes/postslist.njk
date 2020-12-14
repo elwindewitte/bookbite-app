@@ -1,5 +1,5 @@
 <ul>
-    {% for post in postslist %}
+    {%- for post in postslist -%}
         <li>
             <strong>
                 <a href="{{ post.url | url }}">{{ post.data.title }}</a>
@@ -7,5 +7,5 @@
             -
             <span>{{ post.data.description }}</span>
         </li>
-    {% endfor %}
+    {%- endfor -%}
 </ul>
