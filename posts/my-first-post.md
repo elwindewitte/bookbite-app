@@ -1,5 +1,5 @@
 ---
-layout: layout/post.njk
+layout: layouts/post.njk
 title: My first post
 description: The first post on the Eleventy and Netlify CMS blog
 date: 2020-12-14
