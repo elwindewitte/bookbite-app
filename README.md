@@ -12,5 +12,5 @@ This is platform ment for young people to encorage them to consume more literatu
 | Course     | Minor IUXD (Interface and User Experience Design) |
 
 ## Eleventy instructions
-Run: `npx @11ty/eleventy`
-Start server: `npx @11ty/eleventy --serve`
+- Run: `npx @11ty/eleventy`
+- Start server: `npx @11ty/eleventy --serve`
