@@ -10,6 +10,14 @@ This is platform ment for young people to encorage them to consume more literatu
 - Study program: [CMD (Communication and Multimedia Design)](https://www.hogeschoolrotterdam.nl/opleidingen/bachelor/communication-and-multimedia-design/voltijd/)
 - Course: Minor IUXD (Interface and User Experience Design)
 
-## Eleventy instructions
+## Code instructions
+### Languages used
+- `.njk` for layouts
+- `.md` for data on pages (used in layouts)
+- `.html` for general page structure
+- `.css` for styling
+- `.js` for interactivity
+
+### Eleventy
 - Run: `npx @11ty/eleventy`
 - Start server: `npx @11ty/eleventy --serve`
