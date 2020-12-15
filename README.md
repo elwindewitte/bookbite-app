@@ -19,8 +19,18 @@ This is platform ment for young people to encorage them to consume more literatu
 - `.js` for interactivity
 
 ### Frameworks/tools used
+- [Node.js](https://nodejs.org/en/)
 - [Eleventy](https://www.11ty.dev/)
 - [Netlify](https://www.netlify.com/)
+
+### Before coding
+- Install [Node.js](https://nodejs.org/en/)
+- Install [VSCode](https://code.visualstudio.com/download)
+- Install [Github Desktop](https://desktop.github.com/)
+- Set terminal in VSCode to _Git Bash_
+- Install [_Nunjucks_](https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks) extension for proper `.njk` code formatting
+- (Optional) Install [_vscode-icons_](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) extension for proper icons
+- Follow the [instructions](https://www.11ty.dev/docs/getting-started/) from Eleventy
 
 ### Eleventy
 - Run: `npx @11ty/eleventy`
