@@ -18,7 +18,7 @@ This is platform ment for young people to encorage them to consume more literatu
 - `.css` for styling
 - `.js` for interactivity
 
-## Frameworks/tools used
+### Frameworks/tools used
 - [Eleventy](https://www.11ty.dev/)
 - [Netlify](https://www.netlify.com/)
 
