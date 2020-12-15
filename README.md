@@ -4,9 +4,10 @@ This is platform ment for young people to encorage them to consume more literatu
 
 - Team: Silverpoint
 - Members: Ashana, Wessel, Lisa, Gabriella, Elwin
-- Client: KB (Koninklijke Bibliotheek/Royal Dutch Library)
+- Client: [KB (Koninklijke Bibliotheek/Royal Dutch Library)](https://www.kb.nl/en)
 - Date: September 7, 2020 through January 29, 2021
-- University: RUAS (Rotterdam University of Applied Sciences)
+- University: [RUAS (Rotterdam University of Applied Sciences)](https://www.rotterdamuas.com/)
+- Study program: [CMD (Communication and Multimedia Design)](https://www.hogeschoolrotterdam.nl/opleidingen/bachelor/communication-and-multimedia-design/voltijd/)
 - Course: Minor IUXD (Interface and User Experience Design)
 
 ## Eleventy instructions
