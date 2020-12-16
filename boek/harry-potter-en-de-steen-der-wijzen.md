@@ -1,5 +1,5 @@
 ---
-tags: ['book', 'read', 'bookshelfFavorites', 'genreFiction', 'authorJKRowling', 'bookshelfHarryPotter']
+tags: ['book', 'bookshelfRead', 'bookshelfFavorites', 'genreFiction', 'authorJKRowling', 'bookshelfHarryPotter']
 layout: pageBook.njk
 name: Harry Potter en de Steen der Wijzen
 author: JK Rowling
