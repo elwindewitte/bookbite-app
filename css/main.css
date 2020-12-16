@@ -89,15 +89,25 @@ p.small, a.small {
 
 
 
+/* SECTION================ */
+section {
+    padding: 32px 16px;
+}
+
 /* LISTS================ */
 
 .on-page-list, .on-page-grid {
     display: flex;
     flex-direction: column;
+    padding: 16px 0;
 }
 
-.on-page-list h3, .on-page-grid h3 {
-    margin-bottom: 8px;
+.on-page-list {
+    margin: 0 -16px;
+}
+
+.on-page-list h3 {
+    margin: 0 0 8px 16px;
 }
 
 .on-page-list-content {
@@ -122,13 +132,17 @@ p.small, a.small {
 }
 
 .on-page-list a {
-    margin-right: 16px;
+    margin-right: 8px;
 }
 
 .on-page-grid a {
     margin: 4px;
 }
 
-.on-page-list a:last-child {
-    margin-right: 0;
+.on-page-list-content a:last-child {
+    margin-right: 16px;
+}
+
+.on-page-list-content a:first-child {
+    margin-left: 16px;
 }
