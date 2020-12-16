@@ -1,0 +1,8 @@
+<div class="on-page-list-content">
+    {%- for bookshelf in bookshelflist -%}
+    <a class="on-page-book" href="{{ bookshelf.url | url }}">
+        <img src="{{ bookshelf.data.cover }}" alt="{{ bookshelf.data.cover }}"></img>
+        <p>{{ bookshelf.data.name }}</p>
+    </a>
+    {%- endfor -%}
+</div>

@@ -1,10 +1,8 @@
----
----
-<div class="on-page-list">
+<div class="on-page-list-content">
     {%- for book in booklist -%}
-    <a class="on-page-book" href="">
+    <a class="on-page-book" href="{{ book.url | url }}">
         <img src="{{ book.data.coverImage }}" alt="{{ book.data.coverImage }}"></img>
-        <p>{{ book.data.name }}</p>
+        {# <p>{{ book.data.name }}</p> #}
     </a>
     {%- endfor -%}
 </div>
