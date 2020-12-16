@@ -1,6 +1,6 @@
 ---
 tags: ['book', 'reading', 'favorites', 'bookFiction', 'jkRowling', 'harryPotter']
-layout: layouts/book.njk
+layout: pageBook.njk
 name: Harry Potter en de Steen der Wijzen
 author: JK Rowling
 authorLink: 

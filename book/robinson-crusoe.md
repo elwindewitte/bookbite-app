@@ -1,6 +1,6 @@
 ---
 tags: ['book', 'reading', 'favorites', 'bookFiction', 'danielDefoe']
-layout: layouts/book.njk
+layout: layouts/pageBook.njk
 name: Robinson Crusoe
 author: Daniel Defoe
 authorLink: 
