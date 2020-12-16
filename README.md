@@ -36,3 +36,7 @@ This is platform ment for young people to encorage them to consume more literatu
 ### Eleventy
 - Run: `npx @11ty/eleventy`
 - Start server: `npx @11ty/eleventy --serve`
+
+### Know errors
+`Error: template names must be a string: undefined`
+Fix: just set the template in the include between quotes
