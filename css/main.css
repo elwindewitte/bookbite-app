@@ -106,7 +106,6 @@ p.small, a.small {
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100vw;
-    padding: 4px;
 }
 
 .on-page-grid-content {
@@ -119,9 +118,14 @@ p.small, a.small {
 
 .on-page-list img, .on-page-grid img {
     height: 256px;
+    border-radius: 4px;
 }
 
-.on-page-list a, .on-page-grid a {
+.on-page-list a {
+    margin-right: 16px;
+}
+
+.on-page-grid a {
     margin: 4px;
 }
 
