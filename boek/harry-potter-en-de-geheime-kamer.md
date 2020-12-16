@@ -1,5 +1,5 @@
 ---
-tags: ['book', 'reading', 'bookFiction', 'jkRowling', 'harryPotter']
+tags: ['book', 'bookshelfReading', 'genreFiction', 'authorJKRowling', 'bookshelfHarryPotter']
 layout: pageBook.njk
 name: Harry Potter en de Geheime Kamer
 author: JK Rowling

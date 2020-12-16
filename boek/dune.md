@@ -1,5 +1,5 @@
 ---
-tags: ['book', 'fantasy', 'bookFiction', 'frankHerbert']
+tags: ['book', 'genreFantasy', 'genreFiction', 'authorFrankHerbert']
 layout: pageBook.njk
 name: Dune
 author: Frank Herbert

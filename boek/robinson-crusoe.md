@@ -1,5 +1,5 @@
 ---
-tags: ['book', 'reading', 'favorites', 'bookFiction', 'danielDefoe']
+tags: ['book', 'bookshelfReading', 'bookshelfFavorites', 'genreFiction', 'authorDanielDefoe']
 layout: pageBook.njk
 name: Robinson Crusoe
 author: Daniel Defoe

@@ -1,5 +1,5 @@
 ---
-tags: ['book', 'wantToRead', 'bookFiction', 'jkRowling', 'harryPotter']
+tags: ['book', 'bookshelfWantToRead', 'genreFiction', 'authorJKRowling', 'bookshelfHarryPotter']
 layout: pageBook.njk
 name: Harry Potter en de Relieken van de Dood
 author: JK Rowling

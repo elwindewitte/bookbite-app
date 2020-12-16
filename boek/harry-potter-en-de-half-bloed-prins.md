@@ -1,5 +1,5 @@
 ---
-tags: ['book', 'wantToRead', 'bookFiction', 'jkRowling', 'harryPotter']
+tags: ['book', 'booskhelfWantToRead', 'genreFiction', 'authorJKRowling', 'bookshelfHarryPotter']
 layout: pageBook.njk
 name: Harry Potter en de Half-Bloed Prins
 author: JK Rowling

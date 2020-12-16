@@ -1,5 +1,5 @@
 ---
-tags: ['book', 'reading', 'bookFiction' 'bookFantasy', 'jrrTolkien']
+tags: ['book', 'bookshelfReading', 'genreFiction', 'bookFantasy', 'authorJRRTolkien']
 layout: pageBook.njk
 name: De Hobbit
 author: J.R.R. Tolkien

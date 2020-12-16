@@ -6,13 +6,13 @@ permalink: /
 
 <div class="on-page-list">
     <h3>Populair deze week</h3>
-    {%- set booklist = collections.popular -%}
+    {%- set booklist = collections.bookshelfPopular -%}
     {%- include "onPageListBook.njk" -%}
 </div>
 
 <div class="on-page-list">
     <h3>Verder lezen voor jou</h3>
-    {%- set booklist = collections.reading -%}
+    {%- set booklist = collections.bookshelfReading -%}
     {%- include "onPageListBook.njk" -%}
 </div>
 
@@ -22,8 +22,8 @@ permalink: /
     {%- include "onPageListBookshelf.njk" -%}
 </div>
 
-<div class="on-page-list">
+<div class="on-page-grid">
     <h3>Alle boeken</h3>
     {%- set booklist = collections.book -%}
-    {%- include "onPageListBook.njk" -%}
+    {%- include "onPageGridBook.njk" -%}
 </div>
