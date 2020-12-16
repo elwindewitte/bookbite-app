@@ -1,6 +1,6 @@
 ---
 tags: ['book', 'bookFiction', 'jkRowling', 'harryPotter']
-layout: layouts/book.njk
+layout: pageBook.njk
 name: Harry Potter en de Orde van de Fenix
 author: JK Rowling
 authorLink: 

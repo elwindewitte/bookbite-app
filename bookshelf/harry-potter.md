@@ -1,6 +1,6 @@
 ---
 tags: bookshelf
-layout: layouts/book.njk
+layout: pageBookshelf.njk
 name: Harry Potter
 correspondingTag: harryPotter
 description: 

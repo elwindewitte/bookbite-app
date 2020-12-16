@@ -1,6 +1,6 @@
 ---
 tags: ['book', 'bookFiction', 'jkRowling', 'harryPotter']
-layout: layouts/book.njk
+layout: pageBook.njk
 name: Harry Potter en de Gevangene van Azkaban
 author: JK Rowling
 authorLink: 

@@ -1,6 +1,6 @@
 ---
 tags: bookshelf
-layout: layouts/book.njk
+layout: pageBookshelf.njk
 name: Favorieten
 correspondingTag: favorites
 description: 

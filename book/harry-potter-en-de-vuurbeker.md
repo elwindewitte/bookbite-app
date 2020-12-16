@@ -1,6 +1,6 @@
 ---
 tags: ['book', 'bookFiction', 'jkRowling', 'harryPotter']
-layout: layouts/pageBook.njk
+layout: pageBook.njk
 name: Harry Potter en de Vuurbeker
 author: JK Rowling
 authorLink: 

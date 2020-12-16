@@ -1,7 +1,17 @@
 ---
 layout: layouts/base.njk
 ---
-<h1>{{ book.data.name }}</h1>
-<img src="{{ book.data.coverImage | url }}" alt="{{ book.data.coverImage }}"></img>
+<h1>{{ name }}</h1>
+<img src="{{ '/' | url }}{{ coverImage | url }}" alt="{{ '/' | url }}{{ coverImage }}"></img>
+<br>
+<h2>Beschrijving</h2>
+<p>{{ description }}</p>
+<br>
 <h2>Data van dit boek</h2>
-<p>Auteur: {{ book.data.author }}</p>
+<p>Auteur: {{ author }}</p>
+<br>
+<div class="on-page-list">
+    <h3>Andere boeken van deze auteur</h3>
+    {%- set booklist = collections.jkRowling -%}
+    {%- include "onPageListBook.njk" -%}
+</div>
