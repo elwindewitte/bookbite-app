@@ -6,6 +6,6 @@ layout: layouts/base.njk
 <br>
 <div class="on-page-list">
     <h3>Boeken in deze boekenplank</h3>
-    {%- set booklist = collections.reading -%}
+    {%- set booklist = collections.bookshelfReading -%}{# Bope, doesn't work either #}
     {%- include "onPageListBook.njk" -%}
 </div>

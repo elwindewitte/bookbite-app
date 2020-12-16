@@ -2,16 +2,17 @@
 layout: layouts/base.njk
 ---
 <h1>{{ name }}</h1>
+<a class="faded" href="{{ '/' | url }}serie/{{ serieUrl }}">{{ serie }}</a>
+<br>
+<p>Geschreven door <a href="{{ '/' | url }}auteur/{{ authorUrl }}">{{ author }}</a></p>
+<br>
 <img src="{{ '/' | url }}{{ coverImage | url }}" alt="{{ '/' | url }}{{ coverImage }}"></img>
 <br>
-<h2>Beschrijving</h2>
+<h3>Beschrijving</h3>
 <p>{{ description }}</p>
-<br>
-<h2>Data van dit boek</h2>
-<p>Auteur: {{ author }}</p>
 <br>
 <div class="on-page-list">
     <h3>Andere boeken van deze auteur</h3>
-    {%- set booklist = collections.jkRowling -%}
+    {%- set booklist = collections.jkRowling -%}{# Doesn't work of course... sad me :( #}
     {%- include "onPageListBook.njk" -%}
 </div>

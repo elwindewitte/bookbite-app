@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+---
+<h1>{{ name }}</h1>
+<p>Boeken serie</p>
+<br>
+<div class="on-page-list">
+    <h3>Boeken in deze serie</h3>
+    {%- set booklist = collections.serieAGameOfThrones -%}{# Doesn't work... #}
+    {%- include "onPageListBook.njk" -%}
+</div>

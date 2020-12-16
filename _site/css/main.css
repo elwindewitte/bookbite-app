@@ -47,6 +47,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* TEXT================ */
 
+/* COLOR======== */
+h1.faded, h2.faded, h3.faded, h4.faded, h5.faded, p.faded, a.faded {
+    color: var(--color-medium-grey);
+}
+
 /* STYLE======== */
 h1 {
     font-family: var(--font-header);
