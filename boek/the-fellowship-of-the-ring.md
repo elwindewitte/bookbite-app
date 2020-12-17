@@ -7,7 +7,7 @@ authorUrl: jrr-tolkien
 serie: The Lord of the Rings
 serieUrl: the-lord-of-the-rings
 description: 
-coverImage: assets/images/covers/theFellowshipOfTheRing.jpg
+coverImage: assets/covers/theFellowshipOfTheRing.jpg
 ---
 
 Hello, here is the body of the first blog post.

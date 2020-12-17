@@ -7,7 +7,7 @@ authorUrl: jrr-tolkien
 serie: The Lord of the Rings
 serieUrl: the-lord-of-the-rings
 description: 
-coverImage: assets/images/covers/theReturnOfTheKing.jpg
+coverImage: assets/covers/theReturnOfTheKing.jpg
 ---
 
 Hello, here is the body of the first blog post.

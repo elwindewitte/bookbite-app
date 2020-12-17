@@ -7,7 +7,7 @@ authorUrl: jk-rowling
 serie: Harry Potter
 serieUrl: harry-potter
 description: 
-coverImage: assets/images/covers/harryPotterAndTheDeathlyHallows.jpg
+coverImage: assets/covers/harryPotterAndTheDeathlyHallows.jpg
 ---
 
 Hello, here is the body of the first blog post.

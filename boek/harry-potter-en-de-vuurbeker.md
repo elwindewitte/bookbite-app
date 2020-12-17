@@ -7,7 +7,7 @@ authorUrl: jk-rowling
 serie: Harry Potter
 serieUrl: harry-potter
 description: 
-coverImage: assets/images/covers/harryPotterAndTheGobletOfFire.jpg
+coverImage: assets/covers/harryPotterAndTheGobletOfFire.jpg
 ---
 
 Hello, here is the body of the first blog post.

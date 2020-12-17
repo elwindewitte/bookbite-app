@@ -7,7 +7,7 @@ authorUrl: george-rr-martin
 serie: A Song of Ice and Fire
 serieUrl: a-song-of-ice-and-fire
 description: 
-coverImage: assets/images/covers/theWindsOfWinter.jpg
+coverImage: assets/covers/theWindsOfWinter.jpg
 ---
 
 Hello, here is the body of the first blog post.

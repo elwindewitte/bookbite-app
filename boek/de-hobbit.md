@@ -7,7 +7,7 @@ authorUrl: jrr-tolkien
 serie:
 serieUrl:
 description: 
-coverImage: assets/images/covers/theHobbitOrThereAndBackAgain.jpg
+coverImage: assets/covers/theHobbitOrThereAndBackAgain.jpg
 ---
 
 Hello, here is the body of the first blog post.
