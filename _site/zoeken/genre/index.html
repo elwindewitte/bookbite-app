@@ -3,9 +3,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         
-        <!--CUSTOM CSS-->
+        <!--LINKS-->
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/responsive.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
         <!--GOOGLE/META-->
         
@@ -16,16 +17,31 @@
         <meta name="reply-to" content="elwindewitte@gmail.com"/>
     </head>
     <body>
-        <div class="top-nav">
-    <a href="javascript:history.back()"><img src="/assets/icons/arrowLeft.svg" alt=""></img></a>
+        <div class="header-search">
     <h2>Zoeken</h2>
+    <input class="" id="searchInput" type="text" placeholder="Typ om te zoeken...">
+    <div class="on-page-nav">
+        <div class="content">
+            <a class="passive" href="/zoeken/alles">Alles</a>
+            <a class="passive" href="/zoeken/boek">Boeken</a>
+            <a class="passive" href="/zoeken/boekenplank">Boekenplanken</a>
+            <a class="passive" href="/zoeken/auteur">Auteurs</a>
+            <a class="active" href="/zoeken/genre">Genres</a>
+        </div>
+    </div></div><div class="on-page-list books">
+    <h3>Verderlezen voor jou</h3>
+    <div class="container">
+        <div class="list">
+            <div class="content"></div>
+        </div>
+    </div>
 </div>
     <div class="bottom-nav">
     <a class="passive" href="/">
         <img src="/assets/icons/home.svg" alt=""></img>
         <p class="tiny">Home</p>
     </a>
-    <a class="active" href="/zoeken">
+    <a class="active" href="/zoeken/alles">
         <img src="/assets/icons/search.svg" alt=""></img>
         <p class="tiny">Zoeken</p>
     </a>
@@ -39,4 +55,5 @@
     </a>
 </div>
     </body>
+    <script src="/js/search.js"></script>
 </html>

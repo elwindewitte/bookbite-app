@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+permalink: /zoeken/auteur/
+---
+{%- set active = "Auteur" -%}
+{%- include "headerSearch.njk" -%}
+
+{%- set listContent = collections.author -%}
+{%- include "searchResultsAuthor.njk" -%}
+
+{%- set active = "Zoeken" -%}
+{%- include "navBottom.njk" -%}

@@ -1,0 +1,64 @@
+<div class="header-search">
+    <h2>Zoeken</h2>
+    {%- if active == "Boek" -%}
+    {# BOEK #}
+    <input class="" id="searchInput" type="text" placeholder="Typ om te zoeken...">
+    <div class="on-page-nav">
+        <div class="content">
+            <a class="passive" href="{{ '/' | url }}zoeken/alles">Alles</a>
+            <a class="active" href="{{ '/' | url }}zoeken/boek">Boeken</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/boekenplank">Boekenplanken</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/auteur">Auteurs</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/genre">Genres</a>
+        </div>
+    </div>
+    {%- elif active == "Boekenplank" -%}
+    {# BOEKENPLANK #}
+    <input class="" id="searchInput" type="text" placeholder="Typ om te zoeken...">
+    <div class="on-page-nav">
+        <div class="content">
+            <a class="passive" href="{{ '/' | url }}zoeken/alles">Alles</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/boek">Boeken</a>
+            <a class="active" href="{{ '/' | url }}zoeken/boekenplank">Boekenplanken</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/auteur">Auteurs</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/genre">Genres</a>
+        </div>
+    </div>
+    {%- elif active == "Auteur" -%}
+    {# AUTEUR #}
+    <input class="" id="searchInput" type="text" placeholder="Typ om te zoeken...">
+    <div class="on-page-nav">
+        <div class="content">
+            <a class="passive" href="{{ '/' | url }}zoeken/alles">Alles</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/boek">Boeken</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/boekenplank">Boekenplanken</a>
+            <a class="active" href="{{ '/' | url }}zoeken/auteur">Auteurs</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/genre">Genres</a>
+        </div>
+    </div>
+    {%- elif active == "Genre" -%}
+    {# GENRE #}
+    <input class="" id="searchInput" type="text" placeholder="Typ om te zoeken...">
+    <div class="on-page-nav">
+        <div class="content">
+            <a class="passive" href="{{ '/' | url }}zoeken/alles">Alles</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/boek">Boeken</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/boekenplank">Boekenplanken</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/auteur">Auteurs</a>
+            <a class="active" href="{{ '/' | url }}zoeken/genre">Genres</a>
+        </div>
+    </div>
+    {%- else -%}
+    {# DEFAULT STATE #}
+    <input class="" id="searchInput" type="text" placeholder="Typ om te zoeken...">
+    <div class="on-page-nav">
+        <div class="content">
+            <a class="active" href="{{ '/' | url }}zoeken/alles">Alles</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/boek">Boeken</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/boekenplank">Boekenplanken</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/auteur">Auteurs</a>
+            <a class="passive" href="{{ '/' | url }}zoeken/genre">Genres</a>
+        </div>
+    </div>
+    {%- endif -%}
+</div>

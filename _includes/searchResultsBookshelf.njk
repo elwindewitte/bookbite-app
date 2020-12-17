@@ -1,0 +1,10 @@
+<div class="search-results">
+    {%- for bookshelf in listContent -%}
+    <a class="bookshelf" href="{{ bookshelf.url | url }}">
+        <img src="{{ '/' | url }}assets/images/{{ bookshelf.data.coverImage }}" alt="{{ '/' | url }}assets/images/{{ bookshelf.data.coverImage }}">
+        <div class="data">
+            <h3>{{ bookshelf.data.name }}</h3>
+        </div>
+    </a>
+    {%- endfor -%}
+</div>
