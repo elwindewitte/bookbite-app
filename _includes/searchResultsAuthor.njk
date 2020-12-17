@@ -1,0 +1,10 @@
+<div class="search-results" id="searchResults">
+    {%- for author in listContent -%}
+    <a class="author" href="{{ author.url | url }}">
+        <img src="{{ '/' | url }}assets/images/{{ author.data.authorTag }}.png" alt="{{ '/' | url }}assets/images/{{ author.data.authorTag }}.png">
+        <div class="data">
+            <h3>{{ author.data.name }}</h3>
+        </div>
+    </a>
+    {%- endfor -%}
+</div>

@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+permalink: /zoeken/alles/
+---
+{%- include "headerSearch.njk" -%}
+
+{%- set listContentBook = collections.book -%}
+{%- set listContentBookshelf = collections.bookshelf -%}
+{%- set listContentAuthor = collections.author -%}
+{%- set listContentGenre = collections.genre -%}
+{%- include "searchResultsAll.njk" -%}
+
+{%- set active = "Zoeken" -%}
+{%- include "navBottom.njk" -%}

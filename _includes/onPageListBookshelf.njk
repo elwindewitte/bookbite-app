@@ -5,7 +5,7 @@
             <div class="content">
                 {%- for bookshelf in listContent -%}
                 <a class="bookshelf" href="{{ bookshelf.url | url }}">
-                    <img src="{{ '/' | url }}{{ bookshelf.data.coverImage | url }}" alt="{{ '/' | url }}{{ bookshelf.data.coverImage }}"></img>
+                    <img src="{{ '/' | url }}assets/images/{{ bookshelf.data.coverImage | url }}" alt="{{ '/' | url }}asets/images{{ bookshelf.data.coverImage }}"></img>
                     <p>{{ bookshelf.data.name }}</p>
                 </a>
                 {%- endfor -%}

@@ -1,11 +1,11 @@
 ---
 layout: layouts/base.njk
 ---
-<h1>{{ name }}</h1>
-<p>Boekenplank</p>
-<br>
-<div class="on-page-list">
-    <h3>Boeken in deze boekenplank</h3>
-    {%- set booklist = collections.bookshelfReading -%}{# Bope, doesn't work either #}
-    {%- include "onPageListBook.njk" -%}
-</div>
+{%- set pageName -%}{{ name }}{%- endset -%}
+{%- include "navTop.njk" -%}
+
+{%- include "navBottom.njk" -%}
+
+{%- set listName = "Verderlezen voor jou" -%}
+{%- set listContent = collections.serieHarryPotter -%}
+{%- include "onPageGalleryBook.njk" -%}

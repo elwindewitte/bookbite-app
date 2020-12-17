@@ -1,0 +1,34 @@
+<div class="search-results" id="searchResults">
+
+    {# BOEKEN #}
+    {%- for book in listContentBook -%}
+    <a class="book" href="{{ book.url | url }}">
+        <img src="{{ '/' | url }}{{ book.data.coverImage }}" alt="{{ '/' | url }}{{ book.data.coverImage }}">
+        <div class="data">
+            <h3>{{ book.data.name }}</h3>
+            <p>Van {{ book.data.author }}</p>
+        </div>
+    </a>
+    {%- endfor -%}
+
+    {# BOEKENLIJSTEN #}
+    {%- for bookshelf in listContentBookshelf -%}
+    <a class="bookshelf" href="{{ bookshelf.url | url }}">
+        <img src="{{ '/' | url }}assets/images/{{ bookshelf.data.coverImage }}" alt="{{ '/' | url }}assets/images/{{ bookshelf.data.coverImage }}">
+        <div class="data">
+            <h3>{{ bookshelf.data.name }}</h3>
+        </div>
+    </a>
+    {%- endfor -%}
+
+    {# AUTEURS #}
+    {%- for author in listContentAuthor -%}
+    <a class="author" href="{{ author.url | url }}">
+        <img src="{{ '/' | url }}assets/images/{{ author.data.authorTag }}.png" alt="{{ '/' | url }}assets/images/{{ author.data.authorTag }}.png">
+        <div class="data">
+            <h3>{{ author.data.name }}</h3>
+        </div>
+    </a>
+    {%- endfor -%}
+
+</div>
