@@ -13,6 +13,10 @@ permalink: /
     {%- set listContent = collections.bookshelfPopular -%}
     {%- include "onPageListBook.njk" -%}
 
+    {%- set listName = "Verderlezen voor jou" -%}
+    {%- set listContent = collections.bookshelfReading -%}
+    {%- include "onPageListBook.njk" -%}
+
     {%- set listName = "Alle boeken" -%}
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}

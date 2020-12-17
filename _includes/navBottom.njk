@@ -1,4 +1,64 @@
-<div class="bottom-nav">
+{%- if active == "Zoeken" -%}
+    {# ZOEKEN #}
+    <div class="bottom-nav">
+    <a class="passive" href="{{ '/' | url }}">
+        <img src="{{ '/' | url}}assets/icons/home.svg" alt=""></img>
+        <p class="tiny">Home</p>
+    </a>
+    <a class="active" href="{{ '/' | url }}zoeken">
+        <img src="{{ '/' | url}}assets/icons/search.svg" alt=""></img>
+        <p class="tiny">Zoeken</p>
+    </a>
+    <a class="passive" href="{{ '/' | url }}account">
+        <img src="{{ '/' | url}}assets/icons/user.svg" alt=""></img>
+        <p class="tiny">Account</p>
+    </a>
+    <a class="passive" href="{{ '/' | url }}instellingen">
+        <img src="{{ '/' | url}}assets/icons/settings.svg" alt=""></img>
+        <p class="tiny">Instellingen</p>
+    </a>
+</div>
+{%- elif active == "Account" -%}
+    {# ACCOUNT #}
+    <div class="bottom-nav">
+    <a class="passive" href="{{ '/' | url }}">
+        <img src="{{ '/' | url}}assets/icons/home.svg" alt=""></img>
+        <p class="tiny">Home</p>
+    </a>
+    <a class="passive" href="{{ '/' | url }}zoeken">
+        <img src="{{ '/' | url}}assets/icons/search.svg" alt=""></img>
+        <p class="tiny">Zoeken</p>
+    </a>
+    <a class="active" href="{{ '/' | url }}account">
+        <img src="{{ '/' | url}}assets/icons/user.svg" alt=""></img>
+        <p class="tiny">Account</p>
+    </a>
+    <a class="passive" href="{{ '/' | url }}instellingen">
+        <img src="{{ '/' | url}}assets/icons/settings.svg" alt=""></img>
+        <p class="tiny">Instellingen</p>
+    </a>
+{%- elif active == "Instellingen" -%}
+    {# INSTELLINGEN #}
+    <div class="bottom-nav">
+    <a class="passive" href="{{ '/' | url }}">
+        <img src="{{ '/' | url}}assets/icons/home.svg" alt=""></img>
+        <p class="tiny">Home</p>
+    </a>
+    <a class="passive" href="{{ '/' | url }}zoeken">
+        <img src="{{ '/' | url}}assets/icons/search.svg" alt=""></img>
+        <p class="tiny">Zoeken</p>
+    </a>
+    <a class="passive" href="{{ '/' | url }}account">
+        <img src="{{ '/' | url}}assets/icons/user.svg" alt=""></img>
+        <p class="tiny">Account</p>
+    </a>
+    <a class="active" href="{{ '/' | url }}instellingen">
+        <img src="{{ '/' | url}}assets/icons/settings.svg" alt=""></img>
+        <p class="tiny">Instellingen</p>
+    </a>
+{%- else -%}
+    {# DEFAULT STATE #}
+    <div class="bottom-nav">
     <a class="active" href="{{ '/' | url }}">
         <img src="{{ '/' | url}}assets/icons/home.svg" alt=""></img>
         <p class="tiny">Home</p>
@@ -16,3 +76,4 @@
         <p class="tiny">Instellingen</p>
     </a>
 </div>
+{%- endif -%}
