@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/responsive.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/js/search.js"></script>
         
         <!--GOOGLE/META-->
         
@@ -19,7 +20,7 @@
     <body>
         <div class="header-search">
     <h2>Zoeken</h2>
-    <input class="" id="searchInput" type="text" placeholder="Typ om te zoeken...">
+    <input class="" id="searchInput" type="text" placeholder="Typ om boekenplanken te zoeken...">
     <div class="on-page-nav">
         <div class="content">
             <a class="passive" href="/zoeken/alles">Alles</a>
@@ -28,7 +29,7 @@
             <a class="passive" href="/zoeken/auteur">Auteurs</a>
             <a class="passive" href="/zoeken/genre">Genres</a>
         </div>
-    </div></div><div class="search-results"><a class="bookshelf" href="/boekenplank/aan-het-lezen/">
+    </div></div><div class="search-results" id="searchResults"><a class="bookshelf" href="/boekenplank/aan-het-lezen/">
         <img src="/assets/images/bookshelfReading.png" alt="/assets/images/bookshelfReading.png">
         <div class="data">
             <h3>Aan het lezen</h3>
@@ -73,5 +74,4 @@
     </a>
 </div>
     </body>
-    <script src="/js/search.js"></script>
 </html>

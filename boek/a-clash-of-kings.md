@@ -2,6 +2,7 @@
 tags: ['book', 'genreFiction', 'genreFantasy', 'genreEnglish', 'authorGeorgeRRMartin', 'serieASongOfIceAndFire']
 layout: pageBook.njk
 name: A Clash of Kings
+searchName: aclashofkings
 genreTag: ['genreFiction', 'genreFantasy', 'genreEnglish']
 author: George R.R. Martin
 authorUrl: george-rr-martin

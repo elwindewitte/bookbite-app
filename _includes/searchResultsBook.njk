@@ -1,4 +1,4 @@
-<div class="search-results">
+<div class="search-results" id="searchResults">
     {%- for book in listContent -%}
     <a class="book" href="{{ book.url | url }}">
         <img src="{{ '/' | url }}{{ book.data.coverImage }}" alt="{{ '/' | url }}{{ book.data.coverImage }}">

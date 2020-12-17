@@ -305,7 +305,8 @@ section.with-bottom-nav {
 }
 
 .on-page-list .list {
-    margin: 0 16px;
+    padding: 0 16px;
+    box-sizing: border-box;
 }
 
 .on-page-list .content {
@@ -327,6 +328,23 @@ section.with-bottom-nav {
 }
 
 
+
+/* GALLERY================ */
+
+.on-page-gallery .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.on-page-gallery .content img {
+    max-height: 100%;
+}
+
+.on-page-gallery .content a {
+    max-height: 192px;
+}
 
 /* BOOK PAGE================ */
 
