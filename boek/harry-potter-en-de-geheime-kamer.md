@@ -7,7 +7,7 @@ authorUrl: jk-rowlinkg
 serie: Harry Potter
 serieUrl: harry-potter
 description: 
-coverImage: assets/images/covers/harryPotterAndTheChamberOfSecrets.jpg
+coverImage: assets/covers/harryPotterAndTheChamberOfSecrets.jpg
 ---
 
 Hello, here is the body of the first blog post.

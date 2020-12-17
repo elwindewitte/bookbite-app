@@ -4,18 +4,30 @@ layout: layouts/base.njk
 {%- set pageName = "[nameBook]" -%}
 {%- include "navTop.njk" -%}
 
-<h1>{{ name }}</h1>
-<a class="faded" href="{{ '/' | url }}serie/{{ serieUrl }}">{{ serie }}</a>
-<br>
-<p>Geschreven door <a href="{{ '/' | url }}auteur/{{ authorUrl }}">{{ author }}</a></p>
-<br>
-<img src="{{ '/' | url }}{{ coverImage | url }}" alt="{{ '/' | url }}{{ coverImage }}"></img>
-<br>
-<h3>Beschrijving</h3>
-<p>{{ description }}</p>
-<br>
-<div class="on-page-list">
-    <h3>Andere boeken van deze auteur</h3>
-    {%- set booklist = collections.jkRowling -%}{# Doesn't work of course... sad me :( #}
-    {%- include "onPageListBook.njk" -%}
+{%- include "navBottom.njk" -%}
+
+<div class="book-page-header">
+    <div class="column">
+        <img src="{{ '/' | url }}{{ coverImage | url }}" alt="{{ '/' | url }}{{ coverImage }}"></img>
+    </div>
+    <div class="column">
+        <h3>{{ name }}</h3>
+        <p>Van <a href="{{ '/' | url }}auteur/{{ authorUrl }}">{{ author }}</a></p>
+    </div>
 </div>
+
+<div class="book-page-section">
+    <h3>Beschrijving</h3>
+    <p>{{ description }}</p>   
+</div>
+
+<section class="with-bottom-nav">
+    {%- set listName = "Meer boeken van deze auteur" -%}
+    {%- set listContent = collections.authorGeorgeRRMartin -%}{# Should be the variable authorTag #}
+    {%- include "onPageListBook.njk" -%}
+
+    {%- set listName = "Vergelijkbare boeken" -%}
+    {%- set listContent = collections.genreFantasy -%}{# Should be the variable genreTag #}
+    {%- include "onPageListBook.njk" -%}
+</section>
+

@@ -88,6 +88,11 @@ p.small, a.small {
     line-height: 16px;
 }
 
+a {
+    color: var(--color-black);
+    text-decoration: underline;
+}
+
 
 /* NAVIGATION================ */
 
@@ -147,6 +152,7 @@ p.small, a.small {
     font-size: 8px;
     font-weight: 600;
     line-height: 12px;
+    text-decoration: none !important;
 }
 
 
@@ -205,4 +211,38 @@ section.with-bottom-nav {
 
 .on-page-list img {
     height: 192px;
+}
+
+
+
+/* BOOK PAGE================ */
+
+.book-page-header {
+    padding: 96px 16 32px 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.book-page-header .column {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin-right: 16px;
+}
+
+.book-page-header .column:last-child {
+    margin: 0;
+}
+
+.book-page-header img {
+    width: 100%;
+}
+
+.book-page-section {
+    padding: 16px;
+}
+
+.book-page-section h3 {
+    margin-bottom: 8px;
 }

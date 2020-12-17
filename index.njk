@@ -2,24 +2,7 @@
 layout: layouts/base.njk
 permalink: /
 ---
-<div class="bottom-nav">
-    <a class="active" href="{{ '/' | url }}">
-        <img src="{{ '/' | url}}assets/icons/home.svg" alt=""></img>
-        <p class="tiny">Home</p>
-    </a>
-    <a class="passive" href="{{ '/' | url }}zoeken">
-        <img src="{{ '/' | url}}assets/icons/search.svg" alt=""></img>
-        <p class="tiny">Zoeken</p>
-    </a>
-    <a class="passive" href="{{ '/' | url }}account">
-        <img src="{{ '/' | url}}assets/icons/user.svg" alt=""></img>
-        <p class="tiny">Account</p>
-    </a>
-    <a class="passive" href="{{ '/' | url }}instellingen">
-        <img src="{{ '/' | url}}assets/icons/settings.svg" alt=""></img>
-        <p class="tiny">Instellingen</p>
-    </a>
-</div>
+{%- include "navBottom.njk" -%}
 
 <header>
     <h1>Welkom terug Marloes!</h1>
