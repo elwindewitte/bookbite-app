@@ -1,6 +1,9 @@
 ---
 layout: layouts/base.njk
 ---
+{%- set pageName = "[nameBook]" -%}
+{%- include "navTop.njk" -%}
+
 <h1>{{ name }}</h1>
 <a class="faded" href="{{ '/' | url }}serie/{{ serieUrl }}">{{ serie }}</a>
 <br>
