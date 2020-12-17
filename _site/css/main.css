@@ -141,6 +141,15 @@ a {
     align-items: center;
     flex-grow: 1;
     color: var(--color-black) !important;
+    padding: 8px 0;
+}
+
+.bottom-nav a.active img {
+    transform: translateY(-8px);
+}
+
+.bottom-nav a.active p {
+    opacity: 1;
 }
 
 .bottom-nav img {
@@ -153,6 +162,9 @@ a {
     font-weight: 600;
     line-height: 12px;
     text-decoration: none !important;
+    position: absolute;
+    transform: translateY(12px);
+    opacity: 0;
 }
 
 
