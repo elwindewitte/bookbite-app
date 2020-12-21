@@ -25,6 +25,7 @@ This is platform ment for young people to encorage them to consume more literatu
 
 ### Before coding
 - Install [Node.js](https://nodejs.org/en/)
+- Install [Git](https://git-scm.com/)
 - Install [VSCode](https://code.visualstudio.com/download)
 - Install [Github Desktop](https://desktop.github.com/)
 - Set terminal in VSCode to _Git Bash_
