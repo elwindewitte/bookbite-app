@@ -42,6 +42,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     --color-secondary: #FF6DA1;
     --font-header: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
+    --canvas: calc(100vw - (100vw - 100%)); /* Removing the scrollbars from the width */
 }
 
 
@@ -107,7 +108,7 @@ a {
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-black);
     position: fixed;
-    width: 100vw;
+    width: var(--canvas);
     top: 0;
 }
 
@@ -131,7 +132,7 @@ a {
     border-top: 1px solid var(--color-black);
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: var(--canvas);
     padding: 8px 16px;
 }
 
@@ -169,6 +170,15 @@ a {
 
 
 
+/* SPACERS================ */
+
+.spacer-16 {
+    min-width: 16px;
+    min-height: 16px;
+}
+
+
+
 /* SEARCH PAGE================ */
 
 /* HEADER======== */
@@ -177,7 +187,7 @@ a {
     padding: 16px 0 0 0;
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-black);
-    width: 100vw;
+    width: var(--canvas);
     position: fixed;
     top: 0;
     display: flex;
@@ -202,7 +212,7 @@ a {
 }
 
 .header-search .on-page-nav {
-    max-width: 100vw;
+    max-width: var(--canvas);
     overflow-y: hidden;
     overflow-x: auto;
 }
@@ -242,7 +252,7 @@ a {
     padding: 190px 16px 88px 16px;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: var(--canvas);
 }
 
 .search-results a.book, .search-results a.bookshelf, .search-results a.author {
@@ -289,7 +299,6 @@ section.with-bottom-nav {
 /* LISTS================ */
 
 .on-page-list {
-    padding: 16px 0;
     display: flex;
     flex-direction: column;
 }
@@ -301,12 +310,7 @@ section.with-bottom-nav {
 .on-page-list .container {
     overflow-y: hidden;
     overflow-x: auto;
-    max-width: 100vw;
-}
-
-.on-page-list .list {
-    padding: 0 16px;
-    box-sizing: border-box;
+    max-width: var(--canvas);
 }
 
 .on-page-list .content {
