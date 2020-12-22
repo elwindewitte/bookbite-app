@@ -4,9 +4,9 @@ layout: pageBook.njk
 name: The Winds of Winter
 genreTag: genreFantasy
 authorTag: jrrTolien
-serieTag: serieLordOfTheRings
-bookshelfTag: 
-description: 
+serieTag: serieASongOfIceAndFire
+bookshelfTag: NONESET
+description: NONESET
 coverImage: assets/covers/theWindsOfWinter.jpg
 ---
 

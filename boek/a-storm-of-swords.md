@@ -5,8 +5,8 @@ name: A Storm of Swords
 genreTag: genreFantasy
 authorTag: georgeRRMartin
 serieTag: serieASongOfIceAndFire
-bookshelfTag: 
-description: 
+bookshelfTag: NONESET
+description: NONESET
 coverImage: assets//covers/aStormOfSwords.jpg
 ---
 

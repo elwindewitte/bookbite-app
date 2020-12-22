@@ -10,12 +10,12 @@ permalink: /
 
 <section class="with-bottom-nav">
     {%- set listName = "Populair deze week" -%}
-    {%- set listFilter = bookshelfPopular -%}
+    {%- set listFilter = "bookshelfPopular" -%}
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Verderlezen voor jou" -%}
-    {%- set listFilter = bookshelfReading -%}
+    {%- set listFilter = "bookshelfReading" -%}
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
@@ -30,17 +30,17 @@ permalink: /
     {%- include "onPageListBookshelf.njk" -%}
 
     {%- set listName = "Alle 'A Song of Ice and Fire' boeken" -%}
-    {%- set listFilter = serieASongOfIceAndFire -%}
+    {%- set listFilter = "serieASongOfIceAndFire" -%}
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Alle 'The Lord of the Rings' boeken" -%}
-    {%- set listFilter = serieTheLordOfTheRings -%}
+    {%- set listFilter = "serieTheLordOfTheRings" -%}
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Alle 'Harry Potter' boeken" -%}
-    {%- set listFilter = serieHarryPotter -%}
+    {%- set listFilter = "serieHarryPotter" -%}
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 </section>

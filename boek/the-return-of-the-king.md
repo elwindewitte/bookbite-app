@@ -4,9 +4,9 @@ layout: pageBook.njk
 name: The Return of the King
 genreTag: genreFantasy
 authorTag: jrrTolien
-serieTag: serieLordOfTheRings
-bookshelfTag: 
-description: 
+serieTag: serieTheLordOfTheRings
+bookshelfTag: NONESET
+description: NONESET
 coverImage: assets/covers/theReturnOfTheKing.jpg
 ---
 

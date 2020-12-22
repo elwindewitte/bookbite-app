@@ -4,9 +4,9 @@ layout: pageBook.njk
 name: De Hobbit
 genreTag: genreFantasy
 authorTag: jrrTolkien
-serieTag: 
-bookshelfTag: 
-description: 
+serieTag: NONESET
+bookshelfTag: NONESET
+description: NONESET
 coverImage: assets/covers/theHobbitOrThereAndBackAgain.jpg
 ---
 

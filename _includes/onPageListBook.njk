@@ -36,10 +36,7 @@
                         <a class="book" href="{{ book.url | url }}">
                             <img src="{{ '/' | url }}{{ book.data.coverImage | url }}" alt="{{ '/' | url }}{{ book.data.coverImage }}"></img>
                         </a>
-
-                    {# Just for dev purposes, to check if it's still working properly #}
-                    {%- else -%}
-                        This book doesn't belong here
+                        
                     {%- endif -%}
 
                 {%- endif -%}

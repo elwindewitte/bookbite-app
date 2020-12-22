@@ -4,9 +4,9 @@ layout: pageBook.njk
 name: Dune
 genreTag: genreSienceFiction
 authorTag: frankHerbert
-serieTag: 
-bookshelfTag: 
-description: 
+serieTag: NONESET
+bookshelfTag: NONESET
+description: NONESET
 coverImage: assets/covers/dune.jpg
 ---
 

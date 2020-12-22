@@ -6,7 +6,7 @@ genreTag: genreFantasy
 authorTag: georgeRRMartin
 serieTag: serieASongOfIceAndFire
 bookshelfTag: bookshelfPopular
-description: 
+description: NONESET
 coverImage: assets/covers/aGameOfThrones.jpg
 ---
 

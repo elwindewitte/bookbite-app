@@ -6,7 +6,7 @@ genreTag: genreFantasy
 authorTag: jkRowling
 serieTag: serieHarryPotter
 bookshelfTag: bookshelfReading
-description: 
+description: NONESET
 coverImage: assets/covers/harryPotterAndTheChamberOfSecrets.jpg
 ---
 

@@ -6,7 +6,7 @@ genreTag: genreFantasy
 authorTag: jkRowling
 serieTag: serieHarryPotter
 bookshelfTag: bookshelfWantToRead
-description: 
+description: NONESET
 coverImage: assets/covers/harryPotterAndThePrisonerOfAzkaban.jpg
 ---
 

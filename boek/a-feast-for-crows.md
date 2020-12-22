@@ -5,8 +5,8 @@ name: A Feast for Crows
 genreTag: genreFantasy
 authorTag: georgeRRMartin
 serieTag: serieASongOfIceAndFire
-bookshelfTag: 
-description: 
+bookshelfTag: NONESET
+description: NONESET
 coverImage: assets/covers/aFeastForCrows.jpg
 ---
 

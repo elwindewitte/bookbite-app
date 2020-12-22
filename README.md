@@ -40,3 +40,13 @@ This is platform ment for young people to encorage them to consume more literatu
 ### Know errors
 `Error: template names must be a string: undefined`
 Fix: just set the template in the include between quotes
+
+## Using the code base
+### Looking up books in a specific collection for an on-page-list
+To include an on-page-list for books, you can add this piece of code
+```nunjucks
+{%- set listName = "Alle 'Harry Potter' boeken" -%}{# This string of text is placed above an on-page-list#}
+{%- set listFilter = "serieHarryPotter" -%}{# This value checks every book if it corrosponds with either; authorTag, genreTag, serieTag, or bookshelfTag. Must always be a string when you're looking for a specific tag, but can be a variable when you're taking it from a book for example (looking for books with the same genreTag for example). #}
+{%- set listContent = collections.book -%}{# This lists all the items with a corresponding tag, in this case; book. #}
+{%- include "onPageListBook.njk" -%}{# Actually includes the template for the on-page-list specifically for books, but can be set to onPageListBookshelf and onPageListAuthors to change to bookshelves and authors accordingly. #}
+```
