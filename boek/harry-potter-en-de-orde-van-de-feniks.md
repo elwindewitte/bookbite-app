@@ -3,7 +3,7 @@ tags: book
 layout: pageBook.njk
 name: Harry Potter en de Orde van de Fenix
 genreTag: genreFantasy
-authorTag: jkRowling
+authorTag: authorJKRowling
 serieTag: serieHarryPotter
 bookshelfTag: bookshelfWantToRead
 description: NONESET

@@ -3,7 +3,7 @@ tags: book
 layout: pageBook.njk
 name: The Two Towers
 genreTag: genreFantasy
-authorTag: jrrTolien
+authorTag: authorJRRTolkien
 serieTag: serieTheLordOfTheRings
 bookshelfTag: NONESET
 description: NONESET

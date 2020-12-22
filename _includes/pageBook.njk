@@ -6,13 +6,26 @@ layout: layouts/base.njk
 
 {%- include "navBottom.njk" -%}
 
+{# Getting the author's name #}
+{%- set authorName -%}
+    {%- set listFilter = authorTag -%}
+    {%- set listContent = collections.author -%}
+    {%- include "dataAuthorName.njk" -%}
+{%- endset -%}
+
+{%- set authorUrl -%}
+    {%- set listFilter = authorTag -%}
+    {%- set listContent = collections.author -%}
+    {%- include "dataAuthorUrl.njk" -%}
+{%- endset -%}
+
 <div class="book-page-header">
     <div class="column">
         <img src="{{ '/' | url }}{{ coverImage | url }}" alt="{{ '/' | url }}{{ coverImage }}"></img>
     </div>
     <div class="column">
         <h3>{{ name }}</h3>
-        <p>Van <a href="{{ '/' | url }}auteur/{{ authorUrl }}">{{ author }}</a></p>
+        <p>Van <a href="{{ authorUrl }}">{{ authorName }}</a></p>
     </div>
 </div>
 

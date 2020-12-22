@@ -3,7 +3,7 @@ tags: book
 layout: pageBook.njk
 name: A Storm of Swords
 genreTag: genreFantasy
-authorTag: georgeRRMartin
+authorTag: authorGeorgeRRMartin
 serieTag: serieASongOfIceAndFire
 bookshelfTag: NONESET
 description: NONESET

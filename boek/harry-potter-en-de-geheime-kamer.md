@@ -3,7 +3,7 @@ tags: book
 layout: pageBook.njk
 name: Harry Potter en de Geheime Kamer
 genreTag: genreFantasy
-authorTag: jkRowling
+authorTag: authorJKRowling
 serieTag: serieHarryPotter
 bookshelfTag: bookshelfReading
 description: NONESET

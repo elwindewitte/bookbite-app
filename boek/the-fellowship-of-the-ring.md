@@ -3,7 +3,7 @@ tags: book
 layout: pageBook.njk
 name: The Fellowship Of The Ring
 genreTag: genreFantasy
-authorTag: jrrTolien
+authorTag: authorJRRTolkien
 serieTag: serieTheLordOfTheRings
 bookshelfTag: bookshelfPopular
 description: NONESET

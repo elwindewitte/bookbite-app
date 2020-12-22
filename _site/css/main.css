@@ -304,6 +304,7 @@ section.with-bottom-nav {
 .on-page-list {
     display: flex;
     flex-direction: column;
+    margin: 16px 0;
 }
 
 .on-page-list h3 {

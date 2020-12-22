@@ -3,7 +3,7 @@ tags: book
 layout: pageBook.njk
 name: A Game of Thrones
 genreTag: genreFantasy
-authorTag: georgeRRMartin
+authorTag: authorGeorgeRRMartin
 serieTag: serieASongOfIceAndFire
 bookshelfTag: bookshelfPopular
 description: NONESET

@@ -1,0 +1,5 @@
+{%- for author in listContent -%}
+    {%- if listFilter == author.data.authorTag -%}
+        {{ author.url | url }}
+    {%- endif -%}
+{%- endfor -%}

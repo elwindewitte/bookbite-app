@@ -3,7 +3,7 @@ tags: book
 layout: pageBook.njk
 name: De Hobbit
 genreTag: genreFantasy
-authorTag: jrrTolkien
+authorTag: authorJRRTolkien
 serieTag: NONESET
 bookshelfTag: NONESET
 description: NONESET
