@@ -3,7 +3,7 @@ tags: book
 layout: pageBook.njk
 name: The Winds of Winter
 genreTag: genreFantasy
-authorTag: authorJRRTolkien
+authorTag: authorGeorgeRRMarting
 serieTag: serieASongOfIceAndFire
 bookshelfTag: NONESET
 description: NONESET

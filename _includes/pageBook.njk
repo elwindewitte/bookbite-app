@@ -8,16 +8,19 @@ layout: layouts/base.njk
 
 {# Getting the author's name #}
 {%- set authorName -%}
-    {%- set listFilter = authorTag -%}
+    {%- set listFilterShow = authorTag -%}
     {%- set listContent = collections.author -%}
     {%- include "dataAuthorName.njk" -%}
 {%- endset -%}
 
+{# Getting the author's page url #}
 {%- set authorUrl -%}
-    {%- set listFilter = authorTag -%}
+    {%- set listFilterShow = authorTag -%}
     {%- set listContent = collections.author -%}
     {%- include "dataAuthorUrl.njk" -%}
 {%- endset -%}
+
+
 
 <div class="book-page-header">
     <div class="column">
@@ -42,14 +45,14 @@ layout: layouts/base.njk
 
 <section class="with-bottom-nav">
     {%- set listName = "Meer boeken van deze auteur" -%}
-    {%- set listFilter = authorTag -%}
-    {%- set listSpecific = name -%}
+    {%- set listFilterShow = authorTag -%}
+    {%- set listFilterHide = name -%}
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Vergelijkbare boeken" -%}
-    {%- set listFilter = genreTag -%}
-    {%- set listSpecific = name -%}
+    {%- set listFilterShow = genreTag -%}
+    {%- set listFilterHide = serieTag -%}
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 </section>
