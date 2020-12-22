@@ -20,6 +20,13 @@ layout: layouts/base.njk
     {%- include "dataAuthorUrl.njk" -%}
 {%- endset -%}
 
+{# {%- set bookRating -%}
+    {%- set bookData -%} 
+        {{ collection.book | getCollectionItem(page) }}
+    {%- endset -%}
+    {%- include "onPageBookRating.njk" -%}
+{%- endset -%} #}
+
 
 
 <div class="book-page-header">
@@ -29,6 +36,8 @@ layout: layouts/base.njk
     <div class="column">
         <h3>{{ name }}</h3>
         <p>Van <a href="{{ authorUrl }}">{{ authorName }}</a></p>
+        <br>
+        {{ bookRating }}
     </div>
 </div>
 

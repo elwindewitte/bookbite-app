@@ -2,6 +2,7 @@
 tags: book
 layout: pageBook.njk
 name: A Clash of Kings
+rating: 4.3
 genreTag: genreFantasy
 authorTag: authorGeorgeRRMartin
 serieTag: serieASongOfIceAndFire
