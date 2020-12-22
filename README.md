@@ -43,10 +43,16 @@ Fix: just set the template in the include between quotes
 
 ## Using the code base
 ### Looking up books in a specific collection for an on-page-list
-To include an on-page-list for books, you can add this piece of code
+To include an on-page-list for books, you can add this piece of code:
 ```nunjucks
-{%- set listName = "Alle 'Harry Potter' boeken" -%}{# This string of text is placed above an on-page-list#}
-{%- set listFilter = "serieHarryPotter" -%}{# This value checks every book if it corrosponds with either; authorTag, genreTag, serieTag, or bookshelfTag. Must always be a string when you're looking for a specific tag, but can be a variable when you're taking it from a book for example (looking for books with the same genreTag for example). #}
-{%- set listContent = collections.book -%}{# This lists all the items with a corresponding tag, in this case; book. #}
-{%- include "onPageListBook.njk" -%}{# Actually includes the template for the on-page-list specifically for books, but can be set to onPageListBookshelf and onPageListAuthors to change to bookshelves and authors accordingly. #}
+{%- set listName = "Alle 'Harry Potter' boeken" -%}
+{%- set listFilter = "serieHarryPotter" -%}
+{%- set listContent = collections.book -%}
+{%- include "onPageListBook.njk" -%}
 ```
+Variables you can change:
+- `listName` gives the `on-page-list` a proper header, can change it to whatever string you want
+- `listFilter` allows you to specify a certain tag to filter the items on. Must be a string if you want to look up a certain tag, but can be a variable when you want to use meta data. For example; if you're on the book detail page, you might want to look up books with the same `genreTag`.
+- `listContent` allows you to specify the collection you want to show.
+
+`{%- include "onPageListBook.njk" -%}` actually includes the template for the on-page-list specifically for books, but can be set to `onPageListBookshelf` and `onPageListAuthors` to change to bookshelves and authors accordingly. Collection must be set in the same way. #}
