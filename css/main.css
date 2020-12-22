@@ -120,8 +120,12 @@ a {
     margin-right: 16px;
 }
 
-.top-nav h3 {
+.top-nav h2 {
     flex-grow: 1;
+    /* To add the three dots at the end of the word break */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 
