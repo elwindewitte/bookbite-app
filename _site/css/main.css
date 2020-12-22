@@ -27,7 +27,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 
-/* COLOR================ */
+/* VARIABLES================ */
 
 :root {
     --color-black: #000000;
@@ -42,6 +42,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     --color-secondary: #FF6DA1;
     --font-header: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
+    --canvas: calc(100vw - (100vw - 100%)); /* Removing the scrollbars from the width */
+    --easing: cubic-bezier(0.4, 0, 0.4, 1);
+    --shadow-hover: 2px 4px 16px rgba(0, 0, 0, 0.16);
+    --shadow-focus: 1px 2px 8px rgba(0, 0, 0, 0, 0.24)
 }
 
 
@@ -107,7 +111,7 @@ a {
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-black);
     position: fixed;
-    width: 100vw;
+    width: var(--canvas);
     top: 0;
 }
 
@@ -116,8 +120,12 @@ a {
     margin-right: 16px;
 }
 
-.top-nav h3 {
+.top-nav h2 {
     flex-grow: 1;
+    /* To add the three dots at the end of the word break */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 
@@ -131,7 +139,7 @@ a {
     border-top: 1px solid var(--color-black);
     position: fixed;
     bottom: 0;
-    width: 100vw;
+    width: var(--canvas);
     padding: 8px 16px;
 }
 
@@ -169,6 +177,20 @@ a {
 
 
 
+/* SPACERS================ */
+
+.spacer-16 {
+    min-width: 16px;
+    min-height: 16px;
+}
+
+.spacer-8 {
+    min-width: 8px;
+    min-width: 8px;
+}
+
+
+
 /* SEARCH PAGE================ */
 
 /* HEADER======== */
@@ -177,7 +199,7 @@ a {
     padding: 16px 0 0 0;
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-black);
-    width: 100vw;
+    width: var(--canvas);
     position: fixed;
     top: 0;
     display: flex;
@@ -202,7 +224,7 @@ a {
 }
 
 .header-search .on-page-nav {
-    max-width: 100vw;
+    max-width: var(--canvas);
     overflow-y: hidden;
     overflow-x: auto;
 }
@@ -242,7 +264,7 @@ a {
     padding: 190px 16px 88px 16px;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: var(--canvas);
 }
 
 .search-results a.book, .search-results a.bookshelf, .search-results a.author {
@@ -289,9 +311,9 @@ section.with-bottom-nav {
 /* LISTS================ */
 
 .on-page-list {
-    padding: 16px 0;
     display: flex;
     flex-direction: column;
+    margin: 16px 0;
 }
 
 .on-page-list h3 {
@@ -301,12 +323,7 @@ section.with-bottom-nav {
 .on-page-list .container {
     overflow-y: hidden;
     overflow-x: auto;
-    max-width: 100vw;
-}
-
-.on-page-list .list {
-    padding: 0 16px;
-    box-sizing: border-box;
+    max-width: var(--canvas);
 }
 
 .on-page-list .content {
@@ -376,4 +393,55 @@ section.with-bottom-nav {
 
 .book-page-section h3 {
     margin-bottom: 8px;
+}
+
+
+
+/* BUTTONS================ */
+
+.button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;    
+    text-decoration: none;
+    transform: translateY(0);
+    transition: all var(--easing) 0.16s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-focus);
+}
+
+.button p {
+    flex-grow: 1;
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+.button.align-left p {
+    text-align: left;
+}
+
+.button.align-right p {
+    text-align: right;
+}
+
+.button.primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.button.secondary {
+    background-color: var(--color-white);
+    color: var(--color-black);
 }

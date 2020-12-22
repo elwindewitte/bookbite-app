@@ -1,0 +1,5 @@
+{%- for author in listContent -%}
+    {%- if listFilterShow == author.data.authorTag -%}
+        {{ author.data.name }}
+    {%- endif -%}
+{%- endfor -%}

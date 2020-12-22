@@ -1,12 +1,12 @@
 ---
-tags: ['book', 'bookshelfPopular', 'genreFiction', 'genreFantasy', 'genreEnglish', 'authorGeorgeRRMartin', 'serieASongOfIceAndFire']
+tags: book
 layout: pageBook.njk
 name: A Game of Thrones
-author: George R.R. Martin
-authorUrl: george-rr-martin
-serie: A Song of Ice and Fire
-serieUrl: a-song-of-ice-and-fire
-description: 
+genreTag: genreFantasy
+authorTag: authorGeorgeRRMartin
+serieTag: serieASongOfIceAndFire
+bookshelfTag: bookshelfPopular
+description: NONESET
 coverImage: assets/covers/aGameOfThrones.jpg
 ---
 

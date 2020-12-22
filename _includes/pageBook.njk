@@ -6,14 +6,45 @@ layout: layouts/base.njk
 
 {%- include "navBottom.njk" -%}
 
+{# Getting the author's name #}
+{%- set authorName -%}
+    {%- set listFilterShow = authorTag -%}
+    {%- set listContent = collections.author -%}
+    {%- include "dataAuthorName.njk" -%}
+{%- endset -%}
+
+{# Getting the author's page url #}
+{%- set authorUrl -%}
+    {%- set listFilterShow = authorTag -%}
+    {%- set listContent = collections.author -%}
+    {%- include "dataAuthorUrl.njk" -%}
+{%- endset -%}
+
+{# {%- set bookRating -%}
+    {%- set bookData -%} 
+        {{ collection.book | getCollectionItem(page) }}
+    {%- endset -%}
+    {%- include "onPageBookRating.njk" -%}
+{%- endset -%} #}
+
+
+
 <div class="book-page-header">
     <div class="column">
         <img src="{{ '/' | url }}{{ coverImage | url }}" alt="{{ '/' | url }}{{ coverImage }}"></img>
     </div>
     <div class="column">
         <h3>{{ name }}</h3>
-        <p>Van <a href="{{ '/' | url }}auteur/{{ authorUrl }}">{{ author }}</a></p>
+        <p>Van <a href="{{ authorUrl }}">{{ authorName }}</a></p>
+        <br>
+        {{ bookRating }}
     </div>
+</div>
+
+<div class="book-page-section">
+    <a class="button primary">
+        <p>Lees boek</p>
+    </a>
 </div>
 
 <div class="book-page-section">
@@ -23,11 +54,15 @@ layout: layouts/base.njk
 
 <section class="with-bottom-nav">
     {%- set listName = "Meer boeken van deze auteur" -%}
-    {%- set listContent = collections.authorGeorgeRRMartin -%}{# Should be the variable authorTag #}
+    {%- set listFilterShow = authorTag -%}
+    {%- set listFilterHide = name -%}
+    {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Vergelijkbare boeken" -%}
-    {%- set listContent = collections.genreFantasy -%}{# Should be the variable genreTag #}
+    {%- set listFilterShow = genreTag -%}
+    {%- set listFilterHide = serieTag -%}
+    {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 </section>
 

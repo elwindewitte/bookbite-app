@@ -26,6 +26,7 @@ This is platform ment for young people to encorage them to consume more literatu
 
 ### Before coding
 - Install [Node.js](https://nodejs.org/en/)
+- Install [Git](https://git-scm.com/)
 - Install [VSCode](https://code.visualstudio.com/download)
 - Install [Github Desktop](https://desktop.github.com/)
 - Set terminal in VSCode to _Git Bash_
@@ -40,3 +41,21 @@ This is platform ment for young people to encorage them to consume more literatu
 ### Know errors
 `Error: template names must be a string: undefined`
 Fix: just set the template in the include between quotes
+
+## Using the code base
+### Looking up books in a specific collection for an on-page-list
+To include an on-page-list for books, you can add this piece of code:
+```nunjucks
+{%- set listName = "Vergelijkbare boeken" -%}
+{%- set listFilterShow = genreTag -%}
+{%- set listFilterHide = serieTag -%}
+{%- set listContent = collections.book -%}
+{%- include "onPageListBook.njk" -%}
+```
+Variables you can change:
+- `listName`: Specify how you want to call the list, will show up on screen.
+- `listFilterShow`: Specify what tag you want to show in your list. Must be a string or a variable.
+- `listFilterHide`: Specify what tag you want to hide in your list. Must be a string or a variable.
+- `listContent`: Specify what collection you want to show. Options are `book`, `author`, or `bookshelf`.
+
+`{%- include "onPageListBook.njk" -%}` actually includes the template for the on-page-list specifically for books, but can be set to `onPageListBookshelf` and `onPageListAuthors` to change to bookshelves and authors accordingly. Collection must be set in the same way. #}

@@ -1,12 +1,12 @@
 ---
-tags: ['book', 'genreFiction', 'bookFantasy', 'authorJRRTolkien']
+tags: book
 layout: pageBook.njk
 name: De Hobbit
-author: J.R.R. Tolkien
-authorUrl: jrr-tolkien
-serie:
-serieUrl:
-description: 
+genreTag: genreFantasy
+authorTag: authorJRRTolkien
+serieTag: NONESET
+bookshelfTag: NONESET
+description: NONESET
 coverImage: assets/covers/theHobbitOrThereAndBackAgain.jpg
 ---
 

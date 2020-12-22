@@ -1,12 +1,12 @@
 ---
-tags: ['book', 'genreFiction', 'genreFantasy', 'genreEnglish', 'authorGeorgeRRMartin', 'serieASongOfIceAndFire']
+tags: book
 layout: pageBook.njk
 name: A Feast for Crows
-author: George R.R. Martin
-authorUrl: george-rr-martin
-serie: A Song of Ice and Fire
-serieUrl: a-song-of-ice-and-fire
-description: 
+genreTag: genreFantasy
+authorTag: authorGeorgeRRMartin
+serieTag: serieASongOfIceAndFire
+bookshelfTag: NONESET
+description: NONESET
 coverImage: assets/covers/aFeastForCrows.jpg
 ---
 

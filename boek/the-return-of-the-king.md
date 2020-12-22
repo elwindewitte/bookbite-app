@@ -1,12 +1,12 @@
 ---
-tags: ['book', 'genreFiction', 'genreFantasy', 'genreEnglish', 'authorJRRTolkien', 'serieTheLordOfTheRings']
+tags: book
 layout: pageBook.njk
 name: The Return of the King
-author: J.R.R. Tolkien
-authorUrl: jrr-tolkien
-serie: The Lord of the Rings
-serieUrl: the-lord-of-the-rings
-description: 
+genreTag: genreFantasy
+authorTag: authorJRRTolkien
+serieTag: serieTheLordOfTheRings
+bookshelfTag: NONESET
+description: NONESET
 coverImage: assets/covers/theReturnOfTheKing.jpg
 ---
 

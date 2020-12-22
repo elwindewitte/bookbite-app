@@ -1,15 +1,15 @@
 <div class="on-page-list bookshelves">
     <h3>{{ listName }}</h3>
     <div class="container">
-        <div class="list">
-            <div class="content">
-                {%- for bookshelf in listContent -%}
-                <a class="bookshelf" href="{{ bookshelf.url | url }}">
-                    <img src="{{ '/' | url }}assets/images/{{ bookshelf.data.coverImage | url }}" alt="{{ '/' | url }}asets/images{{ bookshelf.data.coverImage }}"></img>
-                    <p>{{ bookshelf.data.name }}</p>
-                </a>
-                {%- endfor -%}
-            </div>
+        <div class="content">
+            <div class="spacer-16"></div>
+            {%- for bookshelf in listContent -%}
+            <a class="bookshelf" href="{{ bookshelf.url | url }}">
+                <img src="{{ '/' | url }}assets/images/{{ bookshelf.data.coverImage | url }}" alt="{{ '/' | url }}asets/images{{ bookshelf.data.coverImage }}"></img>
+                <p>{{ bookshelf.data.name }}</p>
+            </a>
+            {%- endfor -%}
+            <div class="spacer-16"></div>
         </div>
     </div>
 </div>
