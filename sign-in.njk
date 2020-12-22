@@ -2,7 +2,14 @@
 layout: layouts/base.njk
 permalink: /sign-in/
 ---
-Hello, this is the sign in
+<label for="userUserName">Gebruikersnaam</label>
+<input type="text" id="userUserName" placeholder="johndoe">
+
+<label for="userPassword">Wachtwoord</label>
+<input type="password" id="userPassword" placeholder="••••••••">
+
+<a class="button primary" id="buttonSignIn">Log in</a>
+
 <script>
 document.addEventListener("DOMContentLoaded", function(){
     localStorage.setItem('onboardingDone', 'true');
