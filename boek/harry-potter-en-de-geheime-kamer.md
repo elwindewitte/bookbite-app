@@ -1,11 +1,11 @@
 ---
-tags: ['book', 'bookshelfReading', 'genreFiction', 'authorJKRowling', 'serieHarryPotter']
+tags: book
 layout: pageBook.njk
 name: Harry Potter en de Geheime Kamer
-author: J.K. Rowling
-authorUrl: jk-rowlinkg
-serie: Harry Potter
-serieUrl: harry-potter
+genreTag: genreFantasy
+authorTag: jkRowling
+serieTag: serieHarryPotter
+bookshelfTag: bookshelfReading
 description: 
 coverImage: assets/covers/harryPotterAndTheChamberOfSecrets.jpg
 ---

@@ -1,11 +1,11 @@
 ---
-tags: ['book', 'booskhelfWantToRead', 'genreFiction', 'authorJKRowling', 'serieHarryPotter']
+tags: book
 layout: pageBook.njk
 name: Harry Potter en de Half-Bloed Prins
-author: J.K. Rowling
-authorUrl: jk-rowling
-serie: Harry Potter
-serieUrl: harry-potter
+genreTag: genreFantasy
+authorTag: jkRowling
+serieTag: serieHarryPotter
+bookshelfTag: bookshelfWantToRead
 description: 
 coverImage: assets/covers/harryPotterAndTheHalfBloodPrince.jpg
 ---

@@ -1,11 +1,11 @@
 ---
-tags: ['book', 'genreFiction', 'genreFantasy', 'genreEnglish', 'authorJRRTolkien', 'serieTheLordOfTheRings']
+tags: book
 layout: pageBook.njk
 name: The Two Towers
-author: J.R.R. Tolkien
-authorUrl: jrr-tolkien
-serie: The Lord of the Rings
-serieUrl: the-lord-of-the-rings
+genreTag: genreFantasy
+authorTag: jrrTolien
+serieTag: serieLordOfTheRings
+bookshelfTag: 
 description: 
 coverImage: assets/covers/theTwoTowers.jpg
 ---

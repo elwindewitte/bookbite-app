@@ -17,17 +17,27 @@ layout: layouts/base.njk
 </div>
 
 <div class="book-page-section">
+    <a class="button primary">
+        <p>Lees boek</p>
+    </a>
+</div>
+
+<div class="book-page-section">
     <h3>Beschrijving</h3>
     <p>{{ description }}</p>   
 </div>
 
 <section class="with-bottom-nav">
     {%- set listName = "Meer boeken van deze auteur" -%}
-    {%- set listContent = collections.authorGeorgeRRMartin -%}{# Should be the variable authorTag #}
+    {%- set listFilter = authorTag -%}
+    {%- set listSpecific = name -%}
+    {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Vergelijkbare boeken" -%}
-    {%- set listContent = collections.genreFantasy -%}{# Should be the variable genreTag #}
+    {%- set listFilter = genreTag -%}
+    {%- set listSpecific = name -%}
+    {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 </section>
 

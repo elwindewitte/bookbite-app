@@ -1,9 +1,11 @@
 ---
-tags: ['book', 'genreFantasy', 'genreFiction', 'authorFrankHerbert']
+tags: book
 layout: pageBook.njk
 name: Dune
-author: Frank Herbert
-authorUrl: frank-herbert
+genreTag: genreSienceFiction
+authorTag: frankHerbert
+serieTag: 
+bookshelfTag: 
 description: 
 coverImage: assets/covers/dune.jpg
 ---

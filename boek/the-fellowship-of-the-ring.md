@@ -1,11 +1,11 @@
 ---
-tags: ['book', 'bookshelfPopular', 'genreFiction', 'genreFantasy', 'genreEnglish', 'authorJRRTolkien', 'serieTheLordOfTheRings']
+tags: book
 layout: pageBook.njk
 name: The Fellowship Of The Ring
-author: J.R.R. Tolkien
-authorUrl: jrr-tolkien
-serie: The Lord of the Rings
-serieUrl: the-lord-of-the-rings
+genreTag: genreFantasy
+authorTag: jrrTolien
+serieTag: serieLordOfTheRings
+bookshelfTag: bookshelfPopular
 description: 
 coverImage: assets/covers/theFellowshipOfTheRing.jpg
 ---

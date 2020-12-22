@@ -1,11 +1,11 @@
 ---
-tags: ['book', 'genreFiction', 'genreFantasy', 'genreEnglish', 'authorGeorgeRRMartin', 'serieASongOfIceAndFire']
+tags: book
 layout: pageBook.njk
 name: The Winds of Winter
-author: George R.R. Martin
-authorUrl: george-rr-martin
-serie: A Song of Ice and Fire
-serieUrl: a-song-of-ice-and-fire
+genreTag: genreFantasy
+authorTag: jrrTolien
+serieTag: serieLordOfTheRings
+bookshelfTag: 
 description: 
 coverImage: assets/covers/theWindsOfWinter.jpg
 ---

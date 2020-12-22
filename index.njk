@@ -10,30 +10,37 @@ permalink: /
 
 <section class="with-bottom-nav">
     {%- set listName = "Populair deze week" -%}
-    {%- set listContent = collections.bookshelfPopular -%}
+    {%- set listFilter = bookshelfPopular -%}
+    {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Verderlezen voor jou" -%}
-    {%- set listContent = collections.bookshelfReading -%}
+    {%- set listFilter = bookshelfReading -%}
+    {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Alle boeken" -%}
+    {%- set listFilter = "NONESET" -%}
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Alle boekenplanken" -%}
+    {%- set listFilter = "NONESET" -%}
     {%- set listContent = collections.bookshelf -%}
     {%- include "onPageListBookshelf.njk" -%}
 
     {%- set listName = "Alle 'A Song of Ice and Fire' boeken" -%}
-    {%- set listContent = collections.serieASongOfIceAndFire -%}
+    {%- set listFilter = serieASongOfIceAndFire -%}
+    {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Alle 'The Lord of the Rings' boeken" -%}
-    {%- set listContent = collections.serieTheLordOfTheRings -%}
+    {%- set listFilter = serieTheLordOfTheRings -%}
+    {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
     {%- set listName = "Alle 'Harry Potter' boeken" -%}
-    {%- set listContent = collections.serieHarryPotter -%}
+    {%- set listFilter = serieHarryPotter -%}
+    {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 </section>
