@@ -20,20 +20,24 @@
         <div class="top-nav">
     <a href="javascript:history.back()"><img src="/assets/icons/arrowLeft.svg" alt=""></img></a>
     <h2>Instellingen</h2>
-</div><section class=" page with-top-nav with-bottom-nav">
+</div><section class="page with-top-nav with-bottom-nav">
     <h3>Account</h3>
-    <label for="userName">Naam</label>
-    <input type="text" id="userName">
-
+    <div class="spacer-8"></div>
+    <label for="userUsername">Naam</label>
+    <input type="text" id="userUserName">
+    <div class="spacer-8"></div>
     <label for="userUsername">Gebruikersnaam</label>
     <input type="text" id="userUsername">
-
+    <div class="spacer-8"></div>
     <label for="userPassword">Wachtwoord</label>
     <input type="password" id="userPassword">
+    <div class="spacer-16"></div>
     <a class="button positive primary" id="buttonSave"><p>Aanpassingen opslaan</p></a>
+    <div class="spacer-8"></div>
     <a class="button negative secondary" id="buttonSignout"><p>Uitloggen</p></a>
-
+    <div class="spacer-32"></div>
     <h3 class="danger">Danger zone!</h3>
+    <div class="spacer-8"></div>
     <a class="button negative primary" id="buttonDeleteData"><p>Data verwijderen</p></a>
 </section>
     <div class="bottom-nav">
@@ -61,11 +65,10 @@ window.onload = function () {
     var inputName = document.getElementById("userName");
     var inputUsername = document.getElementById("userUsername");
     var inputPassword = document.getElementById("userPassword");
+    var dataUserName = localStorage.getItem("name");
+    var dataUsername = localStorage.getItem("username");
+    var dataPassword = localStorage.getItem("password");
     var path = window.location.protocol + '//' + window.location.host + '/';
-
-    function () {
-        document.writeln();
-    }
 
     // Saves changes
     buttonSave.onclick = function () {

@@ -308,7 +308,7 @@ header.with-top-nav {
 }
 
 section {
-    padding: 16px;
+    /* padding: 16px; */
 }
 
 section.page {
@@ -317,6 +317,7 @@ section.page {
     width: var(--canvas);
     align-items: stretch;
     box-sizing: border-box;
+    padding: 16px;
 }
 
 section.with-top-nav {
@@ -325,6 +326,26 @@ section.with-top-nav {
 
 section.with-bottom-nav {
     padding-bottom: 56px;
+}
+
+/* ONBOARDING */
+
+section.page.onboarding {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    min-height: 100vh;
+    padding: 32px 16px;
+}
+
+section.page.onboarding .button.primary {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+section.page.onboarding .button.secondary {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
 }
 
 
@@ -463,9 +484,9 @@ section.with-bottom-nav {
 }
 
 .button.secondary {
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border: 1px solid var(--color-black);
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
 .button.positive.primary {
@@ -498,6 +519,10 @@ input {
     padding: 12px 16px;
     border: 1px solid var(--color-black);
     border-radius: 0;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 input:active {
@@ -507,5 +532,8 @@ input:active {
 label {
     font-family: var(--font-body);
     font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
     color: var(--color-medium-grey);
+    padding-bottom: 4px;
 }
