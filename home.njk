@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+permalink: /home/
+---
+{%- include "navBottom.njk" -%}
+
+<header>
+    <h1>Welkom terug <script>document.write(localStorage.getItem('name'))</script>!</h1>
+</header>
+
+<section class="with-bottom-nav">
+    {%- set listName = "Populair deze week" -%}
+    {%- set listFilterShow = "bookshelfPopular" -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+
+    {%- set listName = "Verderlezen voor jou" -%}
+    {%- set listFilterShow = "bookshelfReading" -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+
+    {%- set listName = "Alle boeken" -%}
+    {%- set listFilterShow = "NONESET" -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+
+    {%- set listName = "Alle boekenplanken" -%}
+    {%- set listFilterShow = "NONESET" -%}
+    {%- set listContent = collections.bookshelf -%}
+    {%- include "onPageListBookshelf.njk" -%}
+
+    {%- set listName = "Alle 'A Song of Ice and Fire' boeken" -%}
+    {%- set listFilterShow = "serieASongOfIceAndFire" -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+
+    {%- set listName = "Alle 'The Lord of the Rings' boeken" -%}
+    {%- set listFilterShow = "serieTheLordOfTheRings" -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+
+    {%- set listName = "Alle 'Harry Potter' boeken" -%}
+    {%- set listFilterShow = "serieHarryPotter" -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+</section>

@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        
+        <!--LINKS-->
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/responsive.css">
+        
+        
+        <!--GOOGLE/META-->
+        
+        <title>Bookbite</title>
+        <meta name="description" content="Bookbite is a student project of Silverpoint.">
+        <meta name="keywords" content="Books"/>
+        <meta name="author" content="Elwin de Witte"/>
+        <meta name="reply-to" content="elwindewitte@gmail.com"/>
+    </head>
+    <body>
+        <section class="page">
+    <h1>Even inloggen...</h1>
+    <div class="spacer-32"></div>
+    <label for="userUserName">Gebruikersnaam</label>
+    <input type="text" id="userUsername" placeholder="johndoe">
+    <div class="spacer-8"></div>
+    <label for="userPassword">Wachtwoord</label>
+    <input type="password" id="userPassword" placeholder="••••••••">
+    <div class="spacer-32"></div>
+    <a class="button primary" id="buttonSignIn"><p>Log in</p></a>
+    <div class="spacer-8"></div>
+    <a class="button secondary" href="/sign-up/"><p>Aanmelden</p></a>
+</section>
+
+<script>
+window.onload = function () {
+    // Defining variables
+    var buttonSignIn = document.getElementById("buttonSignIn");
+    var inputUsername = document.getElementById("userUsername");
+    var inputPassword = document.getElementById("userPassword");
+    var dataUsername = localStorage.getItem("username");
+    var dataPassword = localStorage.getItem("password");
+    var dataOnboardingDone = localStorage.getItem("onboardingDone");
+    var path = window.location.protocol + '//' + window.location.host + '/';
+
+    // Actual authentication, or simulation of at least
+    buttonSignIn.onclick = function () {
+        if ((inputUsername.value == dataUsername) && (inputPassword.value == dataPassword)) {
+            localStorage.setItem("signinDone", "true");
+            if (dataOnboardingDone == 'true') {
+                // Redirect to home page when the onboarding is completed
+                window.location.replace(path + 'home/');
+            } else {
+                // Redirect to onboarding when it hasn't been completed yet
+                window.location.replace(path + 'onboarding/');
+            };
+        };
+    };
+};
+</script>
+    </body>
+</html>

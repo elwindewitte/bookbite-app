@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+permalink: /sign-up/
+---
+<section class="page">
+    <h1>Even inloggen...</h1>
+    <div class="spacer-32"></div>
+    <label for="userName">Naam</label>
+    <input type="text" id="userName" placeholder="John Doe">
+    <div class="spacer-8"></div>
+    <label for="userUsername">Gebruikersnaam</label>
+    <input type="text" id="userUsername" placeholder="johndoe">
+    <div class="spacer-8"></div>
+    <label for="userPassword">Wachtwoord</label>
+    <input type="password" id="userPassword" placeholder="••••••••">
+    <div class="spacer-32"></div>
+    <a class="button primary" id="buttonSignUp"><p>Meld aan</p></a>
+    <div class="spacer-8"></div>
+    <a class="button secondary" href="{{ '/' | url }}sign-in/"><p>Inloggen</p></a>
+</section>
+
+<script>
+window.onload = function () {
+    // Defining variables
+    var buttonSignUp = document.getElementById("buttonSignUp");
+    var inputName = document.getElementById("userName");
+    var inputUsername = document.getElementById("userUsername");
+    var inputPassword = document.getElementById("userPassword");
+    var path = window.location.protocol + '//' + window.location.host + '/';
+
+    buttonSignUp.onclick = function () {
+        localStorage.setItem('name', inputName.value);
+        localStorage.setItem('username', inputUsername.value);
+        localStorage.setItem('password', inputPassword.value);
+        window.location.replace(path + 'onboarding/');
+    };
+};
+</script>
