@@ -5,12 +5,62 @@ permalink: /instellingen/
 {%- set pageName = "Instellingen" -%}
 {%- include "navTop.njk" -%}
 
-<section class="with-top-nav with-bottom-nav">
-    <a class="button danger secondary" id="buttonSignOut"><p>Uitloggen</p></a>
-
+<section class=" page with-top-nav with-bottom-nav">
+    <h3>Account</h3>
+    <div class="spacer-8"></div>
+    <label for="userName">Naam</label>
+    <input type="text" id="userName" value="elwindewitte">
+    <div class="spacer-8"></div>
+    <label for="userUsername">Gebruikersnaam</label>
+    <input type="text" id="userUsername">
+    <div class="spacer-8"></div>
+    <label for="userPassword">Wachtwoord</label>
+    <input type="password" id="userPassword">
+    <div class="spacer-16"></div>
+    <a class="button positive primary" id="buttonSave"><p>Aanpassingen opslaan</p></a>
+    <div class="spacer-8"></div>
+    <a class="button negative secondary" id="buttonSignout"><p>Uitloggen</p></a>
+    <div class="spacer-32"></div>
     <h3 class="danger">Danger zone!</h3>
-    <a class="button danger primary" id="buttonDeleteData"><p>Data verwijderen</p></a>
+    <div class="spacer-8"></div>
+    <a class="button negative primary" id="buttonDeleteData"><p>Data verwijderen</p></a>
 </section>
 
 {%- set active = "Instellingen" -%}
 {%- include "navBottom.njk" -%}
+
+<script>
+window.onload = function () {
+    // Defining variables
+    var buttonSave = document.getElementById("buttonSave");
+    var buttonSignout = document.getElementById("buttonSignout");
+    var buttonDeleteData = document.getElementById("buttonDeleteData");
+    var inputName = document.getElementById("userName");
+    var inputUsername = document.getElementById("userUsername");
+    var inputPassword = document.getElementById("userPassword");
+    var path = window.location.protocol + '//' + window.location.host + '/';
+
+    function () {
+        document.writeln();
+    }
+
+    // Saves changes
+    buttonSave.onclick = function () {
+        localStorage.setItem('name', inputName.value);
+        localStorage.setItem('username', inputUsername.value);
+        localStorage.setItem('password', inputPassword.value);
+    };
+
+    // Signs out and goes back to root
+    buttonSignout.onclick = function () {
+        localStorage.setItem('signinDone', 'false');
+        window.location.replace(path);
+    };
+
+    // Clears all local storage data and goes back to root
+    buttonDeleteData.onclick = function () {
+        localStorage.clear();
+        window.location.replace(path);
+    };
+};
+</script>

@@ -186,7 +186,12 @@ a {
 
 .spacer-8 {
     min-width: 8px;
-    min-width: 8px;
+    min-height: 8px;
+}
+
+.spacer-32 {
+    min-width: 32px;
+    min-height: 32px;
 }
 
 
@@ -300,6 +305,22 @@ header {
 
 header.with-top-nav {
     padding: 96px 16px 32px 16px;
+}
+
+section {
+    padding: 16px;
+}
+
+section.page {
+    display: flex;
+    flex-direction: column;
+    width: var(--canvas);
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+section.with-top-nav {
+    padding-top: 96px;
 }
 
 section.with-bottom-nav {
@@ -447,13 +468,44 @@ section.with-bottom-nav {
     border: 1px solid var(--color-black);
 }
 
-.button.danger.primary {
+.button.positive.primary {
+    background-color: var(--error-green);
+    color: var(--color-white);
+}
+
+.button.positive.secondary {
+    background-color: var(--color-white);
+    color: var(--error-green);
+    border: 1px solid var(--error-green);
+}
+
+.button.negative.primary {
     background-color: var(--error-red);
     color: var(--color-white);
 }
 
-.button.danger.secondary {
+.button.negative.secondary {
     background-color: var(--color-white);
     color: var(--error-red);
     border: 1px solid var(--error-red);
+}
+
+
+
+/* FORMS================ */
+
+input {
+    padding: 12px 16px;
+    border: 1px solid var(--color-black);
+    border-radius: 0;
+}
+
+input:active {
+    border-color: var(--color-primary);
+}
+
+label {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--color-medium-grey);
 }
