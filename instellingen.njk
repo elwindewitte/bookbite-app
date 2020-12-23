@@ -5,5 +5,12 @@ permalink: /instellingen/
 {%- set pageName = "Instellingen" -%}
 {%- include "navTop.njk" -%}
 
+<section class="with-top-nav with-bottom-nav">
+    <a class="button danger secondary" id="buttonSignOut"><p>Uitloggen</p></a>
+
+    <h3 class="danger">Danger zone!</h3>
+    <a class="button danger primary" id="buttonDeleteData"><p>Data verwijderen</p></a>
+</section>
+
 {%- set active = "Instellingen" -%}
 {%- include "navBottom.njk" -%}

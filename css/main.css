@@ -444,4 +444,16 @@ section.with-bottom-nav {
 .button.secondary {
     background-color: var(--color-white);
     color: var(--color-black);
+    border: 1px solid var(--color-black);
+}
+
+.button.danger.primary {
+    background-color: var(--error-red);
+    color: var(--color-white);
+}
+
+.button.danger.secondary {
+    background-color: var(--color-white);
+    color: var(--error-red);
+    border: 1px solid var(--error-red);
 }

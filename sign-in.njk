@@ -3,15 +3,38 @@ layout: layouts/base.njk
 permalink: /sign-in/
 ---
 <label for="userUserName">Gebruikersnaam</label>
-<input type="text" id="userUserName" placeholder="johndoe">
+<input type="text" id="userUsername" placeholder="johndoe">
 
 <label for="userPassword">Wachtwoord</label>
 <input type="password" id="userPassword" placeholder="••••••••">
 
-<a class="button primary" id="buttonSignIn">Log in</a>
+<a class="button primary" id="buttonSignIn"><p>Log in</p></a>
+<p>Nog geen account?</p>
+<a class="button secondary" href="{{ '/' | url }}sign-up/"><p>Aanmelden</p></a>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
-    localStorage.setItem('onboardingDone', 'true');
-});
+window.onload = function () {
+    // Defining variables
+    var buttonSignIn = document.getElementById("buttonSignIn");
+    var inputUsername = document.getElementById("userUsername");
+    var inputPassword = document.getElementById("userPassword");
+    var dataUsername = localStorage.getItem("username");
+    var dataPassword = localStorage.getItem("password");
+    var dataOnboardingDone = localStorage.getItem("onboardingDone");
+    var path = window.location.protocol + '//' + window.location.host + '/';
+
+    // Actual authentication, or simulation of at least
+    buttonSignIn.onclick = function () {
+        if ((inputUsername.value == dataUsername) && (inputPassword.value == dataPassword)) {
+            localStorage.setItem("signinDone", "true");
+            if (dataOnboardingDone == 'true') {
+                // Redirect to home page when the onboarding is completed
+                window.location.replace(path + 'home/');
+            } else {
+                // Redirect to onboarding when it hasn't been completed yet
+                window.location.replace(path + 'onboarding/');
+            };
+        };
+    };
+};
 </script>

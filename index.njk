@@ -1,13 +1,16 @@
+<script src="{{ '/' | url }}js/data.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function(){
-    var onboardingDone = localStorage.getItem('onboardingDone');
+window.onload = function () {
+    var dataOnboardingDone = localStorage.getItem('onboardingDone');
+    var dataSigninDone = localStorage.getItem('signinDone');
+    var path = window.location.protocol + '//' + window.location.host + '/';
 
-    if (onboardingDone == 'true') {
-        var path = window.location.protocol + '//' + window.location.host + '/';
+    if ((dataSigninDone == 'true') && (dataOnboardingDone == 'true')) {
         window.location.replace(path + 'home/');
+    } else if ((dataSigninDone == 'true') && !(dataOnboardingDone == 'true')) {
+        window.location.replace(path + 'onboarding/');
     } else {
-        var path = window.location.protocol + '//' + window.location.host + '/';
         window.location.replace(path + 'sign-in/');
     };
-});
+};
 </script>

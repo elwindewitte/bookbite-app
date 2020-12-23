@@ -2,4 +2,33 @@
 layout: layouts/base.njk
 permalink: /sign-up/
 ---
-Hello, this should be the sign up
+<label for="userName">Naam</label>
+<input type="text" id="userName" placeholder="John Doe">
+
+<label for="userUsername">Gebruikersnaam</label>
+<input type="text" id="userUsername" placeholder="johndoe">
+
+<label for="userPassword">Wachtwoord</label>
+<input type="password" id="userPassword" placeholder="••••••••">
+
+<a class="button primary" id="buttonSignUp"><p>Meld aan</p></a>
+<p>Al een account?</p>
+<a class="button secondary" href="{{ '/' | url }}sign-in/"><p>Inloggen</p></a>
+
+<script>
+window.onload = function () {
+    // Defining variables
+    var buttonSignUp = document.getElementById("buttonSignUp");
+    var inputName = document.getElementById("userName");
+    var inputUsername = document.getElementById("userUsername");
+    var inputPassword = document.getElementById("userPassword");
+    var path = window.location.protocol + '//' + window.location.host + '/';
+
+    buttonSignUp.onclick = function () {
+        localStorage.setItem('name', inputName.value);
+        localStorage.setItem('username', inputUsername.value);
+        localStorage.setItem('password', inputPassword.value);
+        window.location.replace(path + 'onboarding/');
+    };
+};
+</script>
