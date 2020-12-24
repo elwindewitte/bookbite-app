@@ -40,7 +40,25 @@
     </a>
 </div>
 
+<div class="book-reading-overlay passive normal" id="bookOverlay">
+    <div class="top-controls">
+        <a class="button secondary negative" onclick="closeBookOverlay()">
+            <p>Stop met lezen</p>
+        </a>
+    </div>
+    <div class="content">
+        <p>Hello, here is the body of the first blog post.</p>
 
+    </div>
+    <div class="bottom-controls">
+        <a class="button primary" onclick="bookTextSmaller()" id="buttonTextSmaller">
+            <p>Kleiner</p>
+        </a>
+        <a class="button primary" onclick="bookTextBigger()" id="buttonTextBigger">
+            <p>Groter</p>
+        </a>
+    </div>
+</div>
 
 <div class="book-page-header">
     <div class="column">
@@ -55,7 +73,7 @@
 </div>
 
 <div class="book-page-section">
-    <a class="button primary">
+    <a class="button primary" onclick="openBookOverlay()">
         <p>Lees boek</p>
     </a>
 </div>
@@ -81,6 +99,45 @@
     </div>
 </div></section>
 
+<script>
+function openBookOverlay() {
+    var bookOverlay = document.getElementById('bookOverlay');
+
+    bookOverlay.classList.remove('passive');
+    bookOverlay.classList.add('active');
+};
+
+function closeBookOverlay() {
+    var bookOverlay = document.getElementById('bookOverlay');
+
+    bookOverlay.classList.remove('active');
+    bookOverlay.classList.add('passive');
+};
+
+function bookTextSmaller() {
+    var bookOverlay = document.getElementById('bookOverlay');
+
+    if (bookOverlay.classList.contains('big')) {
+        bookOverlay.classList.remove('big');
+        bookOverlay.classList.add('normal');
+    } else if (bookOverlay.classList.contains('normal')) {
+        bookOverlay.classList.remove('normal');
+        bookOverlay.classList.add('small');
+    }
+};
+
+function bookTextBigger() {
+    var bookOverlay = document.getElementById('bookOverlay');
+
+    if (bookOverlay.classList.contains('small')) {
+        bookOverlay.classList.remove('small');
+        bookOverlay.classList.add('normal');
+    } else if (bookOverlay.classList.contains('normal')) {
+        bookOverlay.classList.remove('normal');
+        bookOverlay.classList.add('big');
+    }
+};
+</script>
 
     </body>
 </html>
