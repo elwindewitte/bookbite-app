@@ -2,11 +2,17 @@
 
     {# BOEKEN #}
     {%- for book in listContentBook -%}
+    {%- set authorName -%}
+        {%- set listFilterShow = book.data.authorTag -%}
+        {%- set listContent = collections.author -%}
+        {%- include "dataAuthorName.njk" -%}
+    {%- endset -%}
+
     <a class="book" href="{{ book.url | url }}">
         <img src="{{ '/' | url }}{{ book.data.coverImage }}" alt="{{ '/' | url }}{{ book.data.coverImage }}">
         <div class="data">
             <h3>{{ book.data.name }}</h3>
-            <p>Van {%- set listFilter = book.data.authorTag -%}{%- set listContent = collections.author -%}{%- include "dataAuthorName.njk" -%}</p>
+            <p>Van {{ authorName }}</p>
         </div>
     </a>
     {%- endfor -%}

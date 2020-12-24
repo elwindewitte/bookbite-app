@@ -42,7 +42,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     --color-secondary: #FF6DA1;
     --font-header: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
-    --canvas: calc(100vw - (100vw - 100%)); /* Removing the scrollbars from the width */
+    --canvas-width: calc(100vw - (100vw - 100%)); /* Removing the scrollbars from the width */
+    --canvas-height: calc(100vh - (100vh - 100%));
     --easing: cubic-bezier(0.4, 0, 0.4, 1);
     --shadow-hover: 2px 4px 16px rgba(0, 0, 0, 0.16);
     --shadow-focus: 1px 2px 8px rgba(0, 0, 0, 0, 0.24)
@@ -111,7 +112,7 @@ a {
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-black);
     position: fixed;
-    width: var(--canvas);
+    width: var(--canvas-width);
     top: 0;
 }
 
@@ -139,7 +140,7 @@ a {
     border-top: 1px solid var(--color-black);
     position: fixed;
     bottom: 0;
-    width: var(--canvas);
+    width: var(--canvas-width);
     padding: 8px 16px;
 }
 
@@ -204,7 +205,7 @@ a {
     padding: 16px 0 0 0;
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-black);
-    width: var(--canvas);
+    width: var(--canvas-width);
     position: fixed;
     top: 0;
     display: flex;
@@ -229,7 +230,7 @@ a {
 }
 
 .header-search .on-page-nav {
-    max-width: var(--canvas);
+    max-width: var(--canvas-width);
     overflow-y: hidden;
     overflow-x: auto;
 }
@@ -269,7 +270,7 @@ a {
     padding: 190px 16px 88px 16px;
     display: flex;
     flex-direction: column;
-    width: var(--canvas);
+    width: var(--canvas-width);
 }
 
 .search-results a.book, .search-results a.bookshelf, .search-results a.author {
@@ -314,7 +315,7 @@ section {
 section.page {
     display: flex;
     flex-direction: column;
-    width: var(--canvas);
+    width: var(--canvas-width);
     align-items: stretch;
     box-sizing: border-box;
     padding: 16px;
@@ -365,7 +366,7 @@ section.page.onboarding .button.secondary {
 .on-page-list .container {
     overflow-y: hidden;
     overflow-x: auto;
-    max-width: var(--canvas);
+    max-width: var(--canvas-width);
 }
 
 .on-page-list .content {
@@ -552,8 +553,8 @@ label {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
-    width: var(--canvas);
-    height: 100vh;
+    width: var(--canvas-width);
+    height: var(--canvas-height);
     z-index: 100;
     background-color: var(--color-white);
     transition: top 0.24s var(--easing);

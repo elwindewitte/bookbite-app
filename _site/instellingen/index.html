@@ -6,7 +6,9 @@
         <!--LINKS-->
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/responsive.css">
-        
+        <script src="/js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/js/search.js"></script>
         
         <!--GOOGLE/META-->
         
@@ -23,8 +25,8 @@
 </div><section class="page with-top-nav with-bottom-nav">
     <h3>Account</h3>
     <div class="spacer-8"></div>
-    <label for="userUsername">Naam</label>
-    <input type="text" id="userUserName">
+    <label for="userName">Naam</label>
+    <input type="text" id="userName">
     <div class="spacer-8"></div>
     <label for="userUsername">Gebruikersnaam</label>
     <input type="text" id="userUsername">
@@ -32,13 +34,13 @@
     <label for="userPassword">Wachtwoord</label>
     <input type="password" id="userPassword">
     <div class="spacer-16"></div>
-    <a class="button positive primary" id="buttonSave"><p>Aanpassingen opslaan</p></a>
+    <a class="button positive primary" id="buttonSave" onclick="saveAccountSettings()"><p>Aanpassingen opslaan</p></a>
     <div class="spacer-8"></div>
-    <a class="button negative secondary" id="buttonSignout"><p>Uitloggen</p></a>
+    <a class="button negative secondary" id="buttonSignout" onclick="authSignout()"><p>Uitloggen</p></a>
     <div class="spacer-32"></div>
     <h3 class="danger">Danger zone!</h3>
     <div class="spacer-8"></div>
-    <a class="button negative primary" id="buttonDeleteData"><p>Data verwijderen</p></a>
+    <a class="button negative primary" id="buttonDeleteData" onclick="deleteData()"><p>Data verwijderen</p></a>
 </section>
     <div class="bottom-nav">
     <a class="passive" href="/home">
@@ -58,37 +60,10 @@
         <p class="tiny">Instellingen</p>
     </a><script>
 window.onload = function () {
-    // Defining variables
-    var buttonSave = document.getElementById("buttonSave");
-    var buttonSignout = document.getElementById("buttonSignout");
-    var buttonDeleteData = document.getElementById("buttonDeleteData");
-    var inputName = document.getElementById("userName");
-    var inputUsername = document.getElementById("userUsername");
-    var inputPassword = document.getElementById("userPassword");
-    var dataUserName = localStorage.getItem("name");
-    var dataUsername = localStorage.getItem("username");
-    var dataPassword = localStorage.getItem("password");
-    var path = window.location.protocol + '//' + window.location.host + '/';
-
-    // Saves changes
-    buttonSave.onclick = function () {
-        localStorage.setItem('name', inputName.value);
-        localStorage.setItem('username', inputUsername.value);
-        localStorage.setItem('password', inputPassword.value);
-    };
-
-    // Signs out and goes back to root
-    buttonSignout.onclick = function () {
-        localStorage.setItem('signinDone', 'false');
-        window.location.replace(path);
-    };
-
-    // Clears all local storage data and goes back to root
-    buttonDeleteData.onclick = function () {
-        localStorage.clear();
-        window.location.replace(path);
-    };
-};
+    document.getElementById('userName').defaultValue = localStorage.getItem('name');
+    document.getElementById('userUsername').defaultValue = localStorage.getItem('username');
+    document.getElementById('userPassword').defaultValue = localStorage.getItem('password');
+}
 </script>
     </body>
 </html>
