@@ -40,7 +40,14 @@
     </a>
 </div>
 
+<div class="book-reading-overlay passive" id="bookOverlay">
+    <div class="top-controls"></div>
+    <div class="content">
+        <p>Hello, here is the body of the first blog post.</p>
 
+    </div>
+    <div class="bottom-controls"></div>
+</div>
 
 <div class="book-page-header">
     <div class="column">
@@ -55,7 +62,7 @@
 </div>
 
 <div class="book-page-section">
-    <a class="button primary">
+    <a class="button primary" onclick="openBookOverlay()">
         <p>Lees boek</p>
     </a>
 </div>
@@ -145,6 +152,14 @@
     </div>
 </div></section>
 
+<script>
+function openBookOverlay() {
+    var bookOverlay = document.getElementById('bookOverlay');
+
+    bookOverlay.classList.remove('passive');
+    bookOverlay.classList.add('active');
+};
+</script>
 
     </body>
 </html>
