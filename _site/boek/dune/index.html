@@ -40,6 +40,17 @@
         <img src="/assets/icons/settings.svg" alt=""></img>
         <p class="tiny">Instellingen</p>
     </a>
+</div><div class="modal hidden" id="addToBookshelf">
+    <div class="modal-content">
+        <img class="close-button" src="/assets/icons/close_16.svg" alt="" onclick="closeModal('addToBookshelf')">
+        <h2>Selecteer een boekenplank</h2>
+        <form name="addBookToBookshelf" method="POST" data-netlify="true">
+            <select name="bookshelf"><option value="reading">Aan het lezen</option><option value="favorites">Favorieten</option><option value="read">Gelezen</option><option value="harryPotter">Harry Potter</option><option value="wantToRead">Wil ik lezen</option></select>
+            <input type="text" name="bookName" value="Dune" class="hidden">
+            <input type="text" name="bookISBN" value="" class="hidden">
+            <button type="submit">Opslaan</button>
+        </form>
+    </div>
 </div>
 
 <div class="book-reading-overlay passive normal" id="bookOverlay">
@@ -77,6 +88,9 @@
 <div class="book-page-section">
     <a class="button primary" onclick="openBookOverlay()">
         <p>Lees boek</p>
+    </a>
+    <a class="button secondary" onclick="openModal('addToBookshelf')">
+        <p>Sla op</p>
     </a>
 </div>
 

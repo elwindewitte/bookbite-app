@@ -1,0 +1,16 @@
+<div class="modal hidden" id="addToBookshelf">
+    <div class="modal-content">
+        <img class="close-button" src="{{ '/' | url}}assets/icons/close_16.svg" alt="" onclick="closeModal('addToBookshelf')">
+        <h2>Selecteer een boekenplank</h2>
+        <form name="addBookToBookshelf" method="POST" data-netlify="true">
+            <select name="bookshelf">
+                {%- for bookshelf in collections.bookshelf -%}
+                <option value="{{ bookshelf.data.correspondingTag }}">{{ bookshelf.data.name }}</option>
+                {%- endfor -%}
+            </select>
+            <input type="text" name="bookName" value="{{ name }}" class="hidden">
+            <input type="text" name="bookISBN" value="{{ isbn }}" class="hidden">
+            <button type="submit">Opslaan</button>
+        </form>
+    </div>
+</div>

@@ -6,6 +6,8 @@ layout: layouts/base.njk
 
 {%- include "navBottom.njk" -%}
 
+{%- include "modalAddToBookshelf.njk" -%}
+
 {# Getting the author's name #}
 {%- set authorName -%}
     {%- set listFilterShow = authorTag -%}
@@ -61,6 +63,9 @@ layout: layouts/base.njk
 <div class="book-page-section">
     <a class="button primary" onclick="openBookOverlay()">
         <p>Lees boek</p>
+    </a>
+    <a class="button secondary" onclick="openModal('addToBookshelf')">
+        <p>Sla op</p>
     </a>
 </div>
 
