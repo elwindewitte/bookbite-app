@@ -644,3 +644,76 @@ label {
     line-height: 16px;
     margin-bottom: 12px;
 }
+
+
+
+/* MODALS================ */
+
+.modal.hidden {
+    display: none;
+}
+
+.modal.visible {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: center;
+    position: fixed;
+    padding: 32px;
+    width: var(--canvas-width);
+    height: var(--canvas-height);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.32)
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--color-white);
+    padding: 32px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.modal-content select {
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.modal-content button {
+    padding: 12px 16px;
+    cursor: pointer;    
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+}
+
+.modal-content img {
+    position: absolute;
+    align-self: flex-end;
+    width: auto;
+    padding: 8px;
+    border-radius: 16px;
+    transform: translateX(8px) translateY(-8px);
+}
+
+.modal-content h2 {
+    padding-right: 32px;
+    margin-bottom: 16px;
+}

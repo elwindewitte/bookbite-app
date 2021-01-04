@@ -35,6 +35,7 @@ function authSignup() {
     localStorage.setItem('name', inputName.value);
     localStorage.setItem('username', inputUsername.value);
     localStorage.setItem('password', inputPassword.value);
+    localStorage.setItem('signinDone', 'true');
 
     // Redirecting to onboarding
     window.location.replace(path + 'onboarding/');
@@ -126,4 +127,22 @@ function bookTextBigger() {
         bookOverlay.classList.remove('normal');
         bookOverlay.classList.add('big');
     }
+};
+
+
+
+
+// MODALS================ //
+// Closes the modal
+function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.classList.add('hidden');
+    modal.classList.remove('visible');
+};
+
+// Opens the modal
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.classList.add('visible');
+    modal.classList.remove('hidden');
 };
