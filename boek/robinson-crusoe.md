@@ -2,6 +2,7 @@
 tags: book
 layout: pageBook.njk
 name: Robinson Crusoe
+isbn: NONESET
 genreTag: genreFiction
 authorTag: authorDanielDefoe
 serieTag: NONESET

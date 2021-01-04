@@ -717,3 +717,7 @@ label {
     padding-right: 32px;
     margin-bottom: 16px;
 }
+
+.modal-content input.hidden {
+    display: none;
+}

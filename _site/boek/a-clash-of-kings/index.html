@@ -46,6 +46,8 @@
         <h2>Selecteer een boekenplank</h2>
         <form name="addBookToBookshelf" method="POST" data-netlify="true">
             <select name="bookshelf"><option value="reading">Aan het lezen</option><option value="favorites">Favorieten</option><option value="read">Gelezen</option><option value="harryPotter">Harry Potter</option><option value="wantToRead">Wil ik lezen</option></select>
+            <input type="text" name="bookName" value="A Clash of Kings" class="hidden">
+            <input type="text" name="bookISBN" value="" class="hidden">
             <button type="submit">Opslaan</button>
         </form>
     </div>
