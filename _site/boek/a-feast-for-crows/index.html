@@ -44,7 +44,7 @@
     <div class="modal-content">
         <img class="close-button" src="/assets/icons/close_16.svg" alt="" onclick="closeModal('addToBookshelf')">
         <h2>Selecteer een boekenplank</h2>
-        <form name="addBookToBookshelf" method="POST" data-netlify="true">
+        <form name="addBookToBookshelf" method="POST" data-netlify="true" action="">
             <select name="bookshelf"><option value="reading">Aan het lezen</option><option value="favorites">Favorieten</option><option value="read">Gelezen</option><option value="harryPotter">Harry Potter</option><option value="wantToRead">Wil ik lezen</option></select>
             <input type="text" name="bookName" value="A Feast for Crows" class="hidden">
             <input type="text" name="bookISBN" value="" class="hidden">
@@ -65,10 +65,19 @@
     </div>
     <div class="bottom-controls">
         <a class="button primary" onclick="bookTextSmaller()" id="buttonTextSmaller">
-            <p>Kleiner</p>
+            <p>T-</p>
         </a>
         <a class="button primary" onclick="bookTextBigger()" id="buttonTextBigger">
-            <p>Groter</p>
+            <p>T+</p>
+        </a>
+        <a class="button primary" onclick="toggleMusic()">
+            <p>Play/Pause</p>
+        </a>
+        <a class="button primary" onclick="volumeDown()">
+            <p>M-</p>
+        </a>
+        <a class="button primary" onclick="volumeUp()">
+            <p>M+</p>
         </a>
     </div>
 </div>

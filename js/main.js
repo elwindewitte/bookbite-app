@@ -86,6 +86,41 @@ function deleteData() {
 
 
 
+// MUSIC================ //
+var path = window.location.protocol + '//' + window.location.host + '/';
+let songs = [path + 'assets/music/whatOnceWas_gavinLuke.mp3', path + 'assets/sheerWill_jonBjork.mp3'];
+let audio = new Audio();
+let currentSong = 0;
+audio.src = songs[currentSong];
+
+// Increases the music volume
+function volumeUp() {
+    if (audio.volume < 1) {
+        audio.volume += 0.1;
+    };
+};
+
+// Decreases the music volume
+function volumeDown() {
+    if (audio.volume > 0) {
+        audio.volume -= 0.1;
+    };
+};
+
+// Toggles the music
+function toggleMusic() {
+    if (audio.paused) {
+        localStorage.setItem('music', 'playing');
+        audio.play();
+      } else {
+        localStorage.setItem('music', 'paused')
+        audio.pause();
+      }
+};
+
+
+
+
 // BOOK OVERLAY================ //
 // Opens the book overlay
 function openBookOverlay() {
@@ -93,6 +128,15 @@ function openBookOverlay() {
 
     bookOverlay.classList.remove('passive');
     bookOverlay.classList.add('active');
+
+    if (localStorage.getItem('music') == 'playing') {
+        audio.play();
+    } else if (localStorage.getItem('music') == 'paused') {
+        audio.pause();
+    } else {
+        audio.play();
+        localStorage.setItem('music', 'playing');
+    };
 };
 
 // Closes the book overlay
@@ -101,6 +145,8 @@ function closeBookOverlay() {
 
     bookOverlay.classList.remove('active');
     bookOverlay.classList.add('passive');
+
+    audio.pause();
 };
 
 // Adds a class to the book overlay to make the text smaller
