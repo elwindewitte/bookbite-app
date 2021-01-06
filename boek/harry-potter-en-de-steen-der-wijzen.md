@@ -2,6 +2,8 @@
 tags: book
 layout: pageBook.njk
 name: Harry Potter en de Steen der Wijzen
+rating: 4.48
+isbn: 9076174083
 genreTag: genreFantasy
 authorTag: authorJKRowling
 serieTag: serieHarryPotter

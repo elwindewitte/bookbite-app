@@ -2,7 +2,8 @@
 tags: book
 layout: pageBook.njk
 name: A Clash of Kings
-rating: 4.3
+rating: 4.41
+isbn: 9780553897852
 genreTag: genreFantasy
 authorTag: authorGeorgeRRMartin
 serieTag: serieASongOfIceAndFire

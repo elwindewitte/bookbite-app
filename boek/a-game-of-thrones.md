@@ -2,6 +2,8 @@
 tags: book
 layout: pageBook.njk
 name: A Game of Thrones
+rating: 4.45
+isbn: 9780553897845
 genreTag: genreFantasy
 authorTag: authorGeorgeRRMartin
 serieTag: serieASongOfIceAndFire
