@@ -1,8 +1,9 @@
 ---
-tags: ['author', 'genreFiction', 'genreFantasy']
+tags: author
 layout: pageAuthor.njk
 name: J.K. Rowling
-profileImage: assets/images/jkRowling.jpg
+profileImage: assets/images/authorJKRowling.png
 authorTag: authorJKRowling
+genreTag: genreFantasy
 description: 
 ---

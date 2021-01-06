@@ -19,28 +19,13 @@ permalink: /home/
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 
-    {%- set listName = "Alle boeken" -%}
+    {# {%- set listName = "Alle boeken" -%}
     {%- set listFilterShow = "NONESET" -%}
     {%- set listContent = collections.book -%}
-    {%- include "onPageListBook.njk" -%}
+    {%- include "onPageListBook.njk" -%} #}
 
-    {%- set listName = "Alle boekenplanken" -%}
+    {%- set listName = "Jouw boekenplanken" -%}
     {%- set listFilterShow = "NONESET" -%}
     {%- set listContent = collections.bookshelf -%}
     {%- include "onPageListBookshelf.njk" -%}
-
-    {%- set listName = "Alle 'A Song of Ice and Fire' boeken" -%}
-    {%- set listFilterShow = "serieASongOfIceAndFire" -%}
-    {%- set listContent = collections.book -%}
-    {%- include "onPageListBook.njk" -%}
-
-    {%- set listName = "Alle 'The Lord of the Rings' boeken" -%}
-    {%- set listFilterShow = "serieTheLordOfTheRings" -%}
-    {%- set listContent = collections.book -%}
-    {%- include "onPageListBook.njk" -%}
-
-    {%- set listName = "Alle 'Harry Potter' boeken" -%}
-    {%- set listFilterShow = "serieHarryPotter" -%}
-    {%- set listContent = collections.book -%}
-    {%- include "onPageListBook.njk" -%}
 </section>

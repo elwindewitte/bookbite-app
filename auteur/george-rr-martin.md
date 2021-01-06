@@ -1,8 +1,9 @@
 ---
-tags: ['author', 'genreFiction', 'genreFantasy']
+tags: author
 layout: pageAuthor.njk
 name: George R.R. Martin
-profileImage: assets/images/georgeRRMartin.jpg
+profileImage: assets/images/authorGeorgeRRMartin.png
 authorTag: authorGeorgeRRMartin
+genreTag: genreFantasy
 description: 
 ---

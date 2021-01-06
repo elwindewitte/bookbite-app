@@ -371,11 +371,15 @@ section.page {
 }
 
 section.with-top-nav {
-    padding-top: 96px;
+    padding-top: 80px;
 }
 
 section.with-bottom-nav {
     padding-bottom: 88px;
+}
+
+section.with-search-nav {
+    padding-top: 172px;
 }
 
 /* ONBOARDING */
@@ -426,6 +430,7 @@ section.page.onboarding .button.secondary {
 
 .on-page-list .content a {
     margin-right: 8px;
+    text-decoration: none;
 }
 
 .on-page-list .content a:last-child {
@@ -435,6 +440,22 @@ section.page.onboarding .button.secondary {
 .on-page-list img {
     height: 192px;
     border-radius: 4px;
+}
+
+.on-page-list.authors img {
+    height: 96px;
+    margin-bottom: 8px;
+}
+
+.on-page-list.authors a {
+    max-width: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.on-page-list.authors p {
+    text-align: center;
 }
 
 
@@ -669,6 +690,7 @@ label {
 .book-reading-overlay h1 {
     padding: 0 32px 64px 32px;
     text-align: center;
+    color: var(--color-white);
 }
 .book-reading-overlay.big h1 {
     font-size: 32px;
@@ -846,4 +868,32 @@ label {
     width: 32px;
     border-radius: 16px;
     margin-right: 8px;
+}
+
+
+
+/* GENRE GRID================ */
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 8px;
+    row-gap: 8px;
+    margin: 16px;
+}
+
+.genre-grid .genre-card {
+    background-color: var(--color-dark-grey);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: var(--shadow-static-small);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 128px;
+}
+
+.genre-grid .button, .genre-grid h3 {
+    grid-column: 1 / 3;
 }

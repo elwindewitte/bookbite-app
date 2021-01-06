@@ -51,7 +51,7 @@ function finishOnboarding() {
 
 
 
-// AUTHENTICATION================ //
+// SETTINGS================ //
 
 // Saves changes made to account inputs
 function saveAccountSettings() {
@@ -59,11 +59,20 @@ function saveAccountSettings() {
     var inputName = document.getElementById("userName");
     var inputUsername = document.getElementById("userUsername");
     var inputPassword = document.getElementById("userPassword");
+    var buttonSaveAccountSettings = document.getElementById('buttonSaveAccountSettings');
 
     // Saves it to local storage
     localStorage.setItem('name', inputName.value);
     localStorage.setItem('username', inputUsername.value);
     localStorage.setItem('password', inputPassword.value);
+
+    // Changes the text
+    buttonSaveAccountSettings.innerHTML = '<p>Opslaan...</p>';
+
+    // Reload page
+    setTimeout(function () {
+        location.reload();
+    }, 400);
 };
 
 // Saves changes made to reading inputs
@@ -71,34 +80,55 @@ function saveReadingSettings() {
     // Defining variables
     var inputReadingVolume = document.getElementById("readingVolume");
     var inputReadingTextSize = document.getElementById("readingTextSize");
+    var buttonSaveReadingSettings = document.getElementById('buttonSaveReadingSettings');
 
     // Saves it to local storage
     localStorage.setItem('readingVolume', inputReadingVolume.value);
     localStorage.setItem('readingTextSize', inputReadingTextSize.value);
+    
+    // Changes the text
+    buttonSaveReadingSettings.innerHTML = '<p>Opslaan...</p>';
+
+    // Reloads page after 400ms
+    setTimeout(function () {
+        location.reload();
+    }, 400);
 };
 
 // Signout process
 function authSignout() {
     // Defining variables
     var path = window.location.protocol + '//' + window.location.host + '/';
+    var buttonSignout = document.getElementById('buttonSignout');
 
     // Changes localstorage signin value
     localStorage.setItem('signinDone', 'false');
 
-    // Redirects to root
-    window.location.replace(path);
+    // Changes the text
+    buttonSignout.innerHTML = '<p>Uitloggen...</p>';
+
+    // Redirects to root after 400ms
+    setTimeout(function () {
+        window.location.replace(path);
+    }, 400);
 };
 
 // Delete all localstorage data
 function deleteData() {
     // Defining variables
     var path = window.location.protocol + '//' + window.location.host + '/';
+    var buttonDeleteData = document.getElementById('buttonDeleteData');
 
     // Wipes all localstorage data
     localStorage.clear();
 
-    // Redirects to root
-    window.location.replace(path);
+    // Changes the text
+    buttonDeleteData.innerHTML = '<p>Data verwijderen...</p>';
+
+    // Redirects to root after 400ms
+    setTimeout(function () {
+        window.location.replace(path);
+    }, 400);
 };
 
 
@@ -201,9 +231,11 @@ function bookTextSmaller() {
     if (bookOverlay.classList.contains('big')) {
         bookOverlay.classList.remove('big');
         bookOverlay.classList.add('normal');
+        localStorage.setItem('readingTextSize', 'normal');
     } else if (bookOverlay.classList.contains('normal')) {
         bookOverlay.classList.remove('normal');
         bookOverlay.classList.add('small');
+        localStorage.setItem('readingTextSize', 'small');
     }
 };
 
@@ -214,9 +246,11 @@ function bookTextBigger() {
     if (bookOverlay.classList.contains('small')) {
         bookOverlay.classList.remove('small');
         bookOverlay.classList.add('normal');
+        localStorage.setItem('readingTextSize', 'normal');
     } else if (bookOverlay.classList.contains('normal')) {
         bookOverlay.classList.remove('normal');
         bookOverlay.classList.add('big');
+        localStorage.setItem('readingTextSize', 'big');
     }
 };
 
