@@ -66,6 +66,17 @@ function saveAccountSettings() {
     localStorage.setItem('password', inputPassword.value);
 };
 
+// Saves changes made to reading inputs
+function saveReadingSettings() {
+    // Defining variables
+    var inputReadingVolume = document.getElementById("readingVolume");
+    var inputReadingTextSize = document.getElementById("readingTextSize");
+
+    // Saves it to local storage
+    localStorage.setItem('readingVolume', inputReadingVolume.value);
+    localStorage.setItem('readingTextSize', inputReadingTextSize.value);
+};
+
 // Signout process
 function authSignout() {
     // Defining variables
@@ -102,15 +113,25 @@ audio.src = songs[currentSong];
 
 // Increases the music volume
 function volumeUp() {
+    audio.volume = parseInt(localStorage.getItem('readingVolume')) / 100;
+
     if (audio.volume < 1) {
         audio.volume += 0.1;
+        var newVolume = audio.volume * 100;
+        localStorage.setItem('readingVolume', newVolume);
+        console.log('audio.volume: ' + audio.volume);
     };
 };
 
 // Decreases the music volume
 function volumeDown() {
+    audio.volume = parseInt(localStorage.getItem('readingVolume')) / 100;
+
     if (audio.volume > 0) {
         audio.volume -= 0.1;
+        var newVolume = audio.volume * 100;
+        localStorage.setItem('readingVolume', newVolume);
+        console.log('audio.volume: ' + audio.volume);
     };
 };
 
@@ -154,6 +175,23 @@ function closeBookOverlay() {
     bookOverlay.classList.add('passive');
 
     audio.pause();
+};
+
+// Sets the proper text size
+function setTextSize() {
+    console.log('Im triggered!');
+    // var readingTextSize = localStorage.getItem('readingTextSize');
+    // var bookOverlay = document.getElementById('bookOverlay');
+
+    // if (readingTextSize == 'big') {
+    //     bookOverlay.classList.remove('normal');
+    //     bookOverlay.classList.add('big');
+    // } else if (readingTextSize == 'medium') {
+    //     // Absolutely nothing...
+    // } else if (readingTextSize == 'small') {
+    //     bookOverlay.classList.remove('normal');
+    //     bookOverlay.classList.add('small');
+    // };
 };
 
 // Adds a class to the book overlay to make the text smaller

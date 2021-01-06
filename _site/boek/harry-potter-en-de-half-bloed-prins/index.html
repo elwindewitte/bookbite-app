@@ -86,7 +86,7 @@
     </div>
 </div>
 
-<div class="book-reading-overlay passive normal" id="bookOverlay">
+<div class="book-reading-overlay passive normal" id="bookOverlay" onload="setTextSize()">
     <div class="top-controls">
         <a class="button secondary negative" onclick="closeBookOverlay()">
             <p>Stop met lezen</p>
@@ -122,8 +122,6 @@
     <div class="column">
         <h3>Harry Potter en de Half-Bloed Prins</h3>
         <p>Van <a href="/auteur/jk-rowling/">J.K. Rowling</a></p>
-        <br>
-        
     </div>
 </div>
 
@@ -220,10 +218,61 @@
 
 <div class="book-page-section">
     <h3>Beoordelingen</h3>
-    <p>4.57</p>   
+    <div class="ratings-header">
+        <div class="ratings-data">
+            <div class="ratings-number">
+                <p class="big">4.57/5</p>
+                <p class="small">Gemiddeld</p>
+            </div>
+            <div class="ratings-stars">
+                <img class="ratings-star" src="/assets/icons/star-full-16.svg">
+                <img class="ratings-star" src="/assets/icons/star-full-16.svg">
+                <img class="ratings-star" src="/assets/icons/star-full-16.svg">
+                <img class="ratings-star" src="/assets/icons/star-full-16.svg">
+                <img class="ratings-star" src="/assets/icons/star-empty-16.svg">
+                
+            </div>
+        </div> 
+        <a class="button primary">
+            <p>Beoordeel</p>
+        </a>
+    </div>
+    <div class="spacer-32"></div>
+    <div class="book-review">
+        <div class="review-data">
+            <img src="/assets/avatars/lionel-bakker.jfif">
+            <div class="review-account">
+                <h4>Lionel Bakker</h4>
+                <p class="small">@lionelbakker</p>
+            </div>
+        </div>
+        <p>Hoewel alle zeilen termen een beetje vervelend waren (ik kan het aantal keren dat ik op een boot ben geweest op 1 hand tellen en alle zeil termen die ik ken kan ik niet tellen omdat die niet bestaan), maar anders dan dat was het verhaal interessant. Zelfs in deze moderne tijd heeft het verhaal het gevoel alsof dit echt kan gebeuren, op deze dag zelfs nog. Ik had niet het idee dat ik een fictief verhaal dat zich in het verleden afspeelt aan het lezen was en dat vond ik best knap aangezien er nog wel wat ouderwetse dingen in voorkomen.</p>
+    </div>
+    <div class="book-review">
+        <div class="review-data">
+            <img src="/assets/avatars/dirk-koopman.jfif">
+            <div class="review-account">
+                <h4>Dirk Koopman</h4>
+                <p class="small">@dirkkoopman</p>
+            </div>
+        </div>
+        <p>Ik heb dit boek gekozen om voor mijn leeslijst voor school te lezen, omdat het mij interessant leek om over de o zo bekende Robinson te lezen. Dit boek doet dan ook wat het belooft, het geeft een leuke, interessant, en bovenal waarheidsgetrouwe weergave van een schipbreukeling die moet overleven op een eiland. Waarschuwing voor mensen met minder ervaring met Engels: het boek is wel in een wat lastigere schrijfstijl geschreven, vooral door het "accent" wat in het verhaal doorkomt.</p>
+    </div>
+    <div class="book-review">
+        <div class="review-data">
+            <img src="/assets/avatars/myra-graus.jfif">
+            <div class="review-account">
+                <h4>Myra Graus</h4>
+                <p class="small">@myragraus</p>
+            </div>
+        </div>
+        <p>Na de laatste pagina was ik wel geïnteresseerd in wat er verder zou gebeuren, maar helaas was het boek al afgelopen zonder vervolg. Voor de mensen die niet allemaal zeilen termen kennen: blijven lezen, na al die rare woorden er is een geweldig verhaal!</p>
+    </div>
+    <a class="button secondary">
+        <p>Meer beoordelingen laden</p>
+    </a>
 </div>
 
 <section class="with-bottom-nav"></section>
-
     </body>
 </html>
