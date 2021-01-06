@@ -9,11 +9,6 @@ permalink: /home/
 </header>
 
 <section class="with-bottom-nav">
-    {%- set listName = "Populair deze week" -%}
-    {%- set listFilterShow = "bookshelfPopular" -%}
-    {%- set listContent = collections.book -%}
-    {%- include "onPageListBook.njk" -%}
-
     {%- set listName = "Verderlezen voor jou" -%}
     {%- set listFilterShow = "bookshelfReading" -%}
     {%- set listContent = collections.book -%}
@@ -28,4 +23,9 @@ permalink: /home/
     {%- set listFilterShow = "NONESET" -%}
     {%- set listContent = collections.bookshelf -%}
     {%- include "onPageListBookshelf.njk" -%}
+
+    {%- set listName = "Volgende boeken om te lezen" -%}
+    {%- set listFilterShow = "bookshelfWantToRead" -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
 </section>
