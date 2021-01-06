@@ -1001,3 +1001,28 @@ label {
     border-radius: 6px;
     margin-bottom: 8px;
 }
+
+
+
+/* AUTHOR PAGE================ */
+
+/* HEADER======== */
+
+.header-author {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    column-gap: 16px;
+    padding: 96px 16px 32px 16px;;
+}
+
+.header-author img {
+    width: 96px;
+}
+
+.header-author .author-details {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    row-gap: 8px;
+}

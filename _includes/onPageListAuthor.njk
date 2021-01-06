@@ -5,6 +5,11 @@
             <div class="spacer-16"></div>
             {%- for author in listContent -%}
 
+                {# To filter out the book with the same name, aka the book the detail page is about #}
+                {%- if listFilterHide == author.data.name -%}
+
+                {%- else -%}
+
                 {# To filter out books with a corresponding author tag #}
                 {%- if listFilterShow == author.data.authorTag -%}
                     <a class="author" href="{{ author.url | url }}">
@@ -39,6 +44,8 @@
                         <img src="{{ '/' | url }}{{ author.data.profileImage | url }}" alt="{{ '/' | url }}{{ book.data.profileImage }}"></img>
                         <p class="small">{{ author.data.name }}</p>
                     </a>
+
+                {%- endif -%}
 
                 {%- endif -%}
             {%- endfor -%}
