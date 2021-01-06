@@ -24,30 +24,32 @@
     <h2>De Hobbit</h2>
 </div>
     <div class="bottom-nav">
-    <a class="active" href="/home">
-        <img src="/assets/icons/home.svg" alt=""></img>
-        <p class="tiny">Home</p>
-    </a>
-    <a class="passive" href="/zoeken/alles">
-        <img src="/assets/icons/search.svg" alt=""></img>
-        <p class="tiny">Zoeken</p>
-    </a>
-    <a class="passive" href="/account">
-        <img src="/assets/icons/user.svg" alt=""></img>
-        <p class="tiny">Account</p>
-    </a>
-    <a class="passive" href="/instellingen">
-        <img src="/assets/icons/settings.svg" alt=""></img>
-        <p class="tiny">Instellingen</p>
-    </a>
-</div><div class="modal hidden" id="addToBookshelf">
+        <div class="wrapper">
+            <a class="active" href="/home">
+                <img src="/assets/icons/home.svg" alt=""></img>
+                <p class="tiny">Home</p>
+            </a>
+            <a class="passive" href="/zoeken/alles">
+                <img src="/assets/icons/search.svg" alt=""></img>
+                <p class="tiny">Zoeken</p>
+            </a>
+            <a class="passive" href="/account">
+                <img src="/assets/icons/user.svg" alt=""></img>
+                <p class="tiny">Account</p>
+            </a>
+            <a class="passive" href="/instellingen">
+                <img src="/assets/icons/settings.svg" alt=""></img>
+                <p class="tiny">Instellingen</p>
+            </a>
+        </div>
+    </div><div class="modal hidden" id="addToBookshelf">
     <div class="modal-content">
         <img class="close-button" src="/assets/icons/close_16.svg" alt="" onclick="closeModal('addToBookshelf')">
         <h2>Selecteer een boekenplank</h2>
         <form name="addBookToBookshelf" method="POST" data-netlify="true" action="">
             <select name="bookshelf"><option value="reading">Aan het lezen</option><option value="favorites">Favorieten</option><option value="read">Gelezen</option><option value="harryPotter">Harry Potter</option><option value="wantToRead">Wil ik lezen</option></select>
             <input type="text" name="bookName" value="De Hobbit" class="hidden">
-            <input type="text" name="bookISBN" value="" class="hidden">
+            <input type="text" name="bookISBN" value="9789402306538" class="hidden">
             <button type="submit">Opslaan</button>
         </form>
     </div>
@@ -98,6 +100,7 @@
     <a class="button primary" onclick="openBookOverlay()">
         <p>Lees boek</p>
     </a>
+    <div class="spacer-8"></div>
     <a class="button secondary" onclick="openModal('addToBookshelf')">
         <p>Sla op</p>
     </a>
@@ -189,10 +192,6 @@
 
                     <a class="book" href="/boek/the-two-towers/">
                             <img src="/assets/covers/theTwoTowers.jpg" alt="/assets/covers/theTwoTowers.jpg"></img>
-                        </a>
-
-                    <a class="book" href="/boek/the-winds-of-winter/">
-                            <img src="/assets/covers/theWindsOfWinter.jpg" alt="/assets/covers/theWindsOfWinter.jpg"></img>
                         </a>
 
                     <div class="spacer-8"></div>

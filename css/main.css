@@ -24,29 +24,38 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* IMPORTS================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@501&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap');
 
 
 
 /* VARIABLES================ */
 
 :root {
-    --color-black: #000000;
-    --color-dark-grey: #666666;
-    --color-medium-grey: #999999;
-    --color-light-grey: #cccccc;
+    --color-black: #202632;
+    --color-darker-grey: #262E40; 
+    --color-dark-grey: #35415B;
+    --color-medium-grey: #8993A9;
+    --color-light-grey: #BFC7D9;
     --color-white: #ffffff;
     --error-green: #27AE60;
     --error-yellow: #f39c12;
     --error-red: #c0392b;
     --color-primary: #3564DC;
     --color-secondary: #FF6DA1;
-    --font-header: 'Inter', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-header: 'Lora', serif;
+    --font-body: 'Epilogue', sans-serif;
     --canvas-width: calc(100vw - (100vw - 100%)); /* Removing the scrollbars from the width */
     --canvas-height: calc(100vh - (100vh - 100%));
     --easing: cubic-bezier(0.4, 0, 0.4, 1);
+    --shadow-static-large: 2px 4px 16px rgba(0, 0, 0, 0.16);
+    --shadow-static-small: 1px 2px 8px rgba(0, 0, 0, 0.24);
     --shadow-hover: 2px 4px 16px rgba(0, 0, 0, 0.16);
     --shadow-focus: 1px 2px 8px rgba(0, 0, 0, 0, 0.24)
+}
+
+body {
+    background-color: var(--color-black);
 }
 
 
@@ -61,10 +70,16 @@ h1.faded, h2.faded, h3.faded, h4.faded, h5.faded, p.faded, a.faded {
 /* STYLE======== */
 h1 {
     font-family: var(--font-header);
+    color: var(--color-secondary);
 }
 
 h2, h3, h4, h5, p, a {
     font-family: var(--font-body);
+    color: var(--color-white)
+}
+
+h2 {
+    font-family: var(--font-header);
 }
 
 /* WEIGHT======== */
@@ -109,8 +124,8 @@ a {
     flex-wrap: nowrap;
     align-items: center;
     padding: 16px;
-    background-color: var(--color-white);
-    border-bottom: 1px solid var(--color-black);
+    background-color: var(--color-dark-grey);
+    box-shadow: var(--shadow-static-large);
     position: fixed;
     width: var(--canvas-width);
     top: 0;
@@ -134,13 +149,23 @@ a {
 
 .bottom-nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    background-color: var(--color-white);
-    border-top: 1px solid var(--color-black);
     position: fixed;
+    align-items: stretch;
     bottom: 0;
     width: var(--canvas-width);
+    padding: 16px;
+    background-image: linear-gradient(180deg, rgba(32, 38, 50,0), rgba(32, 38, 50,1));
+}
+
+.bottom-nav .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: var(--color-dark-grey);
+    border-radius: 32px;
+    box-shadow: var(--shadow-static-large);
     padding: 8px 16px;
 }
 
@@ -203,8 +228,7 @@ a {
 
 .header-search {
     padding: 16px 0 0 0;
-    background-color: var(--color-white);
-    border-bottom: 1px solid var(--color-black);
+    background-color: var(--color-dark-grey);
     width: var(--canvas-width);
     position: fixed;
     top: 0;
@@ -212,6 +236,7 @@ a {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
+    box-shadow: var(--shadow-static-large);
 }
 
 .header-search h2 {
@@ -225,8 +250,10 @@ a {
     font-size: 16px;
     line-height: 24px;
     padding: 8px 16px;
-    border: 1px solid var(--color-black);
-    border-radius: 0;
+    border: 1px solid var(--color-white);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--color-white);
 }
 
 .header-search .on-page-nav {
@@ -245,10 +272,10 @@ a {
 .header-search .on-page-nav .content a {
     padding: 8px 0;
     margin: 0 8px;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     box-sizing: border-box;
-    color: var(--color-medium-grey);
+    color: var(--color-white);
 }
 
 .header-search .on-page-nav .content a:first-child {
@@ -260,8 +287,9 @@ a {
 }
 
 .header-search .on-page-nav .content a.active {
-    border-bottom: 4px solid var(--color-black);
-    color: var(--color-black);
+    border-bottom: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+    font-weight: 600;
 }
 
 /* RESUTLS======== */
@@ -284,6 +312,10 @@ a {
 
 .search-results img {
     width: 48px;
+}
+
+.search-results a.book img {
+    border-radius: 2px;
 }
 
 .search-results a.author img {
@@ -385,6 +417,7 @@ section.page.onboarding .button.secondary {
 
 .on-page-list img {
     height: 192px;
+    border-radius: 4px;
 }
 
 
@@ -448,20 +481,12 @@ section.page.onboarding .button.secondary {
     flex-wrap: nowrap;
     align-items: center;
     padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-static-small);
     cursor: pointer;    
     text-decoration: none;
     transform: translateY(0);
     transition: all var(--easing) 0.16s;
-}
-
-.button:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-hover);
-}
-
-.button:active {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-focus);
 }
 
 .button p {
@@ -488,6 +513,7 @@ section.page.onboarding .button.secondary {
     background-color: transparent;
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
+    box-shadow: none;
 }
 
 .button.passive {
@@ -500,9 +526,9 @@ section.page.onboarding .button.secondary {
 }
 
 .button.positive.secondary {
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     color: var(--error-green);
-    border: 1px solid var(--error-green);
+    border-color: var(--error-green);
 }
 
 .button.negative.primary {
@@ -511,23 +537,29 @@ section.page.onboarding .button.secondary {
 }
 
 .button.negative.secondary {
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     color: var(--error-red);
-    border: 1px solid var(--error-red);
+    border-color: var(--error-red);
 }
 
 
 
 /* FORMS================ */
 
-input {
+input, select {
     padding: 12px 16px;
-    border: 1px solid var(--color-black);
-    border-radius: 0;
+    border: 1px solid var(--color-dark-grey);
+    background-color: var(--color-darker-grey);
+    color: var(--color-white);
+    border-radius: 4px;
     font-family: var(--font-body);
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+}
+
+input::placeholder {
+    color: var(--color-medium-grey);
 }
 
 input:active {

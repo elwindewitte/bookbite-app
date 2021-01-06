@@ -17,9 +17,25 @@ permalink: /instellingen/
     <label for="userPassword">Wachtwoord</label>
     <input type="password" id="userPassword">
     <div class="spacer-16"></div>
-    <a class="button positive primary" id="buttonSave" onclick="saveAccountSettings()"><p>Aanpassingen opslaan</p></a>
+    <a class="button positive secondary" id="buttonSave" onclick="saveAccountSettings()"><p>Aanpassingen opslaan</p></a>
     <div class="spacer-8"></div>
     <a class="button negative secondary" id="buttonSignout" onclick="authSignout()"><p>Uitloggen</p></a>
+
+    <div class="spacer-32"></div>
+    <h3>Leeservaring</h3>
+    <div class="spacer-8"></div>
+    <label for="readingTextSize">Tekst grootte</label>
+    <select id="readingTextSize">
+        <option value="big">Groot</option>
+        <option value="medium">Medium</option>
+        <option value="small">Klein</option>
+    </select>
+    <div class="spacer-8"></div>
+    <label for="readingVolume">Volume van muziek</label>
+    <input type="number" id="readingVolume" min="10" max="100">
+    <div class="spacer-16"></div>
+    <a class="button positive secondary" id="buttonSave" onclick="saveReadingSettings()"><p>Aanpassingen opslaan</p></a>
+
     <div class="spacer-32"></div>
     <h3 class="danger">Danger zone!</h3>
     <div class="spacer-8"></div>
@@ -34,5 +50,13 @@ window.onload = function () {
     document.getElementById('userName').defaultValue = localStorage.getItem('name');
     document.getElementById('userUsername').defaultValue = localStorage.getItem('username');
     document.getElementById('userPassword').defaultValue = localStorage.getItem('password');
+
+    // Checks if reading text size has been set already and fills the dropdown accordingly
+    if (localStorage.getItem('readingTextSize') === null) {
+        localStorage.setItem('readingTextSize', 'medium');
+        document.getElementById('readingTextSize').defaultValue = localStorage.getItem('readingTextSize');
+    } else {
+        document.getElementById('readingTextSize').defaultValue = localStorage.getItem('readingTextSize');
+    };
 }
 </script>
