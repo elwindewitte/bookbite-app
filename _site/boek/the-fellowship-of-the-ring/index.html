@@ -93,8 +93,23 @@
 
 <div class="book-reading-overlay passive normal" id="bookOverlay" onload="setTextSize()">
     <div class="top-controls">
-        <a class="button secondary negative" onclick="closeBookOverlay()">
-            <p>Stop met lezen</p>
+        <div class="volume-controls">
+            <div class="group-icon">
+                <img src="/assets/icons/volume-16.svg">
+            </div>
+            <a class="button" onclick="volumeDown()">
+                <img src="/assets/icons/minus-16.svg">
+            </a>
+            <a class="button" onclick="volumeUp()">
+                <img src="/assets/icons/plus-16.svg">
+            </a>
+            <a class="button" onclick="toggleMusic()" id="musicToggle">
+                <img src="/assets/icons/pause-16.svg">
+            </a>
+        </div>
+        <a class="button align-left" onclick="closeBookOverlay()">
+            <p>Stop</p>
+            <img src="/assets/icons/close_16.svg">
         </a>
     </div>
     <div class="content">
@@ -102,20 +117,18 @@
 
     </div>
     <div class="bottom-controls">
-        <a class="button primary" onclick="bookTextSmaller()" id="buttonTextSmaller">
-            <p>T-</p>
+        <div class="group-icon">Aa</div>
+        <a class="button" onclick="bookTextSmaller()" id="buttonTextSmaller">
+            <img src="/assets/icons/minus-16.svg">
         </a>
-        <a class="button primary" onclick="bookTextBigger()" id="buttonTextBigger">
-            <p>T+</p>
+        <a class="button" onclick="bookTextBigger()" id="buttonTextBigger">
+            <img src="/assets/icons/plus-16.svg">
         </a>
-        <a class="button primary" onclick="toggleMusic()">
-            <p>Play/Pause</p>
+        <a class="button sans" onclick="bookTextSans()" id="buttonTextSans">
+            Aa
         </a>
-        <a class="button primary" onclick="volumeDown()">
-            <p>M-</p>
-        </a>
-        <a class="button primary" onclick="volumeUp()">
-            <p>M+</p>
+        <a class="button serif" onclick="bookTextSerif()" id="buttonTextSerif">
+            Aa
         </a>
     </div>
 </div>
@@ -288,7 +301,11 @@
 window.onload = function () {
     var readingTextSize = localStorage.getItem('readingTextSize');
     var bookOverlay = document.getElementById('bookOverlay');
+    var readingMusic = localStorage.getItem('music');
+    var musicToggle = document.getElementById('musicToggle');
+    var path = window.location.protocol + '//' + window.location.host + '/';
 
+    // Sets the reading text size according to localStorage
     if (readingTextSize == 'big') {
         bookOverlay.classList.remove('normal');
         bookOverlay.classList.add('big');
@@ -298,6 +315,16 @@ window.onload = function () {
         bookOverlay.classList.remove('normal');
         bookOverlay.classList.add('small');
     };
+
+    // Sets the right icon for playing music
+    if (readingMusic == 'playing') {
+        musicToggle.innerHTML = '<img src="' + path + 'assets/icons/pause-16.svg">';
+    } else if (readingMusic == 'paused') {
+        musicToggle.innerHTML = '<img src="' + path + 'assets/icons/play-16.svg">';
+    } else if (readingMusic === null) {
+        localStorage.setItem('music', 'playing');
+        musicToggle.innerHTML = '<img src="' + path + 'assets/icons/pause-16.svg">';
+    }
 };
 </script>
     </body>

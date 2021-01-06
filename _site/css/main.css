@@ -689,25 +689,64 @@ label {
 
 .book-reading-overlay .top-controls {
     padding: 16px;
-    border-bottom: 1px solid var(--color-black);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    column-gap: 8px;
     background-color: var(--color-dark-grey);
     box-shadow: var(--shadow-static-large);
+}
+
+.book-reading-overlay .volume-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 8px;
 }
 
 .book-reading-overlay .bottom-controls {
     padding: 16px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 8px;
     background-color: var(--color-dark-grey);
     box-shadow: var(--shadow-static-large);
 }
 
-.book-reading-overlay .bottom-controls .button {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0;
-    margin-right: 8px;
+.book-reading-overlay .bottom-controls .group-icon, .book-reading-overlay .top-controls .group-icon {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-medium-grey);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    stroke: var(--color-medium-grey)
+}
+
+.book-reading-overlay .bottom-controls .button, .book-reading-overlay .top-controls .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-black);
+}
+
+.book-reading-overlay .bottom-controls .button.sans {
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.book-reading-overlay .bottom-controls .button.serif {
+    font-family: serif;
+    font-weight: 400;
+}
+
+.book-reading-overlay .top-controls .button.align-left {
+    flex-direction: row;
 }
 
 .book-reading-overlay .bottom-controls .button:last-child {
@@ -1048,6 +1087,7 @@ label {
 
 .on-page-gallery.bookshelves .bookshelf {
     margin-right: 16px;
+    text-decoration: none;
 }
 
 .on-page-gallery.bookshelves .bookshelf .covers {
@@ -1090,4 +1130,29 @@ label {
 .on-page-gallery.bookshelves a img {
     display: none;
     border-radius: 4px;
+}
+
+
+/* LOGIN PAGE================ */
+
+input.error {
+    border-color: var(--error-red);
+}
+
+.error-message {
+    color: var(--color-white);
+    border: 1px solid var(--error-red);
+    background-color: rgba(192, 57, 43, 0.16);
+    font-weight: 400;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-top: 32px;
+}
+
+.error-message.hidden {
+    display: none;
+}
+
+.error-message.visible {
+    display: block;
 }
