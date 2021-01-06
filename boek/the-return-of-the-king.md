@@ -7,7 +7,7 @@ isbn: 9780547952048
 genreTag: genreFantasy
 authorTag: authorJRRTolkien
 serieTag: serieTheLordOfTheRings
-bookshelfTag: NONESET
+bookshelfTag: bookshelfRead
 description: NONESET
 coverImage: assets/covers/theReturnOfTheKing.jpg
 ---

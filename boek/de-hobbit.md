@@ -7,7 +7,7 @@ isbn: 9789402306538
 genreTag: genreFantasy
 authorTag: authorJRRTolkien
 serieTag: NONESET
-bookshelfTag: NONESET
+bookshelfTag: bookshelfRead
 description: NONESET
 coverImage: assets/covers/theHobbitOrThereAndBackAgain.jpg
 ---

@@ -7,7 +7,7 @@ isbn: 9780547952024
 genreTag: genreFantasy
 authorTag: authorJRRTolkien
 serieTag: serieTheLordOfTheRings
-bookshelfTag: NONESET
+bookshelfTag: bookshelfRead
 description: NONESET
 coverImage: assets/covers/theTwoTowers.jpg
 ---

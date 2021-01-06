@@ -7,7 +7,7 @@ isbn: 9780553900323
 genreTag: genreFantasy
 authorTag: authorGeorgeRRMartin
 serieTag: serieASongOfIceAndFire
-bookshelfTag: NONESET
+bookshelfTag: bookshelfFavorites
 description: NONESET
 coverImage: assets/covers/aFeastForCrows.jpg
 ---

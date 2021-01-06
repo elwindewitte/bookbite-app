@@ -5,7 +5,11 @@
             <div class="spacer-16"></div>
             {%- for bookshelf in listContent -%}
             <a class="bookshelf" href="{{ bookshelf.url | url }}">
-                <img src="{{ '/' | url }}assets/images/{{ bookshelf.data.coverImage | url }}" alt="{{ '/' | url }}asets/images{{ bookshelf.data.coverImage }}"></img>
+                <div class="covers">
+                    {%- set listFilterShow = bookshelf.data.bookshelfTag -%}
+                    {%- set listContent = collections.book -%}
+                    {%- include "bookshelfCoverBooks.njk" -%}
+                </div>
                 <p>{{ bookshelf.data.name }}</p>
             </a>
             {%- endfor -%}
