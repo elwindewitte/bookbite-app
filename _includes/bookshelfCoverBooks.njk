@@ -1,0 +1,5 @@
+{%- for book in listContent -%}
+    {%- if book.data.bookshelfTag == listFilterShow -%}
+    <img src="{{ '/' | url }}{{ book.data.coverImage | url }}" alt="{{ '/' | url }}{{ book.data.coverImage }}"></img>
+    {%- endif -%}
+{%- endfor -%}

@@ -7,7 +7,7 @@ isbn: 9780553905656
 genreTag: genreFantasy
 authorTag: authorGeorgeRRMartin
 serieTag: serieASongOfIceAndFire
-bookshelfTag: NONESET
+bookshelfTag: bookshelfFavorites
 description: NONESET
 coverImage: assets/covers/aDanceWithDragons.jpg
 ---

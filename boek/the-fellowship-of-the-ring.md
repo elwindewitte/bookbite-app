@@ -7,7 +7,7 @@ isbn: 9780547952017
 genreTag: genreFantasy
 authorTag: authorJRRTolkien
 serieTag: serieTheLordOfTheRings
-bookshelfTag: bookshelfPopular
+bookshelfTag: bookshelfRead
 description: NONESET
 coverImage: assets/covers/theFellowshipOfTheRing.jpg
 ---

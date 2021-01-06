@@ -458,6 +458,50 @@ section.page.onboarding .button.secondary {
     text-align: center;
 }
 
+.on-page-list.bookshelves .bookshelf {
+    margin-right: 16px;
+}
+
+.on-page-list.bookshelves .bookshelf .covers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 8px;
+    padding-right: 16px;
+}
+
+.on-page-list.bookshelves a img:nth-child(1) {
+    display: block;
+    height: 192px;
+    box-shadow: var(--shadow-static-small);
+    z-index: 3;
+}
+
+.on-page-list.bookshelves a img:nth-child(2) {
+    display: block;
+    height: 176px;
+    box-shadow: var(--shadow-static-small);
+    position: relative;
+    transform: translateX(8px);
+    margin-top: -176px;
+    z-index: 2;
+}
+
+.on-page-list.bookshelves a img:nth-child(3) {
+    display: block;
+    height: 160px;
+    box-shadow: var(--shadow-static-small);
+    position: relative;
+    transform: translateX(16px);
+    margin-top: -160px;
+    z-index: 1;
+}
+
+.on-page-list.bookshelves a img {
+    display: none;
+}
+
 
 
 /* GALLERY================ */
@@ -896,4 +940,64 @@ label {
 
 .genre-grid .button, .genre-grid h3 {
     grid-column: 1 / 3;
+}
+
+
+
+/* BOOKSHELF PAGE================ */
+
+/* HEADER======== */
+
+.header-bookshelf {
+    padding: 16px;
+    background-color: var(--color-dark-grey);
+    width: var(--canvas-width);
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 8px;
+    row-gap: 16px;
+    box-shadow: var(--shadow-static-large);
+    z-index: 1000;
+}
+
+.header-bookshelf .data {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    column-gap: 16px;
+}
+
+.header-bookshelf svg {
+    width: 24px;
+    margin: 4px 0;
+}
+
+.header-bookshelf path {
+    stroke: var(--color-white);
+}
+
+/* GRID======== */
+
+.on-page-gallery.books {
+    display: grid;
+    padding: 168px 16px 104px 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+    width: var(--canvas-width);
+}
+
+.on-page-gallery.books .book {
+    text-decoration: none;
+}
+
+.on-page-gallery.books .book img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 8px;
 }

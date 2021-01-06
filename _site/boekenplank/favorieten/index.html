@@ -20,15 +20,28 @@
         <meta name="reply-to" content="elwindewitte@gmail.com"/>
     </head>
     <body>
-        <div class="top-nav">
-    <a href="javascript:history.back()">
-        
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 12H5" stroke="black" stroke-width="1.6"/>
-            <path d="M12 19L5 12L12 5" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
-        </svg>
+        <div class="header-bookshelf">
+    <div class="data">
+        <a href="javascript:history.back()">
+            
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5" stroke="black" stroke-width="1.6"/>
+                <path d="M12 19L5 12L12 5" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+            </svg>
+        </a>
+        <div class="page-data">
+            <h2>Favorieten</h2>
+            <p>Boekenplank</p>
+        </div>
+    </div>
+    <a class="button primary align-left" onclick="openModal()">
+        <p>Deel</p>
+        <img src="/assets/icons/share-16.svg">
     </a>
-    <h2>Favorieten</h2>
+    <a class="button primary align-left" onclick="openModal()">
+        <p>Instellingen</p>
+        <img src="/assets/icons/settings-16.svg">
+    </a>
 </div>
     <div class="bottom-nav">
         <div class="wrapper">
@@ -72,9 +85,18 @@
                 <p class="tiny">Instellingen</p>
             </a>
         </div>
-    </div><div class="on-page-gallery books">
-    <h3>Verderlezen voor jou</h3>
-    <div class="content"></div>
-</div>
+    </div><div class="on-page-gallery books"><a class="book" href="/boek/a-clash-of-kings/">
+                <img src="/assets/covers/aClashOfKings.jpg" alt="/assets/covers/aClashOfKings.jpg"></img>
+                <p class="small">A Clash of Kings</p>
+            </a><a class="book" href="/boek/a-dance-with-dragons/">
+                <img src="/assets/covers/aDanceWithDragons.jpg" alt="/assets/covers/aDanceWithDragons.jpg"></img>
+                <p class="small">A Dance with Dragons</p>
+            </a><a class="book" href="/boek/a-feast-for-crows/">
+                <img src="/assets/covers/aFeastForCrows.jpg" alt="/assets/covers/aFeastForCrows.jpg"></img>
+                <p class="small">A Feast for Crows</p>
+            </a><a class="book" href="/boek/a-storm-of-swords/">
+                <img src="/assets/covers/aStormOfSwords.jpg" alt="/assets//covers/aStormOfSwords.jpg"></img>
+                <p class="small">A Storm of Swords</p>
+            </a></div>
     </body>
 </html>

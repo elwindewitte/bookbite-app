@@ -2,7 +2,7 @@
 tags: bookshelf
 layout: pageBookshelf.njk
 name: Aan het lezen
-correspondingTag: reading
+bookshelfTag: bookshelfReading
 coverImage: bookshelfReading.png
 description: 
 ---
