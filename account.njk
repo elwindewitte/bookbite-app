@@ -8,6 +8,8 @@ permalink: /account/
 {%- set active = "Account" -%}
 {%- include "navBottom.njk" -%}
 
+{%- include "modalCreateBookshelf.njk" -%}
+
 <div class="on-page-gallery bookshelves">
     {%- set listContent = collections.bookshelf -%}
     {%- for bookshelf in listContent -%}
@@ -19,5 +21,8 @@ permalink: /account/
             </div>
             <p>{{ bookshelf.data.name }}</p>
         </a>
-        {%- endfor -%}
+    {%- endfor -%}
+    <a class="button primary" onclick="openModal('createBookshelf')">
+    <p>Nieuwe boekenplank</p>
+    </a>
 </div>

@@ -34,11 +34,11 @@
             <p>Boekenplank</p>
         </div>
     </div>
-    <a class="button primary align-left" onclick="openModal()">
+    <a class="button primary align-left" onclick="openModal('shareBookshelf')">
         <p>Deel</p>
         <img src="/assets/icons/share-16.svg">
     </a>
-    <a class="button primary align-left" onclick="openModal()">
+    <a class="button primary align-left" onclick="openModal('settingsBookshelf')">
         <p>Instellingen</p>
         <img src="/assets/icons/settings-16.svg">
     </a>
@@ -85,7 +85,27 @@
                 <p class="tiny">Instellingen</p>
             </a>
         </div>
-    </div><div class="on-page-gallery books"><a class="book" href="/boek/harry-potter-en-de-geheime-kamer/">
+    </div><div class="modal hidden" id="shareBookshelf">
+    <div class="modal-content">
+        <svg class="close-button" onclick="closeModal('shareBookshelf')" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 12" stroke="#330012" stroke-width="1.6" stroke-linecap="square"/>
+            <path d="M4 4L12 12" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+        </svg>
+        <h2>Da's pech...</h2>
+        <p>Je kunt nog geen boekenplank delen :(</p>
+        <div class="spacer-16"></div>
+    </div>
+</div><div class="modal hidden" id="settingsBookshelf">
+    <div class="modal-content">
+        <svg class="close-button" onclick="closeModal('settingsBookshelf')" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 12" stroke="#330012" stroke-width="1.6" stroke-linecap="square"/>
+            <path d="M4 4L12 12" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+        </svg>
+        <h2>Da's pech...</h2>
+        <p>Je kunt nog geen instellingen veranderen :(</p>
+        <div class="spacer-16"></div>
+    </div>
+</div><div class="on-page-gallery books"><a class="book" href="/boek/harry-potter-en-de-geheime-kamer/">
                 <img src="/assets/covers/harryPotterAndTheChamberOfSecrets.jpg" alt="/assets/covers/harryPotterAndTheChamberOfSecrets.jpg"></img>
                 <p class="small">Harry Potter en de Geheime Kamer</p>
             </a><a class="book" href="/boek/robinson-crusoe/">

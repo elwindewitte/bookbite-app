@@ -72,7 +72,17 @@
                 <p class="tiny">Instellingen</p>
             </a>
         </div>
-    </div><div class="on-page-gallery bookshelves"><a class="bookshelf" href="/boekenplank/aan-het-lezen/">
+    </div><div class="modal hidden" id="createBookshelf">
+    <div class="modal-content">
+        <svg class="close-button" onclick="closeModal('createBookshelf')" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 12" stroke="#330012" stroke-width="1.6" stroke-linecap="square"/>
+            <path d="M4 4L12 12" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+        </svg>
+        <h2>Da's pech...</h2>
+        <p>Je kunt nog geen boekenplank aanmaken :(</p>
+        <div class="spacer-16"></div>
+    </div>
+</div><div class="on-page-gallery bookshelves"><a class="bookshelf" href="/boekenplank/aan-het-lezen/">
             <div class="covers"><img src="/assets/covers/harryPotterAndTheChamberOfSecrets.jpg" alt="/assets/covers/harryPotterAndTheChamberOfSecrets.jpg"></img><img src="/assets/covers/robinsonCrusoe.jpg" alt="/assets/covers/robinsonCrusoe.jpg"></img></div>
             <p>Aan het lezen</p>
         </a><a class="bookshelf" href="/boekenplank/favorieten/">
@@ -84,6 +94,9 @@
         </a><a class="bookshelf" href="/boekenplank/wil-ik-lezen/">
             <div class="covers"><img src="/assets/covers/harryPotterAndThePrisonerOfAzkaban.jpg" alt="/assets/covers/harryPotterAndThePrisonerOfAzkaban.jpg"></img><img src="/assets/covers/harryPotterAndTheHalfBloodPrince.jpg" alt="/assets/covers/harryPotterAndTheHalfBloodPrince.jpg"></img><img src="/assets/covers/harryPotterAndTheOrderOfThePhoenix.jpg" alt="/assets/covers/harryPotterAndTheOrderOfThePhoenix.jpg"></img><img src="/assets/covers/harryPotterAndTheDeathlyHallows.jpg" alt="/assets/covers/harryPotterAndTheDeathlyHallows.jpg"></img><img src="/assets/covers/harryPotterAndTheSorcerersStone.jpg" alt="/assets/covers/harryPotterAndTheSorcerersStone.jpg"></img><img src="/assets/covers/harryPotterAndTheGobletOfFire.jpg" alt="/assets/covers/harryPotterAndTheGobletOfFire.jpg"></img></div>
             <p>Wil ik lezen</p>
-        </a></div>
+        </a><a class="button primary" onclick="openModal('createBookshelf')">
+    <p>Nieuwe boekenplank</p>
+    </a>
+</div>
     </body>
 </html>

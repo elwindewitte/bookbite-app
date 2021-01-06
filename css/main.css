@@ -1042,6 +1042,10 @@ label {
     padding: 96px 16px 32px 16px;;
 }
 
+.on-page-gallery.bookshelves .button {
+    grid-column: 1 / 3;
+}
+
 .on-page-gallery.bookshelves .bookshelf {
     margin-right: 16px;
 }

@@ -117,18 +117,12 @@ function authSignout() {
 function deleteData() {
     // Defining variables
     var path = window.location.protocol + '//' + window.location.host + '/';
-    var buttonDeleteData = document.getElementById('buttonDeleteData');
 
     // Wipes all localstorage data
     localStorage.clear();
 
-    // Changes the text
-    buttonDeleteData.innerHTML = '<p>Data verwijderen...</p>';
-
-    // Redirects to root after 400ms
-    setTimeout(function () {
-        window.location.replace(path);
-    }, 400);
+    // Redirects to root
+    window.location.replace(path);
 };
 
 
