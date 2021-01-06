@@ -41,6 +41,13 @@ function authSignup() {
     window.location.replace(path + 'onboarding/');
 };
 
+// Onboarding process
+function finishOnboarding() {
+    var path = window.location.protocol + '//' + window.location.host + '/';
+    localStorage.setItem('onboardingDone', 'true');
+    window.location.replace(path + 'home/');
+};
+
 
 
 
