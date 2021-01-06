@@ -1026,3 +1026,64 @@ label {
     grid-template-rows: auto;
     row-gap: 8px;
 }
+
+
+
+/* ACCOUNT PAGE================ */
+
+/* GRID======== */
+
+.on-page-gallery.bookshelves {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 16px;
+    row-gap: 16px;
+    padding: 96px 16px 32px 16px;;
+}
+
+.on-page-gallery.bookshelves .bookshelf {
+    margin-right: 16px;
+}
+
+.on-page-gallery.bookshelves .bookshelf .covers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    padding-right: 16px;
+    width: auto;
+}
+
+.on-page-gallery.bookshelves a img:nth-child(1) {
+    display: block;
+    height: 192px;
+    box-shadow: var(--shadow-static-small);
+    z-index: 3;
+}
+
+.on-page-gallery.bookshelves a img:nth-child(2) {
+    display: block;
+    height: 176px;
+    box-shadow: var(--shadow-static-small);
+    position: relative;
+    transform: translateX(24px);
+    margin-top: -176px;
+    z-index: 2;
+}
+
+.on-page-gallery.bookshelves a img:nth-child(3) {
+    display: block;
+    height: 160px;
+    box-shadow: var(--shadow-static-small);
+    position: relative;
+    transform: translateX(48px);
+    margin-top: -160px;
+    z-index: 1;
+}
+
+.on-page-gallery.bookshelves a img {
+    display: none;
+    border-radius: 4px;
+}
