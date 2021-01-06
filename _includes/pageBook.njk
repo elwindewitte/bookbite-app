@@ -84,7 +84,7 @@ layout: layouts/base.njk
     <p>{{ description }}</p>   
 </div>
 
-<section class="with-bottom-nav">
+<section>
     {%- set listName = "Meer boeken van deze auteur" -%}
     {%- set listFilterShow = authorTag -%}
     {%- set listFilterHide = name -%}
@@ -97,3 +97,10 @@ layout: layouts/base.njk
     {%- set listContent = collections.book -%}
     {%- include "onPageListBook.njk" -%}
 </section>
+
+<div class="book-page-section">
+    <h3>Beoordelingen</h3>
+    <p>{{ rating }}</p>   
+</div>
+
+<section class="with-bottom-nav"></section>
