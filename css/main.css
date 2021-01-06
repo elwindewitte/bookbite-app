@@ -24,7 +24,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* IMPORTS================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Lora:wght@600&display=swap');
 
 
 
@@ -70,6 +70,7 @@ h1.faded, h2.faded, h3.faded, h4.faded, h5.faded, p.faded, a.faded {
 h1 {
     font-family: var(--font-header);
     color: var(--color-secondary);
+    font-weight: 600;
 }
 
 h2, h3, h4, h5, p, a {
@@ -79,6 +80,7 @@ h2, h3, h4, h5, p, a {
 
 h2 {
     font-family: var(--font-header);
+    font-weight: 600;
 }
 
 /* WEIGHT======== */
@@ -476,6 +478,7 @@ section.page.onboarding .button.secondary {
 
 .book-page-header img {
     width: 100%;
+    border-radius: 8px;
 }
 
 .book-page-section {
@@ -607,7 +610,7 @@ label {
     width: var(--canvas-width);
     height: var(--canvas-height);
     z-index: 100;
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     transition: top 0.24s var(--easing);
 }
 
@@ -622,6 +625,8 @@ label {
 .book-reading-overlay .top-controls {
     padding: 16px;
     border-bottom: 1px solid var(--color-black);
+    background-color: var(--color-dark-grey);
+    box-shadow: var(--shadow-static-large);
 }
 
 .book-reading-overlay .bottom-controls {
@@ -629,7 +634,8 @@ label {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    border-top: 1px solid var(--color-black);
+    background-color: var(--color-dark-grey);
+    box-shadow: var(--shadow-static-large);
 }
 
 .book-reading-overlay .bottom-controls .button {
@@ -780,4 +786,64 @@ label {
 
 .modal-content input.hidden {
     display: none;
+}
+
+
+
+/* BOOK REVIEW================ */
+
+.ratings-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 16px;
+}
+
+.ratings-header .button {
+    align-self: start;
+}
+
+.ratings-header .ratings-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.ratings-header .ratings-number {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.ratings-header p.big {
+    margin-right: 4px;
+}
+
+.book-review {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--color-dark-grey);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 8px;
+}
+
+.book-review .review-data {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+}
+
+.book-review .review-account {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.book-review img {
+    width: 32px;
+    border-radius: 16px;
+    margin-right: 8px;
 }
