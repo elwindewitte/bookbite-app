@@ -578,6 +578,7 @@ input, select {
 
 input::placeholder {
     color: var(--color-medium-grey);
+    font-family: var(--font-body);
 }
 
 input:active {

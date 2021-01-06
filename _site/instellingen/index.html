@@ -119,6 +119,14 @@ window.onload = function () {
     } else {
         document.getElementById('readingTextSize').defaultValue = localStorage.getItem('readingTextSize');
     };
+
+    // Checks if reading volume has been set already
+    if (localStorage.getItem('readingVolume') === null) {
+        localStorage.setItem('readingVolume', '100');
+        document.getElementById('readingVolume').value = localStorage.getItem('readingVolume');
+    } else {
+        document.getElementById('readingVolume').value = localStorage.getItem('readingVolume');
+    };
 }
 </script>
     </body>
