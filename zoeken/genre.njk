@@ -5,9 +5,22 @@ permalink: /zoeken/genre/
 {%- set active = "Genre" -%}
 {%- include "headerSearch.njk" -%}
 
-{%- set listName = "Verderlezen voor jou" -%}
-{%- set listContent = collections.genre -%}
-{%- include "onPageListBook.njk" -%}
+<section class="with-search-nav with-bottom-nav">
+    <div class="genre-grid">
+        <a class="genre-card" href="{{ '/' | url }}genre/fictie/">
+            <h3>Fictie</h3>
+        </a>
+        <a class="genre-card">
+            <h3>Non-fictie</h3>
+        </a>
+        <a class="genre-card">
+            <h3>Vrije tijd</h3>
+        </a>
+        <a class="genre-card">
+            <h3>Overig</h3>
+        </a>
+    </div>
+</section>
 
 {%- set active = "Zoeken" -%}
 {%- include "navBottom.njk" -%}

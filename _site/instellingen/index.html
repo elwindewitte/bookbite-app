@@ -9,6 +9,7 @@
         <script src="/js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/js/search.js"></script>
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
         
         <!--GOOGLE/META-->
         
@@ -40,29 +41,29 @@
     <label for="userPassword">Wachtwoord</label>
     <input type="password" id="userPassword">
     <div class="spacer-16"></div>
-    <a class="button positive secondary" id="buttonSave" onclick="saveAccountSettings()"><p>Aanpassingen opslaan</p></a>
+    <a class="button positive secondary" id="buttonSaveAccountSettings" onclick="saveAccountSettings()"><p>Aanpassingen opslaan</p></a>
     <div class="spacer-8"></div>
-    <a class="button negative secondary" id="buttonSignout" onclick="authSignout()"><p>Uitloggen</p></a>
+    <a class="button negative secondary" id="buttonSignout" onclick="authSignout()"><p>Log uit</p></a>
 
     <div class="spacer-32"></div>
     <h3>Leeservaring</h3>
     <div class="spacer-8"></div>
     <label for="readingTextSize">Tekst grootte</label>
     <select id="readingTextSize">
-        <option value="big">Groot</option>
-        <option value="medium">Medium</option>
-        <option value="small">Klein</option>
+        <option value="big" id="readingTextSizeBig">Groot</option>
+        <option value="medium" id="readingTextSizeMedium">Medium</option>
+        <option value="small" id="readingTextSizeSmall">Klein</option>
     </select>
     <div class="spacer-8"></div>
     <label for="readingVolume">Volume van muziek</label>
     <input type="number" id="readingVolume" min="10" max="100">
     <div class="spacer-16"></div>
-    <a class="button positive secondary" id="buttonSave" onclick="saveReadingSettings()"><p>Aanpassingen opslaan</p></a>
+    <a class="button positive secondary" id="buttonSaveReadingSettings" onclick="saveReadingSettings()"><p>Aanpassingen opslaan</p></a>
 
     <div class="spacer-32"></div>
     <h3 class="danger">Danger zone!</h3>
     <div class="spacer-8"></div>
-    <a class="button negative primary" id="buttonDeleteData" onclick="deleteData()"><p>Data verwijderen</p></a>
+    <a class="button negative primary" id="buttonDeleteData" onclick="deleteData()"><p>Verwijder data</p></a>
 </section>
     <div class="bottom-nav">
         <div class="wrapper">
@@ -115,10 +116,8 @@ window.onload = function () {
     // Checks if reading text size has been set already and fills the dropdown accordingly
     if (localStorage.getItem('readingTextSize') === null) {
         localStorage.setItem('readingTextSize', 'medium');
-        document.getElementById('readingTextSize').defaultValue = localStorage.getItem('readingTextSize');
-    } else {
-        document.getElementById('readingTextSize').defaultValue = localStorage.getItem('readingTextSize');
-    };
+        document.getElementById('readingTextSizeMedium').selected = true;
+    }
 
     // Checks if reading volume has been set already
     if (localStorage.getItem('readingVolume') === null) {
@@ -127,6 +126,15 @@ window.onload = function () {
     } else {
         document.getElementById('readingVolume').value = localStorage.getItem('readingVolume');
     };
+
+    // Sets the right text size
+    if (localStorage.getItem('readingTextSize') == 'big') {
+        document.getElementById('readingTextSizeBig').selected = true;
+    } else if (localStorage.getItem('readingTextSize') == 'medium') {
+        document.getElementById('readingTextSizeMedium').selected = true;
+    } else if (localStorage.getItem('readingTextSize') == 'small') {
+        document.getElementById('readingTextSizeSmall').selected = true;
+    }
 }
 </script>
     </body>

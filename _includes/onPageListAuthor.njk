@@ -1,0 +1,48 @@
+<div class="on-page-list authors">
+    <h3>{{ listName }}</h3>
+    <div class="container">
+        <div class="content">
+            <div class="spacer-16"></div>
+            {%- for author in listContent -%}
+
+                {# To filter out books with a corresponding author tag #}
+                {%- if listFilterShow == author.data.authorTag -%}
+                    <a class="author" href="{{ author.url | url }}">
+                        <img src="{{ '/' | url }}{{ author.data.profileImage | url }}" alt="{{ '/' | url }}{{ book.data.profileImage }}"></img>
+                        <p class="small">{{ author.data.name }}</p>
+                    </a>
+
+                {# To filter out books with a corresponding genre tag #}
+                {%- elif listFilterShow == author.data.genreTag -%}
+                    <a class="author" href="{{ author.url | url }}">
+                        <img src="{{ '/' | url }}{{ author.data.profileImage | url }}" alt="{{ '/' | url }}{{ book.data.profileImage }}"></img>
+                        <p class="small">{{ author.data.name }}</p>
+                    </a>
+
+                {# To filter out books with a corresponding bookshelf tag #}
+                {%- elif listFilterShow == author.data.bookshelfTag -%}
+                    <a class="author" href="{{ author.url | url }}">
+                        <img src="{{ '/' | url }}{{ author.data.profileImage | url }}" alt="{{ '/' | url }}{{ book.data.profileImage }}"></img>
+                        <p class="small">{{ author.data.name }}</p>
+                    </a>
+                
+                {# To filter out books with a corresponding serie tag #}
+                {%- elif listFilterShow == author.data.serieTag -%}
+                    <a class="author" href="{{ author.url | url }}">
+                        <img src="{{ '/' | url }}{{ author.data.profileImage | url }}" alt="{{ '/' | url }}{{ book.data.profileImage }}"></img>
+                        <p class="small">{{ author.data.name }}</p>
+                    </a>
+                
+                {# To show book without a filter #}
+                {%- elif listFilterShow == "NONESET" -%}
+                    <a class="author" href="{{ author.url | url }}">
+                        <img src="{{ '/' | url }}{{ author.data.profileImage | url }}" alt="{{ '/' | url }}{{ book.data.profileImage }}"></img>
+                        <p class="small">{{ author.data.name }}</p>
+                    </a>
+
+                {%- endif -%}
+            {%- endfor -%}
+            <div class="spacer-8"></div>
+        </div>
+    </div>
+</div>

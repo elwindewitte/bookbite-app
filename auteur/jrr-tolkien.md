@@ -1,8 +1,9 @@
 ---
-tags: ['author', 'genreFiction', 'genreFantasy']
+tags: author
 layout: pageAuthor.njk
 name: J.R.R. Tolkien
-profileImage: assets/images/jrrTolkien.jpg
+profileImage: assets/images/authorJRRTolkien.png
 authorTag: authorJRRTolkien
+genreTag: genreFantasy
 description: 
 ---

@@ -1,8 +1,9 @@
 ---
-tags: ['author', 'genreFiction', 'genreFantasy']
+tags: author
 layout: pageAuthor.njk
 name: Frank Herbert
-profileImage: assets/images/frankHerbert.jpg
+profileImage: assets/images/authorFrankHerbert.png
 authorTag: authorFrankHerbert
+genreTag: genreFantasy
 description: 
 ---

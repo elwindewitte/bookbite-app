@@ -188,3 +188,20 @@ layout: layouts/base.njk
 </div>
 
 <section class="with-bottom-nav"></section>
+
+<script>
+window.onload = function () {
+    var readingTextSize = localStorage.getItem('readingTextSize');
+    var bookOverlay = document.getElementById('bookOverlay');
+
+    if (readingTextSize == 'big') {
+        bookOverlay.classList.remove('normal');
+        bookOverlay.classList.add('big');
+    } else if (readingTextSize == 'medium') {
+        // Absolutely nothing...
+    } else if (readingTextSize == 'small') {
+        bookOverlay.classList.remove('normal');
+        bookOverlay.classList.add('small');
+    };
+};
+</script>
