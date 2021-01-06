@@ -6,6 +6,10 @@ layout: layouts/base.njk
 
 {%- include "navBottom.njk" -%}
 
+{%- include "modalShareBookshelf.njk" -%}
+
+{%- include "modalSettingsBookshelf.njk" -%}
+
 <div class="on-page-gallery books">
     {%- set listContent = collections.book -%}
     {%- for book in listContent -%}

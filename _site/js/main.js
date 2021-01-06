@@ -8,6 +8,7 @@ function authSignin() {
     var dataUsername = localStorage.getItem("username");
     var dataPassword = localStorage.getItem("password");
     var dataOnboardingDone = localStorage.getItem("onboardingDone");
+    var errorMessage = document.getElementById('errorMessage');
     var path = window.location.protocol + '//' + window.location.host + '/';
 
     // Actual authentication, or simulation of at least
@@ -20,6 +21,18 @@ function authSignin() {
             // Redirect to onboarding when it hasn't been completed yet
             window.location.replace(path + 'onboarding/');
         };
+
+    // When the password is incorrect
+    } else if ((inputUsername.value == dataUsername) && !(inputPassword.value == dataPassword)) {
+        errorMessage.classList.remove('hidden');
+        errorMessage.classList.add('visible');
+        errorMessage.innerHTML = 'Volgensmij klopt het wachtwoord niet. Probeer opnieuw.';
+
+    // When the username is incorrect
+    } else if (!(inputUsername.value == dataUsername) && !(inputPassword.value == dataPassword)) {
+        errorMessage.classList.remove('hidden');
+        errorMessage.classList.add('visible');
+        errorMessage.innerHTML = 'Die gebruikersnaam kennen we niet. Maak een nieuw account aan.';
     };
 };
 
@@ -117,18 +130,12 @@ function authSignout() {
 function deleteData() {
     // Defining variables
     var path = window.location.protocol + '//' + window.location.host + '/';
-    var buttonDeleteData = document.getElementById('buttonDeleteData');
 
     // Wipes all localstorage data
     localStorage.clear();
 
-    // Changes the text
-    buttonDeleteData.innerHTML = '<p>Data verwijderen...</p>';
-
-    // Redirects to root after 400ms
-    setTimeout(function () {
-        window.location.replace(path);
-    }, 400);
+    // Redirects to root
+    window.location.replace(path);
 };
 
 
@@ -167,12 +174,17 @@ function volumeDown() {
 
 // Toggles the music
 function toggleMusic() {
+    var musicToggle = document.getElementById('musicToggle');
+    var path = window.location.protocol + '//' + window.location.host + '/';
+
     if (audio.paused) {
         localStorage.setItem('music', 'playing');
         audio.play();
+        musicToggle.innerHTML = '<img src="' + path + 'assets/icons/pause-16.svg">';
       } else {
         localStorage.setItem('music', 'paused')
         audio.pause();
+        musicToggle.innerHTML = '<img src="' + path + 'assets/icons/play-16.svg">';
       }
 };
 

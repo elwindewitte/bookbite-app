@@ -1,0 +1,18 @@
+<div class="modal hidden" id="deleteDataConfirm">
+    <div class="modal-content">
+        <svg class="close-button" onclick="closeModal('deleteDataConfirm')" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 12" stroke="#330012" stroke-width="1.6" stroke-linecap="square"/>
+            <path d="M4 4L12 12" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+        </svg>
+        <h2>Sure?</h2>
+        <p>Weet je zeker dat je je data wilt verwijderen?</p>
+        <div class="spacer-16"></div>
+        <a class="button primary" onclick="closeModal('deleteDataConfirm')">
+            <p>Nee, toch niet</p>
+        </a>
+        <div class="spacer-8"></div>
+        <a class="button negative primary" onclick="deleteData()">
+            <p>Ja, verwijder</p>
+        </a>
+    </div>
+</div>

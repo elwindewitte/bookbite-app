@@ -7,3 +7,22 @@ permalink: /account/
 
 {%- set active = "Account" -%}
 {%- include "navBottom.njk" -%}
+
+{%- include "modalCreateBookshelf.njk" -%}
+
+<div class="on-page-gallery bookshelves">
+    {%- set listContent = collections.bookshelf -%}
+    {%- for bookshelf in listContent -%}
+        <a class="bookshelf" href="{{ bookshelf.url | url }}">
+            <div class="covers">
+                {%- set listFilterShow = bookshelf.data.bookshelfTag -%}
+                {%- set listContent = collections.book -%}
+                {%- include "bookshelfCoverBooks.njk" -%}
+            </div>
+            <p>{{ bookshelf.data.name }}</p>
+        </a>
+    {%- endfor -%}
+    <a class="button primary" onclick="openModal('createBookshelf')">
+    <p>Nieuwe boekenplank</p>
+    </a>
+</div>

@@ -5,3 +5,24 @@ layout: layouts/base.njk
 {%- include "navTop.njk" -%}
 
 {%- include "navBottom.njk" -%}
+
+<div class="header-author">
+    <img src="{{ '/' | url }}{{ profileImage }}">
+    <div class="author-details">
+        <h3>{{ name }}</h3>
+        <p>{{ description }}</p>
+    </div>
+</div>
+
+<section class="with-bottom-nav">
+    {%- set listName = "Boeken van deze auteur" -%}
+    {%- set listFilterShow = authorTag -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+
+    {%- set listName = "Vergelijkbare auteurs" -%}
+    {%- set listFilterShow = genreTag -%}
+    {%- set listFilterHide = name -%}
+    {%- set listContent = collections.author -%}
+    {%- include "onPageListAuthor.njk" -%}
+</section>
