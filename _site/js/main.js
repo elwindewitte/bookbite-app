@@ -49,9 +49,10 @@ function authSignup() {
     localStorage.setItem('username', inputUsername.value);
     localStorage.setItem('password', inputPassword.value);
     localStorage.setItem('signinDone', 'true');
+    localStorage.setItem('signinDone', 'true');
 
     // Redirecting to onboarding
-    window.location.replace(path + 'onboarding/');
+    window.location.replace(path);
 };
 
 // Onboarding process

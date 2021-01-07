@@ -8,7 +8,6 @@
         <select name="bookshelf">
             {%- for bookshelf in collections.bookshelf -%}
             <option value="{{ bookshelf.data.correspondingTag }}">{{ bookshelf.data.name }}</option>
-            <option value="{{ bookshelf.data.correspondingTag }}">{{ bookshelf.data.name }}</option>
             {%- endfor -%}
         </select>
         <div class="spacer-16"></div>
