@@ -355,7 +355,7 @@ a {
 /* SECTION================ */
 
 header {
-    padding: 32px 16px;
+    padding: 40px 16px 16px 16px;
 }
 
 header.with-top-nav {
