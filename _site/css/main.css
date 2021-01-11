@@ -68,8 +68,8 @@ h1.faded, h2.faded, h3.faded, h4.faded, h5.faded, p.faded, a.faded {
 
 /* STYLE======== */
 h1 {
-    font-family: var(--font-header);
-    color: var(--color-secondary);
+    font-family: var(--font-body);
+    color: var(--color-white);
     font-weight: 600;
 }
 
@@ -79,7 +79,7 @@ h2, h3, h4, h5, p, a {
 }
 
 h2 {
-    font-family: var(--font-header);
+    font-family: var(--font-body);
     font-weight: 600;
 }
 
