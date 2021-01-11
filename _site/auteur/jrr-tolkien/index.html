@@ -9,6 +9,7 @@
         <script src="/js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/js/search.js"></script>
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
         
         <!--GOOGLE/META-->
         
@@ -20,26 +21,110 @@
     </head>
     <body>
         <div class="top-nav">
-    <a href="javascript:history.back()"><img src="/assets/icons/arrowLeft.svg" alt=""></img></a>
+    <a href="javascript:history.back()">
+        
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5" stroke="black" stroke-width="1.6"/>
+            <path d="M12 19L5 12L12 5" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+        </svg>
+    </a>
     <h2>J.R.R. Tolkien</h2>
 </div>
     <div class="bottom-nav">
-    <a class="active" href="/home">
-        <img src="/assets/icons/home.svg" alt=""></img>
-        <p class="tiny">Home</p>
-    </a>
-    <a class="passive" href="/zoeken/alles">
-        <img src="/assets/icons/search.svg" alt=""></img>
-        <p class="tiny">Zoeken</p>
-    </a>
-    <a class="passive" href="/account">
-        <img src="/assets/icons/user.svg" alt=""></img>
-        <p class="tiny">Account</p>
-    </a>
-    <a class="passive" href="/instellingen">
-        <img src="/assets/icons/settings.svg" alt=""></img>
-        <p class="tiny">Instellingen</p>
-    </a>
+        <div class="wrapper">
+            <a class="active" href="/home">
+                
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.375 9L12.375 2L21.375 9V20C21.375 20.5304 21.1643 21.0391 20.7892 21.4142C20.4141 21.7893 19.9054 22 19.375 22H5.375C4.84457 22 4.33586 21.7893 3.96079 21.4142C3.58571 21.0391 3.375 20.5304 3.375 20V9Z" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.375 22V12H15.375V22" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="tiny">Home</p>
+            </a>
+            <a class="passive" href="/zoeken/alles">
+                
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.125 19C15.5433 19 19.125 15.4183 19.125 11C19.125 6.58172 15.5433 3 11.125 3C6.70672 3 3.125 6.58172 3.125 11C3.125 15.4183 6.70672 19 11.125 19Z" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21.125 21L16.775 16.65" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="tiny">Zoeken</p>
+            </a>
+            <a class="passive" href="/account">
+                
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.875 21V19C20.875 17.9391 20.4536 16.9217 19.7034 16.1716C18.9533 15.4214 17.9359 15 16.875 15H8.875C7.81413 15 6.79672 15.4214 6.04657 16.1716C5.29643 16.9217 4.875 17.9391 4.875 19V21" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.875 11C15.0841 11 16.875 9.20914 16.875 7C16.875 4.79086 15.0841 3 12.875 3C10.6659 3 8.875 4.79086 8.875 7C8.875 9.20914 10.6659 11 12.875 11Z" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p class="tiny">Account</p>
+            </a>
+            <a class="passive" href="/instellingen">
+                
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M12.625 15C14.2819 15 15.625 13.6569 15.625 12C15.625 10.3431 14.2819 9 12.625 9C10.9681 9 9.625 10.3431 9.625 12C9.625 13.6569 10.9681 15 12.625 15Z" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.025 15C19.8919 15.3016 19.8522 15.6362 19.911 15.9606C19.9698 16.285 20.1245 16.5843 20.355 16.82L20.415 16.88C20.601 17.0657 20.7485 17.2863 20.8491 17.5291C20.9498 17.7719 21.0016 18.0322 21.0016 18.295C21.0016 18.5578 20.9498 18.8181 20.8491 19.0609C20.7485 19.3037 20.601 19.5243 20.415 19.71C20.2293 19.896 20.0087 20.0435 19.7659 20.1441C19.5231 20.2448 19.2628 20.2966 19 20.2966C18.7372 20.2966 18.4769 20.2448 18.2341 20.1441C17.9913 20.0435 17.7707 19.896 17.585 19.71L17.525 19.65C17.2893 19.4195 16.99 19.2648 16.6656 19.206C16.3412 19.1472 16.0066 19.1869 15.705 19.32C15.4092 19.4468 15.157 19.6572 14.9793 19.9255C14.8016 20.1938 14.7063 20.5082 14.705 20.83V21C14.705 21.5304 14.4943 22.0391 14.1192 22.4142C13.7441 22.7893 13.2354 23 12.705 23C12.1746 23 11.6659 22.7893 11.2908 22.4142C10.9157 22.0391 10.705 21.5304 10.705 21V20.91C10.6973 20.579 10.5901 20.258 10.3975 19.9887C10.2049 19.7194 9.93574 19.5143 9.625 19.4C9.32338 19.2669 8.98881 19.2272 8.66441 19.286C8.34002 19.3448 8.04068 19.4995 7.805 19.73L7.745 19.79C7.55925 19.976 7.33868 20.1235 7.09588 20.2241C6.85308 20.3248 6.59283 20.3766 6.33 20.3766C6.06717 20.3766 5.80692 20.3248 5.56412 20.2241C5.32132 20.1235 5.10075 19.976 4.915 19.79C4.72905 19.6043 4.58153 19.3837 4.48088 19.1409C4.38023 18.8981 4.32843 18.6378 4.32843 18.375C4.32843 18.1122 4.38023 17.8519 4.48088 17.6091C4.58153 17.3663 4.72905 17.1457 4.915 16.96L4.975 16.9C5.20554 16.6643 5.36019 16.365 5.419 16.0406C5.47782 15.7162 5.43812 15.3816 5.305 15.08C5.17824 14.7842 4.96776 14.532 4.69947 14.3543C4.43118 14.1766 4.11679 14.0813 3.795 14.08H3.625C3.09457 14.08 2.58586 13.8693 2.21079 13.4942C1.83571 13.1191 1.625 12.6104 1.625 12.08C1.625 11.5496 1.83571 11.0409 2.21079 10.6658C2.58586 10.2907 3.09457 10.08 3.625 10.08H3.715C4.04599 10.0723 4.367 9.96512 4.6363 9.77251C4.90559 9.5799 5.11072 9.31074 5.225 9C5.35812 8.69838 5.39782 8.36381 5.339 8.03941C5.28019 7.71502 5.12554 7.41568 4.895 7.18L4.835 7.12C4.64905 6.93425 4.50153 6.71368 4.40088 6.47088C4.30023 6.22808 4.24843 5.96783 4.24843 5.705C4.24843 5.44217 4.30023 5.18192 4.40088 4.93912C4.50153 4.69632 4.64905 4.47575 4.835 4.29C5.02075 4.10405 5.24132 3.95653 5.48412 3.85588C5.72692 3.75523 5.98717 3.70343 6.25 3.70343C6.51283 3.70343 6.77308 3.75523 7.01588 3.85588C7.25868 3.95653 7.47925 4.10405 7.665 4.29L7.725 4.35C7.96068 4.58054 8.26002 4.73519 8.58441 4.794C8.90881 4.85282 9.24338 4.81312 9.545 4.68H9.625C9.92077 4.55324 10.173 4.34276 10.3507 4.07447C10.5284 3.80618 10.6237 3.49179 10.625 3.17V3C10.625 2.46957 10.8357 1.96086 11.2108 1.58579C11.5859 1.21071 12.0946 1 12.625 1C13.1554 1 13.6641 1.21071 14.0392 1.58579C14.4143 1.96086 14.625 2.46957 14.625 3V3.09C14.6263 3.41179 14.7216 3.72618 14.8993 3.99447C15.077 4.26276 15.3292 4.47324 15.625 4.6C15.9266 4.73312 16.2612 4.77282 16.5856 4.714C16.91 4.65519 17.2093 4.50054 17.445 4.27L17.505 4.21C17.6907 4.02405 17.9113 3.87653 18.1541 3.77588C18.3969 3.67523 18.6572 3.62343 18.92 3.62343C19.1828 3.62343 19.4431 3.67523 19.6859 3.77588C19.9287 3.87653 20.1493 4.02405 20.335 4.21C20.521 4.39575 20.6685 4.61632 20.7691 4.85912C20.8698 5.10192 20.9216 5.36217 20.9216 5.625C20.9216 5.88783 20.8698 6.14808 20.7691 6.39088C20.6685 6.63368 20.521 6.85425 20.335 7.04L20.275 7.1C20.0445 7.33568 19.8898 7.63502 19.831 7.95941C19.7722 8.28381 19.8119 8.61838 19.945 8.92V9C20.0718 9.29577 20.2822 9.54802 20.5505 9.72569C20.8188 9.90337 21.1332 9.99872 21.455 10H21.625C22.1554 10 22.6641 10.2107 23.0392 10.5858C23.4143 10.9609 23.625 11.4696 23.625 12C23.625 12.5304 23.4143 13.0391 23.0392 13.4142C22.6641 13.7893 22.1554 14 21.625 14H21.535C21.2132 14.0013 20.8988 14.0966 20.6305 14.2743C20.3622 14.452 20.1518 14.7042 20.025 15V15Z" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="24" height="24" fill="white" transform="translate(0.625)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <p class="tiny">Instellingen</p>
+            </a>
+        </div>
+    </div><div class="header-author">
+    <img src="/assets/images/authorJRRTolkien.png">
+    <div class="author-details">
+        <h3>J.R.R. Tolkien</h3>
+        <p>John Ronald Reuel Tolkien (Bloemfontein, Oranje Vrijstaat, 3 januari 1892 – Bournemouth, Verenigd Koninkrijk, 2 september 1973) was een Engelse filoloog, dichter, theoloog en hoogleraar in de Engelse taal- en letterkunde. Hij werd vooral bekend als de schrijver van De Hobbit, In de ban van de ring en De Silmarillion, waarmee hij de vader van de moderne fantasy-literatuur werd.</p>
+    </div>
 </div>
+
+<section class="with-bottom-nav"><div class="on-page-list books">
+    <h3>Boeken van deze auteur</h3>
+    <div class="container">
+        <div class="content">
+            <div class="spacer-16"></div><a class="book" href="/boek/de-hobbit/">
+                            <img src="/assets/covers/theHobbitOrThereAndBackAgain.jpg" alt="/assets/covers/theHobbitOrThereAndBackAgain.jpg"></img>
+                        </a>
+
+                    <a class="book" href="/boek/the-fellowship-of-the-ring/">
+                            <img src="/assets/covers/theFellowshipOfTheRing.jpg" alt="/assets/covers/theFellowshipOfTheRing.jpg"></img>
+                        </a>
+
+                    <a class="book" href="/boek/the-return-of-the-king/">
+                            <img src="/assets/covers/theReturnOfTheKing.jpg" alt="/assets/covers/theReturnOfTheKing.jpg"></img>
+                        </a>
+
+                    <a class="book" href="/boek/the-two-towers/">
+                            <img src="/assets/covers/theTwoTowers.jpg" alt="/assets/covers/theTwoTowers.jpg"></img>
+                        </a>
+
+                    <div class="spacer-8"></div>
+        </div>
+    </div>
+</div><div class="on-page-list authors">
+    <h3>Vergelijkbare auteurs</h3>
+    <div class="container">
+        <div class="content">
+            <div class="spacer-16"></div><a class="author" href="/auteur/frank-herbert/">
+                        <img src="/assets/images/authorFrankHerbert.png" alt="/"></img>
+                        <p class="small">Frank Herbert</p>
+                    </a>
+
+                <a class="author" href="/auteur/george-rr-martin/">
+                        <img src="/assets/images/authorGeorgeRRMartin.png" alt="/"></img>
+                        <p class="small">George R.R. Martin</p>
+                    </a>
+
+                <a class="author" href="/auteur/jk-rowling/">
+                        <img src="/assets/images/authorJKRowling.png" alt="/"></img>
+                        <p class="small">J.K. Rowling</p>
+                    </a>
+
+                <div class="spacer-8"></div>
+        </div>
+    </div>
+</div></section>
     </body>
 </html>

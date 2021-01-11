@@ -9,6 +9,7 @@
         <script src="/js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/js/search.js"></script>
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
         
         <!--GOOGLE/META-->
         
@@ -27,6 +28,7 @@
     <div class="spacer-8"></div>
     <label for="userPassword">Wachtwoord</label>
     <input type="password" id="userPassword" placeholder="••••••••">
+    <div class="error-message hidden" id="errorMessage"></div>
     <div class="spacer-32"></div>
     <a class="button primary" id="buttonSignIn" onclick="authSignin()"><p>Log in</p></a>
     <div class="spacer-8"></div>

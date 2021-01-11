@@ -2,6 +2,8 @@
 tags: book
 layout: pageBook.njk
 name: Harry Potter en de Orde van de Fenix
+rating: 4.50
+isbn: 906169700X
 genreTag: genreFantasy
 authorTag: authorJKRowling
 serieTag: serieHarryPotter

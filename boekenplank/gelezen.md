@@ -2,6 +2,6 @@
 tags: bookshelf
 layout: pageBookshelf.njk
 name: Gelezen
-correspondingTag: read
+bookshelfTag: bookshelfRead
 description: 
 ---

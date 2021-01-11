@@ -2,6 +2,6 @@
 tags: bookshelf
 layout: pageBookshelf.njk
 name: Wil ik lezen
-correspondingTag: wantToRead
+bookshelfTag: bookshelfWantToRead
 description: 
 ---

@@ -2,10 +2,12 @@
 tags: book
 layout: pageBook.njk
 name: The Return of the King
+rating: 4.53
+isbn: 9780547952048
 genreTag: genreFantasy
 authorTag: authorJRRTolkien
 serieTag: serieTheLordOfTheRings
-bookshelfTag: NONESET
+bookshelfTag: bookshelfRead
 description: NONESET
 coverImage: assets/covers/theReturnOfTheKing.jpg
 ---

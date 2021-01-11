@@ -1,0 +1,55 @@
+---
+layout: layouts/base.njk
+---
+{%- set pageName -%}{{ name }}{%- endset -%}
+{%- include "navTop.njk" -%}
+
+{%- set active = "Zoeken" -%}
+{%- include "navBottom.njk" -%}
+
+<section class="with-top-nav with-bottom-nav">
+    <div class="genre-grid">
+        <h3>Meer in deze categorie</h3>
+        <a class="genre-card">
+            <h3>Romans</h3>
+        </a>
+        <a class="genre-card">
+            <h3>Thrillers</h3>
+        </a>
+        <a class="genre-card">
+            <h3>Fantasy</h3>
+        </a>
+        <a class="genre-card">
+            <h3>Young adults</h3>
+        </a>
+        <a class="button secondary">
+            <p>Laad meer</p>
+        </a>
+    </div>
+
+    {%- set listName = "Geprezen fictie boeken" -%}
+    {%- set listFilterShow = 'genreFantasy' -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+
+    {%- set listName = "Geprezen fictie auteurs" -%}
+    {%- set listFilterShow = "genreFantasy" -%}
+    {%- set listContent = collections.author -%}
+    {%- include "onPageListAuthor.njk" -%}
+
+    {%- set listName = "De 'A Song of Ice and Fire' collectie" -%}
+    {%- set listFilterShow = "serieASongOfIceAndFire" -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+
+    {%- set listName = "De 'Lord of the Rings' collectie" -%}
+    {%- set listFilterShow = "serieTheLordOfTheRings" -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+
+    {%- set listName = "De 'Harry Potter' collectie" -%}
+    {%- set listFilterShow = "serieHarryPotter" -%}
+    {%- set listContent = collections.book -%}
+    {%- include "onPageListBook.njk" -%}
+</section>
+

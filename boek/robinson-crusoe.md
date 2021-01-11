@@ -2,7 +2,8 @@
 tags: book
 layout: pageBook.njk
 name: Robinson Crusoe
-isbn: NONESET
+rating: 3.68
+isbn: 9780613632263
 genreTag: genreFiction
 authorTag: authorDanielDefoe
 serieTag: NONESET

@@ -2,6 +2,8 @@
 tags: book
 layout: pageBook.njk
 name: Harry Potter en de Geheime Kamer
+rating: 4.43
+isbn: 9076174121
 genreTag: genreFantasy
 authorTag: authorJKRowling
 serieTag: serieHarryPotter

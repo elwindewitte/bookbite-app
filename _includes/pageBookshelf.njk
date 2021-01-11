@@ -2,10 +2,22 @@
 layout: layouts/base.njk
 ---
 {%- set pageName -%}{{ name }}{%- endset -%}
-{%- include "navTop.njk" -%}
+{%- include "headerBookshelf.njk" -%}
 
 {%- include "navBottom.njk" -%}
 
-{%- set listName = "Verderlezen voor jou" -%}
-{%- set listContent = collections.serieHarryPotter -%}
-{%- include "onPageGalleryBook.njk" -%}
+{%- include "modalShareBookshelf.njk" -%}
+
+{%- include "modalSettingsBookshelf.njk" -%}
+
+<div class="on-page-gallery books">
+    {%- set listContent = collections.book -%}
+    {%- for book in listContent -%}
+        {%- if book.data.bookshelfTag == bookshelfTag -%}
+            <a class="book" href="{{ book.url | url }}">
+                <img src="{{ '/' | url }}{{ book.data.coverImage | url }}" alt="{{ '/' | url }}{{ book.data.coverImage }}"></img>
+                <p class="small">{{ book.data.name }}</p>
+            </a>
+        {%- endif -%}
+    {%- endfor -%}
+</div>

@@ -2,10 +2,12 @@
 tags: book
 layout: pageBook.njk
 name: A Storm of Swords
+rating: 4.53
+isbn: 9780553897876
 genreTag: genreFantasy
 authorTag: authorGeorgeRRMartin
 serieTag: serieASongOfIceAndFire
-bookshelfTag: NONESET
+bookshelfTag: bookshelfFavorites
 description: NONESET
 coverImage: assets//covers/aStormOfSwords.jpg
 ---
