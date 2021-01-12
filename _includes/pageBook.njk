@@ -4,6 +4,7 @@ layout: layouts/base.njk
 {%- set pageName -%}{{ name }}{%- endset -%}
 {%- include "navTop.njk" -%}
 
+{%- set active = "Zoeken" -%}
 {%- include "navBottom.njk" -%}
 
 {%- include "modalAddToBookshelf.njk" -%}
@@ -86,7 +87,7 @@ layout: layouts/base.njk
     </a>
     <div class="spacer-8"></div>
     <a class="button secondary" onclick="openModal('addToBookshelf')">
-        <p>Sla op</p>
+        <p>Voeg toe aan boekenplank</p>
     </a>
 </div>
 

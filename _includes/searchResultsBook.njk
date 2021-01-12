@@ -1,10 +1,27 @@
 <div class="search-results" id="searchResults">
-    {%- for book in listContent -%}
+    {# {%- for book in listContent -%}
     <a class="book" href="{{ book.url | url }}">
         <img src="{{ '/' | url }}{{ book.data.coverImage }}" alt="{{ '/' | url }}{{ book.data.coverImage }}">
         <div class="data">
             <h3>{{ book.data.name }}</h3>
             <p>Van {%- set listFilter = book.data.authorTag -%}{%- set listContent = collections.author -%}{%- include "dataAuthorName.njk" -%}</p>
+        </div>
+    </a>
+    {%- endfor -%} #}
+
+    {# BOEKEN #}
+    {%- for book in listContent -%}
+    {%- set authorName -%}
+        {%- set listFilterShow = book.data.authorTag -%}
+        {%- set listContent = collections.author -%}
+        {%- include "dataAuthorName.njk" -%}
+    {%- endset -%}
+
+    <a class="book" href="{{ book.url | url }}">
+        <img src="{{ '/' | url }}{{ book.data.coverImage }}" alt="{{ '/' | url }}{{ book.data.coverImage }}">
+        <div class="data">
+            <h3>{{ book.data.name }}</h3>
+            <p>Van {{ authorName }}</p>
         </div>
     </a>
     {%- endfor -%}

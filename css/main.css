@@ -68,8 +68,8 @@ h1.faded, h2.faded, h3.faded, h4.faded, h5.faded, p.faded, a.faded {
 
 /* STYLE======== */
 h1 {
-    font-family: var(--font-header);
-    color: var(--color-secondary);
+    font-family: var(--font-body);
+    color: var(--color-white);
     font-weight: 600;
 }
 
@@ -79,7 +79,7 @@ h2, h3, h4, h5, p, a {
 }
 
 h2 {
-    font-family: var(--font-header);
+    font-family: var(--font-body);
     font-weight: 600;
 }
 
@@ -115,6 +115,7 @@ p {
 
 a {
     text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 
@@ -236,6 +237,11 @@ a {
     min-height: 32px;
 }
 
+.spacer-64 {
+    min-width: 64px;
+    min-height: 64px;
+}
+
 
 
 /* SEARCH PAGE================ */
@@ -267,9 +273,9 @@ a {
     font-size: 16px;
     line-height: 24px;
     padding: 8px 16px;
-    border: 1px solid var(--color-white);
+    border: 1px solid var(--color-dark-grey);
     border-radius: 4px;
-    background-color: transparent;
+    background-color: var(--color-darker-grey);
     color: var(--color-white);
 }
 
@@ -350,7 +356,7 @@ a {
 /* SECTION================ */
 
 header {
-    padding: 32px 16px;
+    padding: 40px 16px 16px 16px;
 }
 
 header.with-top-nav {

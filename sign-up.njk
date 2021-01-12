@@ -3,7 +3,10 @@ layout: layouts/base.njk
 permalink: /sign-up/
 ---
 <section class="page">
-    <h1>Even inloggen...</h1>
+    <div class="spacer-16"></div>
+    <h1>Account aanmaken</h1>
+    <div class="spacer-8"></div>
+    <p>Om gebruik te maken van Bookbite heb je een account nodig.</p>
     <div class="spacer-32"></div>
     <label for="userName">Naam</label>
     <input type="text" id="userName" placeholder="John Doe">
@@ -14,7 +17,9 @@ permalink: /sign-up/
     <label for="userPassword">Wachtwoord</label>
     <input type="password" id="userPassword" placeholder="••••••••">
     <div class="spacer-32"></div>
-    <a class="button primary" id="buttonSignUp" onclick="authSignup()"><p>Meld aan</p></a>
+    <a class="button primary" id="buttonSignUp" onclick="authSignup()"><p>Maak account aan</p></a>
+    <div class="spacer-32"></div>
+    <p class="align-center">Nog geen account?</p>
     <div class="spacer-8"></div>
     <a class="button secondary" href="{{ '/' | url }}sign-in/"><p>Inloggen</p></a>
 </section>
